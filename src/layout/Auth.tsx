@@ -1,7 +1,7 @@
 const AuthLayout = ({children}:any) => {
     return ( 
     <div>
-        Auth Layout
+        {/* Auth Layout */}
         {children}
     </div> 
     );

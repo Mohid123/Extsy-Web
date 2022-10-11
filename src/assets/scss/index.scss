@@ -1,0 +1,125 @@
+@import '~antd/dist/antd.css';
+$white-color: #FFFFFF;
+$primary-color: #7C167D;
+a{
+    text-decoration: none !important;
+}
+
+.login{
+    background: linear-gradient(114.78deg, #844D95 -5.79%, #6374A0 73.16%);
+    height: 100vh;
+    padding-top: 5px;
+}
+
+.loginContainer{
+    height: 911px!important;
+    width:662px ;
+    background: $white-color;
+    border-radius: 24px;
+    margin-top: 30px;
+    padding-top: 75px;
+    margin-inline: auto;
+    text-align: center;
+    
+   }
+.formLabel{
+    width: 460px !important;
+}
+   .ant-input-affix-wrapper{
+    width: 460px !important;
+    height: 60px;
+    border-radius: 24px;
+    padding: 13px 22px;
+   }
+   .ant-input{
+    background: none!important;
+   }
+   .login-form-button{
+    width: 300px;
+    height: 46px;
+    
+    /* Primary */
+    
+    background: $primary-color;
+    border-radius: 12px;
+
+   }
+   .loginBtn{
+    width: 335px;
+height: 60px;
+    background: #FFFFFF;
+border: 1px solid #333333;
+border-radius: 10px;
+   }
+//    sign up page scss
+.signUpSection{
+    height: 94vh;
+}
+.signUpPara{
+    width: 460px;
+height: 168px;
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 48px;
+line-height: 56px;
+/* or 117% */
+
+display: flex;
+align-items: center;
+
+color: #3C3C3C;
+}
+.signUpPara2{
+    width: 460px;
+    color:#333333 ;
+}
+.signUpSection2{
+    width: 460px;
+   padding: 100px 180px 0 180px;
+}
+ .signUpBtn{
+    width: 458px;
+    height: 65px;
+    background: #FFFFFF;
+border: 1px solid #333333;
+border-radius: 10px;
+   }
+   .formLabelSignUp{
+    width: 458px !important;
+}
+.signUp-form-button{
+    width: 460px;
+height: 56px;
+
+/* Primary */
+
+background:$primary-color;
+border-radius: 12px;
+}
+.signUpFooter{
+    margin-top: 125px!important;
+    width: 458px;
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+/* identical to box height */
+
+
+color: #666666;
+
+}
+.signUpFormLabel{
+     width: 460px !important;
+}
+.signUpBtnWhite{
+   
+    width: 460px;
+    height: 56px;
+        background: #FFFFFF;
+    border: 1px solid #333333;
+    border-radius: 10px;
+       
+}

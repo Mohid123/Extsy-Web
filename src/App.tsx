@@ -1,21 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Routes
-} from "react-router-dom";
-import MainLayout from './layout/Main';
+
+// import '~antd/dist/antd.css';
+import { BrowserRouter, Route, Switch} from "react-router-dom";
+
 import AuthLayout from './layout/Auth';
+import { routes } from './routes';
+import MainLayout from './layout/Main';
 
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Routes>
+      <BrowserRouter>
+
+        <Switch>
         {routes.map(route => {
 						switch (route.layout) {
 							case 'main':
@@ -29,7 +27,7 @@ function App() {
 								);
 							case 'auth':
 								return (
-									<Route exact path={route.path}>
+									<Route  path={route.path}>
 										<AuthLayout>
 											<route.component />
 										</AuthLayout>
@@ -37,8 +35,8 @@ function App() {
 								);
 						}
 					})}
-        </Routes>
-      </Router>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
