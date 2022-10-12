@@ -30,7 +30,7 @@ const SignUp = () => {
         <div className="formLabelSignUp d-flex justify-content-center  mt-3">
     <hr  className="w-25 me-2"/>OR<hr  className=" ms-2 w-25"/>
     </div>
-    <PrimaryButton   text= "Sign up" height="56px" width="460px" background="#7C167D"/>
+    <PrimaryButton   text= "Sign up with email" height="56px" width="460px" background="#7C167D"/>
     {/* <Button type="primary" htmlType="submit" className="signUp-form-button">
          Sign up
         </Button> */}

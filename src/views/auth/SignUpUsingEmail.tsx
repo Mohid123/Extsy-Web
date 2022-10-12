@@ -26,7 +26,7 @@ const SignUpUsingEmail = () => {
         rules={[{ required: true, message: 'Please input your Email!' }]}
       >
         
-        <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="your Email" />
+        <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="your Email"  className="loginSignUpInput" />
       </Form.Item>
       <div className="formLabel text-start  mb-2">your password</div>
       <Form.Item
@@ -37,6 +37,7 @@ const SignUpUsingEmail = () => {
           prefix={<LockOutlined className="site-form-item-icon" />}
           type="password"
           placeholder="Password"
+          className="loginSignUpInput"
         />
       </Form.Item>
      

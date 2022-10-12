@@ -31,7 +31,7 @@ const Login = () => {
         rules={[{ required: true, message: 'Please input your Username!' }]}
       >
         
-        <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" />
+        <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username"  className="loginSignUpInput"/>
       </Form.Item>
       <div className="formLabel text-start m-auto  mb-2">your password</div>
       <Form.Item
@@ -42,6 +42,7 @@ const Login = () => {
           prefix={<LockOutlined className="site-form-item-icon" />}
           type="password"
           placeholder="Password"
+          className="loginSignUpInput"
         />
       </Form.Item>
      

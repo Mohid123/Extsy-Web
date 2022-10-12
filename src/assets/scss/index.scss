@@ -4,7 +4,11 @@ $primary-color: #7C167D;
 a{
     text-decoration: none !important;
 }
-
+.main{
+    max-width: 1440px;
+    margin: auto;
+  
+}
 .login{
     background: linear-gradient(114.78deg, #844D95 -5.79%, #6374A0 73.16%);
     height: 100vh;
@@ -25,7 +29,7 @@ a{
 .formLabel{
     width: 460px !important;
 }
-   .ant-input-affix-wrapper{
+.loginSignUpInput{
     width: 460px !important;
     height: 60px;
     border-radius: 24px;
@@ -91,4 +95,131 @@ color: #666666;
 }
 .signUpFormLabel{
      width: 460px !important;
+}
+// mainViewHeader scss
+.mainViewHeader{
+    &__left{
+margin-left: 23px;
+    }
+    &__middle{
+        width: 52%;
+        display: flex;
+        justify-content: space-around;
+        margin:0 142px 0 145px
+
+    }
+    &__right{
+
+    }
+    &__headerSearch{
+ 
+padding: 8px 16px;
+
+
+width: 210px;
+height: 34px;
+
+background: #F7F7F7;
+border: 1px solid rgba(102, 102, 102, 0.35);
+border-radius: 16px;
+    }
+}
+.mainViewContent{
+    &__left{
+        
+            }
+            &__middle{
+        width: 50%;
+            }
+            &__right{
+        
+            }
+}
+.mainViewLeftProfileInfo{
+  
+    &__mainContainer{
+        width: 284px;
+       height: 190px;
+       position: relative;
+       &__image{
+        background-image: url("../img/Rectangle.svg");
+        width: 284px;
+       height: 82px;
+        background-repeat: no-repeat;
+        background-size: cover; 
+       }
+       &__profileAvatar{
+        position: absolute;
+        top: 70px;
+        left: 10px;
+       }
+       &__p{
+      margin-left: 54px;
+        font-size: small;
+    
+       
+       }
+    }
+}
+.mainViewMiddle{
+    &__mainViewStories{
+        width: 646px;
+height: 102px;
+    }
+    &__mainViewPostContainer{
+        width: 646px;
+height: 168px;
+position: relative;
+&__options{
+    width: 646px;
+height: 70px;
+position: absolute;
+left: 0px;
+bottom: 0px;
+
+background: rgba(99, 116, 160, 0.5);
+border-radius: 0px 0px 10px 10px;
+
+// &__postBtn{
+//     position: absolute;
+// width: 88.27px;
+// height: 70px;
+// left: 557.73px;
+// bottom: 0px;
+
+// /* Logo color 1 */
+
+// background: #6374A0;
+// border-radius: 0px 0px 10px 0px;
+// }
+}
+    }
+}
+.mainViewRight{
+    &__whiteBtnFollow{
+        padding: 3px 10px;
+
+        width: 64px;
+        height: 32px;
+        
+        /* Primary */
+        
+        border: 1px solid #7C167D;
+        border-radius: 6px;     
+    }
+    &__image{
+width: 336px;
+height: 213px;
+background-image: url("../img/image.png");
+/* Note: backdrop-filter has minimal browser support */
+background-repeat: no-repeat;
+background-size: cover; 
+border-radius: 10px;
+position: relative;
+&__text{
+    position: absolute;
+    bottom: 0;
+   
+}
+    }
 }
