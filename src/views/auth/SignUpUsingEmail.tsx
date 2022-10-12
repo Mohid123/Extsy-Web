@@ -1,6 +1,8 @@
 import { UserOutlined,LockOutlined } from "@ant-design/icons";
 import { Form,Input,Button } from "antd";
 import Header from "../../components/Header";
+import PrimaryButton from "../../components/PrimaryButton";
+import WhiteButton from "../../components/WhiteButton";
 const SignUpUsingEmail = () => {
     return ( 
         <div>
@@ -9,8 +11,8 @@ const SignUpUsingEmail = () => {
         <div className="d-flex">
             <div className="w-50 bg-info signUpSection">image</div>
             <div className="w-50 signUpSection2">
-                <p className="signUpPara">Explore the world to experience the nature of others!</p>
-                <p className="signUpPara2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis maximus</p>
+                <p className="signUpSection2__signUpPara">Explore the world to experience the nature of others!</p>
+                <p className="signUpSection2__signUpPara2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis maximus</p>
            
      
     <Form
@@ -52,15 +54,10 @@ const SignUpUsingEmail = () => {
       
 
       <Form.Item>
-        <Button type="primary" htmlType="submit" className="signUp-form-button">
-         Sign Up
-        </Button>
-        {/* Or <a href="">register now!</a> */}
+      <PrimaryButton  text= "Sign up" height="56px" width="460px" background="#7C167D"/>
       </Form.Item>
     </Form>
-    <Button htmlType="submit" className="signUpBtnWhite">
-         Sign up with Quick Links
-        </Button>
+    <WhiteButton url=""  text="  Sign up with Quick Links" height="56px" width="460px" background="#FFFFFF" />
       <p className="text-center mt-2" style={{width:"460px"}}>By signing up, you agree to the <a href="#">Terms of Service</a>and <a href="#">Privacy policy </a>including <a href="#">cookie use</a></p>
             </div>
         </div>

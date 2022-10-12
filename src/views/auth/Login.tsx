@@ -6,6 +6,8 @@ import logo from "../../assets/img/ExtsyLogo.svg"
 import apple from  "../../assets/img/apple.svg"
 import google from "../../assets/img/google.svg"
 import facebook from "../../assets/img/facebook.svg"
+import WhiteButton from "../../components/WhiteButton";
+import PrimaryButton from "../../components/PrimaryButton";
 const Login = () => {
     const [form] = Form.useForm();
     const [, forceUpdate] = useState({});
@@ -57,26 +59,17 @@ const Login = () => {
       
 
       <Form.Item>
-        <Button type="primary" htmlType="submit" className="login-form-button">
-          Log in
-        </Button>
-        {/* Or <a href="">register now!</a> */}
+        <PrimaryButton  text="Log in" height="46px" width="300px" background="#7C167D"/>
       </Form.Item>
     </Form>
     <div className=" formLabel d-flex m-auto justify-content-center">
     <hr  className="w-25 me-2"/>OR<hr  className=" ms-2 w-25"/>
     </div>
-    <Button  className="loginBtn mt-4">
-        <img src={facebook}  className="me-3"/>  Continue with Facebook
-        </Button>
-        
-        <Button  className="loginBtn mt-4">
-        <img src={google}  className="me-3"/>   Continue with Google
-        </Button>
-        
-        <Button  className="loginBtn mt-4">
-        <img src={apple} className="me-3"/>   Continue with Apple
-        </Button>
+    <WhiteButton url="../assets/img/facebook.svg" text=" Continue with Facebook" height="60px" width="335px" background="#FFFFFF" />
+    <WhiteButton url="../../assets/img/google.svg" text=" Continue with Google"  height="60px" width="335px" background="#FFFFFF"/>
+
+<WhiteButton url="../../assets/img/apple.svg" text="Continue with Apple" height="60px" width="335px" background="#FFFFFF"/>
+
         <p className="mt-5">Don't have an account? <a href="#">Sign up</a></p>
             </div>
         </div>
