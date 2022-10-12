@@ -65,10 +65,10 @@ const Login = () => {
     <div className=" formLabel d-flex m-auto justify-content-center">
     <hr  className="w-25 me-2"/>OR<hr  className=" ms-2 w-25"/>
     </div>
-    <WhiteButton url="../assets/img/facebook.svg" text=" Continue with Facebook" height="60px" width="335px" background="#FFFFFF" />
-    <WhiteButton url="../../assets/img/google.svg" text=" Continue with Google"  height="60px" width="335px" background="#FFFFFF"/>
+    <WhiteButton url={facebook} text="Continue with Facebook" height="60px" width="335px" background="#FFFFFF" />
+    <WhiteButton url={google} text="Continue with Google"  height="60px" width="335px" background="#FFFFFF"/>
 
-<WhiteButton url="../../assets/img/apple.svg" text="Continue with Apple" height="60px" width="335px" background="#FFFFFF"/>
+<WhiteButton url={apple} text="Continue with Apple" height="60px" width="335px" background="#FFFFFF"/>
 
         <p className="mt-5">Don't have an account? <a href="#">Sign up</a></p>
             </div>

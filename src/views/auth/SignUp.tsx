@@ -6,6 +6,8 @@ import facebook from "../../assets/img/facebook.svg"
 import Header from "../../components/Header";
 import WhiteButton from "../../components/WhiteButton";
 import PrimaryButton from "../../components/PrimaryButton";
+
+
 const SignUp = () => {
     return ( 
         <div>
@@ -19,11 +21,11 @@ const SignUp = () => {
                 {/* <Button  className="signUpBtn mt-4">
         <img src={facebook}  className="me-3"/>  Continue with Facebook
         </Button> */}
-        <WhiteButton url="../assets/img/facebook.svg" text=" Continue with Facebook" height="65px" width="458px" background="#FFFFFF" />
+        <WhiteButton url={facebook} text="Continue with Facebook" height="65px" width="458px" background="#FFFFFF" />
         
-        <WhiteButton url="../../assets/img/google.svg" text=" Continue with Google"  height="65px" width="458px" background="#FFFFFF"/>
+        <WhiteButton url={google} text="Continue with Google"  height="65px" width="458px" background="#FFFFFF"/>
 
-        <WhiteButton url="../../assets/img/apple.svg" text="Continue with Apple" height="65px" width="458px" background="#FFFFFF"/>
+        <WhiteButton url={apple} text="Continue with Apple" height="65px" width="458px" background="#FFFFFF"/>
 
         <div className="formLabelSignUp d-flex justify-content-center  mt-3">
     <hr  className="w-25 me-2"/>OR<hr  className=" ms-2 w-25"/>
