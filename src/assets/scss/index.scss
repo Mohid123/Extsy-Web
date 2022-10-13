@@ -1,6 +1,95 @@
 @import '~antd/dist/antd.css';
 $white-color: #FFFFFF;
 $primary-color: #7C167D;
+$font-family: 'Poppins';
+$font-family-roboto:'Roboto';
+$font-color-gery:#8A8A8A;
+$font-color-black:#000000;
+$font-color-white:#FFFFFF;
+.textStyle{
+    font-style: normal;
+    font-family:$font-family;
+    font-weight: 400;
+    font-size: 12px;
+    // line-height: 18px;
+    &__textStyleSmall{
+
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 15px;
+        color: $font-color-gery;
+    } 
+    &__following{
+        font-size: 10px;
+    }
+
+}
+.propertiesTextStyle{
+font-family: $font-family-roboto;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+color: #666666;
+&__group{
+font-weight: 500;
+color: #212121;
+}
+&__colorWhite{
+    color: #FFFFFF 
+}
+
+}
+.postCardfontStyle{
+font-family: $font-family-roboto;
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+/* identical to box height */
+color: $font-color-black;
+ &__username{
+    font-size: 10px;
+     line-height: 12px;
+/* identical to box height */
+color: rgba(0, 0, 0, 0.46);
+ }
+ &__text{
+    font-size: 14px;
+line-height: 16px;
+color: $font-color-black;
+ }
+ &__style{
+    font-family: $font-family;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 18px;
+&__viewAllComment{
+    font-weight: 400;
+    color: #666666;
+}
+/* identical to box height */
+color: #3C3C3C;
+&__description{
+    font-weight: 400;
+font-size: 11px;
+line-height: 16px;
+&__time{
+    font-weight: 300;
+color: rgba(60, 60, 60, 0.44);
+
+}
+&__style{
+    font-weight: 600; 
+}
+}
+ }
+}
+
+// font-family: 'Poppins';
+// font-style: normal;
+
 a{
     text-decoration: none !important;
 }
@@ -99,17 +188,18 @@ color: #666666;
 // mainViewHeader scss
 .mainViewHeader{
     &__left{
-margin-left: 23px;
+// margin-left: 23px;
+// width: 22%;
     }
     &__middle{
         width: 52%;
         display: flex;
         justify-content: space-around;
-        margin:0 142px 0 145px
+        // margin:0 142px 0 145px
 
     }
     &__right{
-
+// width: 28%;
     }
     &__headerSearch{
  
@@ -125,11 +215,13 @@ border-radius: 16px;
     }
 }
 .mainViewContent{
+    
     &__left{
-        
+       position: sticky;
+      
             }
             &__middle{
-        width: 50%;
+      
             }
             &__right{
         
@@ -162,9 +254,17 @@ border-radius: 16px;
     }
 }
 .mainViewMiddle{
+   
     &__mainViewStories{
         width: 646px;
-height: 102px;
+// height: 102px;
+
+overflow-x: scroll;
+white-space: nowrap;
+overflow-x: hidden;
+&__content{
+   
+}
     }
     &__mainViewPostContainer{
         width: 646px;
@@ -180,18 +280,15 @@ bottom: 0px;
 background: rgba(99, 116, 160, 0.5);
 border-radius: 0px 0px 10px 10px;
 
-// &__postBtn{
-//     position: absolute;
-// width: 88.27px;
-// height: 70px;
-// left: 557.73px;
-// bottom: 0px;
-
-// /* Logo color 1 */
-
-// background: #6374A0;
-// border-radius: 0px 0px 10px 0px;
-// }
+&__postBtn{
+position: absolute;
+bottom: 0;
+right: 0;
+width: 88.27px;
+height: 70px;
+background: #6374A0;
+border-radius: 0px 0px 10px 0px;
+}
 }
     }
 }
@@ -222,4 +319,45 @@ position: relative;
    
 }
     }
+    &__textStyle{
+        font-family: $font-family;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: $white-color;
+        &__paraStyle{
+            font-weight: 400;
+                line-height: 16px;
+                color: $white-color;
+        }
+    }
+    &__peopleSuggestion{
+        font-family: $font-family-roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+color: #212121;
+&__userName{
+    font-weight: 300;
+font-size: 11px;
+line-height: 13px;
 }
+    }
+}
+// post story
+.container {
+    
+    display: flex;
+    overflow: hidden;
+  
+    
+    
+    white-space: nowrap;
+  }
+  .postStoryName{
+    width: 30px!important;
+  }
+
+  

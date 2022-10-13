@@ -1,44 +1,68 @@
-import { Avatar } from "antd";
-import Carousel from "react-multi-carousel";
-const responsive = {
-	superLargeDesktop: {
-		// the naming can be any, depends on you.
-		breakpoint: { max: 4000, min: 3000 },
-		items: 9,
-		partialVisibilityGutter: 10,
-	},
-	desktop: {
-		breakpoint: { max: 3000, min: 768 },
-		items: 3,
-		partialVisibilityGutter: 8,
-	},
-	tablet: {
-		breakpoint: { max: 768, min: 464 },
-		items: 2,
-		partialVisibilityGutter: 8,
-	},
-	mobile: {
-		breakpoint: { max: 464, min: 0 },
-		items: 2,
-		partialVisibilityGutter: 20,
-	},
-};
+import { Avatar, Image, Input } from "antd";
+import imageIcon from "../../assets/img/ImageIcon.svg"
+import videoIcon from "../../assets/img/Video.svg"
+import calenderIcon from "../../assets/img/Calendar.svg"
+import sendIcon from "../../assets/img/Send.svg"
+import { EditOutlined } from "@ant-design/icons";
+import PostCard from "./postCard";
+import StoryCard from "./storyCard";
+
 const MainViewMiddle = () => {
-    return ( 
-        <div className="mainViewMiddle">
-         <div className="mainViewMiddle__mainViewStories bg-info">
-
-         </div>
-         <div className="mainViewMiddle__mainViewPostContainer ">
-        <div className="mainViewMiddle__mainViewPostContainer__options">
-
-         {/* <div  className="mainViewMiddle__mainViewPostContainer__options_postBtn">
-
-         </div> */}
+	
+    return (
+      <div className="mainViewMiddle  ">
+        <div className="mainViewMiddle__mainViewStories  pt-2">
+		
+            
+              <StoryCard/>
+            
+         
+       
         </div>
-</div>
+        <div className="mainViewMiddle__mainViewPostContainer ">
+          <div className="d-flex pt-4 ps-2">
+            <Avatar
+              src={
+                <Image
+                  src="https://joeschmoe.io/api/v1/random"
+                  style={{
+                    width: 32,
+                  }}
+                />
+              }
+            />
+            <span className="d-flex align-items-center">
+              <Input placeholder="write something..." bordered={false} />
+              <EditOutlined />
+            </span>
+          </div>
+          <div className="mainViewMiddle__mainViewPostContainer__options d-flex justify-content-around align-items-center">
+            <span className="propertiesTextStyle__colorWhite">
+              <img src={imageIcon} style={{color:"#EE1D52"}} width="22" height="16" />
+              Photo
+            </span>
+            <span style={{color:"#DFDFDF"}}>|</span>
+            <span className="propertiesTextStyle__colorWhite">
+              <img src={videoIcon} width="22" height="16" /> Video
+            </span>
+            <span style={{color:"#DFDFDF"}}>|</span>
+            <span style={{ marginRight: "87px" }} className="propertiesTextStyle__colorWhite">
+              <img src={calenderIcon} width="22" height="16" />
+              Event
+            </span>
+            <span className="mainViewMiddle__mainViewPostContainer__options__postBtn d-flex  justify-content-center align-items-center">
+              <img src={sendIcon} width="22" height="16" />
+            </span>
+          </div>
         </div>
-     );
+		<div className="p-5">
+		<PostCard/>
+    <PostCard/>
+    <PostCard/>
+
+		</div>
+      </div>
+    );
 }
  
 export default MainViewMiddle;
