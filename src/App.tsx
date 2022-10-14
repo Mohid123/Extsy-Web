@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './App.less'
 // import '~antd/dist/antd.css';
 import { BrowserRouter, Route, Switch} from "react-router-dom";
 

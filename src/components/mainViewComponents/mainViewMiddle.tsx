@@ -4,8 +4,10 @@ import videoIcon from "../../assets/img/Video.svg"
 import calenderIcon from "../../assets/img/Calendar.svg"
 import sendIcon from "../../assets/img/Send.svg"
 import { EditOutlined } from "@ant-design/icons";
-import PostCard from "./postCard";
 import StoryCard from "./storyCard";
+import PostCardImage from "./postCardImage";
+import PostCardText from "./PostCardText";
+import PostCardVideo from "./postCardVideo";
 
 const MainViewMiddle = () => {
 	
@@ -56,9 +58,11 @@ const MainViewMiddle = () => {
           </div>
         </div>
 		<div className="p-5">
-		<PostCard/>
-    <PostCard/>
-    <PostCard/>
+		<PostCardImage/>
+    <br/>
+    <PostCardText/>
+    <br/>
+    <PostCardVideo/>
 
 		</div>
       </div>

@@ -7,7 +7,11 @@ import commentIcon from '../../assets/img/commentIcon.svg'
 import shareIcon from '../../assets/img/postCardShareIcon.svg'
 import bookMark from '../../assets/img/Bookmark.svg'
 import commentImage from '../../assets/img/commentImgIcon.svg'
-const PostCard = () => {
+type Props = {
+    
+    children?: JSX.Element;
+  };
+const PostCardLayout = ({children}:Props) => {
     const [count, setCount] = useState(5);
     return (
       <div>
@@ -32,7 +36,7 @@ const PostCard = () => {
         </div>
         <p className="postCardfontStyle__text mt-3">-Photo is perfecto</p>
 
-        <Image src={postCardImage} />
+               {children}
         <div className="py-3 d-flex justify-content-between">
           <span>
             <img src={likeIcon} />
@@ -75,5 +79,6 @@ const PostCard = () => {
       </div>
     );
 }
- 
-export default PostCard;
+
+  
+export default PostCardLayout;

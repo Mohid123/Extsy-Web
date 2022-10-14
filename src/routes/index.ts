@@ -1,12 +1,18 @@
 import Login from "../views/auth/Login";
 import SignUp from "../views/auth/SignUp";
 import SignUpUsingEmail from "../views/auth/SignUpUsingEmail";
+import Groups from "../views/Groups";
 import Main from "../views/MainView";
 
 export const routes = [
     {
 		path: '/',
 		component: Main,
+		layout: 'main',
+	},
+	{
+		path: '/groups',
+		component: Groups,
 		layout: 'main',
 	},
 	{

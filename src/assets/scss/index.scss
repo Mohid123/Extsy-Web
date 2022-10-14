@@ -1,4 +1,5 @@
-@import '~antd/dist/antd.css';
+
+@import "~video-react/styles/scss/video-react";
 $white-color: #FFFFFF;
 $primary-color: #7C167D;
 $font-family: 'Poppins';
@@ -6,6 +7,10 @@ $font-family-roboto:'Roboto';
 $font-color-gery:#8A8A8A;
 $font-color-black:#000000;
 $font-color-white:#FFFFFF;
+.video-react-big-play-button{
+    top: 41% !important;
+    left: 41%!important;
+}
 .textStyle{
     font-style: normal;
     font-family:$font-family;
@@ -210,8 +215,17 @@ width: 210px;
 height: 34px;
 
 background: #F7F7F7;
-border: 1px solid rgba(102, 102, 102, 0.35);
-border-radius: 16px;
+border: 1px solid rgba(102, 102, 102, 0.35)!important;
+border-radius: 16px!important;
+&__groupSearch{
+    width: 645px!important;
+    padding: 8px 16px;
+    height: 34px;
+    
+    background: #F7F7F7;
+    border: 1px solid rgba(102, 102, 102, 0.35)!important;
+    border-radius: 16px!important;
+}
     }
 }
 .mainViewContent{
@@ -298,12 +312,17 @@ border-radius: 0px 0px 10px 0px;
 
         width: 64px;
         height: 32px;
-        
+        font-family: $font-family;
         /* Primary */
-        
-        border: 1px solid #7C167D;
-        border-radius: 6px;     
+        color: $primary-color !important;
+        border: 1px solid $primary-color !important;
+        border-radius: 6px !important; 
+   
     }
+//     &__whiteBtnFollow :hover{
+// background: $primary-color !important;
+// color: $white-color !important;
+//     }
     &__image{
 width: 336px;
 height: 213px;
@@ -333,7 +352,7 @@ position: relative;
         }
     }
     &__peopleSuggestion{
-        font-family: $font-family-roboto;
+        font-family: $font-family-roboto!important;
 font-style: normal;
 font-weight: 500;
 font-size: 16px;
@@ -351,13 +370,39 @@ line-height: 13px;
     
     display: flex;
     overflow: hidden;
-  
-    
-    
     white-space: nowrap;
+    &__storyAvatar{
+        border: 2px solid $primary-color !important;
+    }
+    // &__badgeBg{
+    //     padding: 15px!important;
+    //     border: 2px solid $primary-color!important;
+    //   border-radius: 5px !important;
+      
+    // }
+    &__userName{
+        font-family: $font-family-roboto;
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+color: #666666;
+    }
   }
   .postStoryName{
     width: 30px!important;
   }
-
+.createGroupBtn{
+    width: 102px!important;
+    padding: 5px 10px !important;
+    height: 28px;
+    color: $primary-color!important;
+    border: 1px solid $primary-color !important;
+    border-radius: 6px!important;
+}  
+.tabs{
+    width:645px!important;
+}
+.tabPane{
+    // width:645px!important;
+}
   
