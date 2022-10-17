@@ -1,6 +1,6 @@
 import { Avatar, Button } from 'antd';
 import * as React from 'react';
-import WhiteButton from '../WhiteButton';
+
 
 const MainViewRight = () => {
     return ( 

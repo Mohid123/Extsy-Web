@@ -21,16 +21,17 @@ const SignUp = () => {
                 {/* <Button  className="signUpBtn mt-4">
         <img src={facebook}  className="me-3"/>  Continue with Facebook
         </Button> */}
-        <WhiteButton url={facebook} text="Continue with Facebook" height="65px" width="458px" background="#FFFFFF" />
+        <WhiteButton url={facebook} text="Continue with Facebook" height="65px" width="458px"/>
         
-        <WhiteButton url={google} text="Continue with Google"  height="65px" width="458px" background="#FFFFFF"/>
+        <WhiteButton url={google} text="Continue with Google"  height="65px" width="458px" />
 
-        <WhiteButton url={apple} text="Continue with Apple" height="65px" width="458px" background="#FFFFFF"/>
+        <WhiteButton url={apple} text="Continue with Apple" height="65px" width="458px"/>
 
         <div className="formLabelSignUp d-flex justify-content-center  mt-3">
     <hr  className="w-25 me-2"/>OR<hr  className=" ms-2 w-25"/>
     </div>
-    <PrimaryButton   text= "Sign up with email" height="56px" width="460px" background="#7C167D"/>
+    <div className="d-flex justify-content-center bg-info">  <PrimaryButton   text= "Sign up with email" height="56px" width="460px" /></div>
+  
     {/* <Button type="primary" htmlType="submit" className="signUp-form-button">
          Sign up
         </Button> */}

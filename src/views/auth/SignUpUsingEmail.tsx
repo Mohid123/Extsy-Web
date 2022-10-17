@@ -54,11 +54,11 @@ const SignUpUsingEmail = () => {
        
       
 
-      <Form.Item>
-      <PrimaryButton  text= "Sign up" height="56px" width="460px" background="#7C167D"/>
+      <Form.Item> <PrimaryButton  text= "Sign up" height="56px" width="460px" />
+     
       </Form.Item>
     </Form>
-    <WhiteButton url=""  text="  Sign up with Quick Links" height="56px" width="460px" background="#FFFFFF" />
+    <WhiteButton url=""  text="  Sign up with Quick Links" height="56px" width="460px"/>
       <p className="text-center mt-2" style={{width:"460px"}}>By signing up, you agree to the <a href="#">Terms of Service</a>and <a href="#">Privacy policy </a>including <a href="#">cookie use</a></p>
             </div>
         </div>
