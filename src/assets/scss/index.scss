@@ -405,4 +405,16 @@ color: #666666;
 .tabPane{
     // width:645px!important;
 }
-  
+
+.blur-bg {
+    position: relative;
+    bottom: 40px;
+    background-color: rgb(222, 222, 222, 0.4)
+}
+.textColor{
+    color: white;
+}
+.ant-list-item-meta-content{
+    text-align:left
+}
+
