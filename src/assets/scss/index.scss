@@ -133,7 +133,11 @@ a{
     background: none!important;
    }
    .primaryButton{
-    border-radius: 12px;
+    border-radius: 12px!important;
+    color: $white-color!important ;
+    background-color: $primary-color!important;
+  
+ 
 
    }
 
@@ -231,7 +235,7 @@ border-radius: 16px!important;
 .mainViewContent{
     
     &__left{
-       position: sticky;
+       z-index: -1 !important;
       
             }
             &__middle{
@@ -242,7 +246,7 @@ border-radius: 16px!important;
             }
 }
 .mainViewLeftProfileInfo{
-  
+
     &__mainContainer{
         width: 284px;
        height: 190px;
@@ -319,6 +323,7 @@ border-radius: 0px 0px 10px 0px;
         border-radius: 6px !important; 
    
     }
+ 
 //     &__whiteBtnFollow :hover{
 // background: $primary-color !important;
 // color: $white-color !important;
@@ -400,9 +405,6 @@ color: #666666;
     border-radius: 6px!important;
 }  
 .tabs{
-    width:645px!important;
-}
-.tabPane{
     // width:645px!important;
 }
 
@@ -435,7 +437,59 @@ color: #666666;
     height: 238px;
 }
 
+
 .explore-profile-container{
     max-width: 1165px !important;
    
+}
+//groups modal for create groups
+.groupModal{
+    border-radius: 18px 18px 0px 0px;
+   
+    overflow: hidden;
+}
+.coverImg{
+    height: 160px;
+    background-image: url("../img/modalCoverImg.svg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+} 
+.ant-collapse  {
+    border: none !important;
+}
+.ant-collapse-content{
+    border: none !important;
+}
+.ant-collapse-item{
+    border: none !important;
+}
+.modelInput{
+    border: none !important;
+}
+.ant-modal-footer{
+    display: none!important;
+}
+.ant-modal-close-x{
+    display: none!important;
+}
+.ant-modal-body{
+    padding: 0 !important;
+}
+.uploadCoverImg{
+    padding-top:  8rem !important;
+    margin-left: 1.5rem!important;
+    &__textColor{
+        color: $white-color!important;
+    }
+    
+}
+.groupBtn{
+    width: 84px;
+    padding: 3px 10px;
+    height: 32px;
+    font-family: $font-family;
+    /* Primary */
+    color: $primary-color !important;
+    border: 1px solid $primary-color !important;
+    border-radius: 6px !important; 
 }
