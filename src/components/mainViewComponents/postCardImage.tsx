@@ -1,13 +1,15 @@
 import {  Image } from "antd";
-import postCardImage from '../../assets/img/postCardImage.png'
 import PostCardLayout from './postCardLayout';
-const PostCardImage = () => {
+ type Props={
+  img:string
+ }
+const PostCardImage = ({img}:Props) => {
     
     return (
       <PostCardLayout>
        
 
-        <Image src={postCardImage} />
+        <Image src={img} />
       
       </PostCardLayout>
     );
