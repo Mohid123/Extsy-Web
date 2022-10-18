@@ -407,6 +407,36 @@ color: #666666;
 .tabs{
     // width:645px!important;
 }
+
+.blur-bg {
+    position: relative;
+    bottom: 40px;
+    background-color: rgb(222, 222, 222, 0.4)
+}
+.textColor{
+    color: white;
+}
+.ant-list-item-meta-content{
+    text-align:left
+}
+.ant-input {
+    border-radius: 4px !important;
+}
+
+.edit-profile-container{
+    max-width: 865px !important;
+}
+
+.edit-profile-content{
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.edit-profile-content-profileimg{
+    width: 238px;
+    height: 238px;
+}
+
 //groups modal for create groups
 .groupModal{
     border-radius: 18px 18px 0px 0px;

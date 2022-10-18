@@ -4,6 +4,7 @@ import SignUpUsingEmail from "../views/auth/SignUpUsingEmail";
 import GroupAdmin from "../views/GroupAdmin";
 import Groups from "../views/Groups";
 import Main from "../views/MainView";
+import UserProfile from "../components/userProfile/userProfile"
 
 export const routes = [
     {
@@ -35,5 +36,10 @@ export const routes = [
 		path: '/auth/signup2',
 		component: SignUpUsingEmail,
 		layout: 'auth',
+	},
+	{
+		path: '/auth/userProfile',
+		component: UserProfile,
+		layout: 'main',
 	}
 ]
