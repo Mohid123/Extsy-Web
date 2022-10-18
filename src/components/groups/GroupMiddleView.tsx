@@ -1,15 +1,28 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState,useEffect,useRef} from 'react';
 import { AntDesignOutlined, InfoCircleOutlined, SearchOutlined, SettingOutlined, UploadOutlined, UserOutlined } from "@ant-design/icons";
 import { Avatar, Button, Collapse, Input, message, Modal, Tabs, Tooltip, Upload } from "antd";
 import TextArea from 'antd/lib/input/TextArea';
 import addIcon from '../../assets/img/plusIcon.svg'
 import PrimaryButton from '../PrimaryButton';
-import CreateGroup from './creatGroupModal';
+import CreateGroup from './createGroup';
 const { Panel } = Collapse;
+const initialItems = [
+  {
+    label: 'Tab 1',
+    children: 'Content of Tab 1',
+    key: '1',
+    closable: false,
+  },
+  {
+    label: 'Tab 2',
+    children: 'Content of Tab 2',
+    key: '2',
+    closable: false,
+  },
+  
+];
 const GroupComp = () => {
   const [open, setOpen] = useState(false);
-
-
 
 	// useEffect(() => {
 	// 	document.addEventListener('mousedown', handleClickOutside);
@@ -20,6 +33,14 @@ const GroupComp = () => {
 		
   //   setOpen(false);
   // }
+  const [activeKey, setActiveKey] = useState(initialItems[0].key);
+  const [items, setItems] = useState(initialItems);
+  const onChange = (newActiveKey:any) => {
+    setActiveKey(newActiveKey);
+  };
+ 
+
+  
 
     return (
       <div>
@@ -29,13 +50,22 @@ const GroupComp = () => {
           prefix={<SearchOutlined />}
           className="mainViewHeader__headerSearch__groupSearch"
         />
-        <div className="d-flex justify-content-between tabs">
-          <Tabs defaultActiveKey="1">
+          <Tabs
+      type="editable-card"
+      onChange={onChange}
+      items={items}
+    />
+          {/* <Tabs defaultActiveKey="1"
+          className='tabs'
+          addIcon={ <Button className="createGroupBtn mt-3" onClick={() => setOpen(true)}>
+          Create Group
+        </Button>}
+        >
             <Tabs.TabPane tab="Popular Groups" key="1" className="tabPane">
             
                 <div className="">
               
-                  <div className='bg-info  '>
+                  <div className=' '>
                     <Avatar
                     size={60}
                     className={""}
@@ -53,38 +83,7 @@ const GroupComp = () => {
                   <p className="">Top % Soccer Group description if any, Group description if any , Group description if any , Group description if any , Group description.</p>
                   </div>
                  
-                  {/* <Avatar.Group
-                    maxCount={3}
-                    maxStyle={{
-                      color: "#f56a00",
-                      backgroundColor: "#fde3cf",
-                    }}
-                  >
-                    <Avatar src="https://joeschmoe.io/api/v1/random" />
-                    <Avatar
-                      style={{
-                        backgroundColor: "#f56a00",
-                      }}
-                    >
-                      K
-                    </Avatar>
-                    <Tooltip title="Ant User" placement="top">
-                      <Avatar
-                        style={{
-                          backgroundColor: "#87d068",
-                        }}
-                        icon={<UserOutlined />}
-                      />
-                    </Tooltip>
-                    <Avatar
-                      style={{
-                        backgroundColor: "#1890ff",
-                      }}
-                      icon={<AntDesignOutlined />}
-                    />
-                    <Avatar src="https://joeschmoe.io/api/v1/random" />
-                    <Avatar src="https://joeschmoe.io/api/v1/random" />
-                  </Avatar.Group> */}
+               
                   
                   <Button className="createGroupBtn">join Now</Button>
                 </div>
@@ -203,11 +202,11 @@ const GroupComp = () => {
             </Tabs.TabPane>
           </Tabs>
           <Button className="createGroupBtn mt-3" onClick={() => setOpen(true)}>
-            Create Group
-          </Button>
-        </div>
+          Create Group
+        </Button> */}
+    
 
-        {/* create group modal  */}
+       
         <>
          <CreateGroup     open={open}
           

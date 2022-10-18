@@ -1,6 +1,7 @@
 import Login from "../views/auth/Login";
 import SignUp from "../views/auth/SignUp";
 import SignUpUsingEmail from "../views/auth/SignUpUsingEmail";
+import GroupAdmin from "../views/GroupAdmin";
 import Groups from "../views/Groups";
 import Main from "../views/MainView";
 
@@ -13,6 +14,11 @@ export const routes = [
 	{
 		path: '/groups',
 		component: Groups,
+		layout: 'main',
+	},
+	{
+		path: '/groupadmin',
+		component: GroupAdmin,
 		layout: 'main',
 	},
 	{
