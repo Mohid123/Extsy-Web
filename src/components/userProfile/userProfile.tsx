@@ -1,4 +1,5 @@
 import Header from "../LandingPageHeader"
+import EditUserProfile from "./editUserProfile"
 import TabsPanel from  "./Tabs";
 import TabsPanel1 from  "./TabsUserFollowing";
 import { Col, Row, Button,Tabs } from 'antd';
@@ -14,6 +15,10 @@ const style = {
 const UserProfileInfo = () => {
     const [tabs, setTabs] = useState(true)
     const [lists, setLists] = useState(false)
+    const [editProfile, setEditProfile] = useState(false)
+    const [userID, setUserID] = useState('my id')
+
+    
 
   const handleClick = () =>{
     setTabs(false)
@@ -23,9 +28,12 @@ const UserProfileInfo = () => {
     setTabs(true)
     setLists(false)
   }
+  const closeDiv = () =>{
+    setEditProfile(true)
+  }
     return ( 
         <div > <Header></Header>
-        <div className=" container">
+{editProfile? (<EditUserProfile/>):( <div className=" container">
          <Row
       gutter={{ xs: 24, sm: 24, md: 24, lg: 8 }}
     >
@@ -39,10 +47,18 @@ const UserProfileInfo = () => {
         <img src={avatarImage} style={{ width:"10%"}} alt=""/>
         <h6 className="mt-3">Ali Raza</h6>
         <p>@aliraza</p>
-        <Button type="primary" shape="round"  size={"large"}>
+        {userID==='my id'?( <div><Button type="primary" shape="round"  size={"large"} onClick={closeDiv}>
         Edit Profile
       </Button>
       <Button type="primary"  shape="circle" icon={<UploadOutlined style={{color:'#8A2F88'}} />} size={'large'} style={{marginLeft:'10px',backgroundColor:'#F2E8F2', borderStyle:'none'}} />
+     </div>):(<div><Button type="primary" shape="round"  size={"large"} onClick={closeDiv}>
+        Following
+      </Button>
+      <Button type="primary" shape="round"  size={"large"} onClick={closeDiv} style={{marginLeft:'10px'}} ghost>
+        Message
+      </Button>
+      <Button type="primary"  shape="circle" icon={<UploadOutlined style={{color:'#8A2F88'}} />} size={'large'} style={{marginLeft:'10px',backgroundColor:'#F2E8F2', borderStyle:'none'}} /></div>)}
+     
       <div className="d-flex justify-content-center mt-3">
         <div style={{borderRight: '1px solid #8A2F88',paddingRight:'30px',height:'30px', cursor:'pointer'}} onClick={showPosts}>
         <h6 className="mb-0 pt-1">
@@ -72,7 +88,9 @@ const UserProfileInfo = () => {
       </Col>
     
      
-    </Row> </div>
+    </Row> </div>)}
+
+       
     </div>
     )
 }
