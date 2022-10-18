@@ -7,7 +7,7 @@ type Props = {
 const  GroupAdminMiddleLayout= ({children}:Props) => {
     return (  
         <div className="pt-5">
-        <div className='coverImg' style={{width:'645px'}}></div>
+        <div className='coverImg' ></div>
 
         <GroupMemberInfo/>
           {children}
