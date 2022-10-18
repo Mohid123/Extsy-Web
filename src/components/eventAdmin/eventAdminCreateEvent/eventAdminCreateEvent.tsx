@@ -16,7 +16,7 @@ import { AntDesignOutlined, UserOutlined } from '@ant-design/icons';
 const EventAdminCreateEvent = () => {
   return (
     <div className="centralCard">
-      <button className='createEventButton mb-4'><span>&#10003;</span>&nbsp;Create Event</button>
+      {/* <button className='createEventButton mb-4'><span>&#10003;</span>&nbsp;Create Event</button> */}
       <div className='main-card mt-1 shadow-sm position-relative'>
         <img alt='top-img' className='img-fluid' src={topImg}></img>
         <div className='position-absolute blurred-bottom'></div>
