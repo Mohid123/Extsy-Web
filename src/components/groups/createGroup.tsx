@@ -5,7 +5,7 @@ import TextArea from 'antd/lib/input/TextArea';
 import addIcon from '../../assets/img/plusIcon.svg'
 import PrimaryButton from '../PrimaryButton';
 import cameraIcon from '../../assets/img/cameraIcon.svg'
-import WhiteButton from '../WhiteButton';
+
 const { Panel } = Collapse;
 type Prop={
   open:boolean;
