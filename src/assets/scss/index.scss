@@ -323,6 +323,7 @@ border-radius: 0px 0px 10px 0px;
         border-radius: 6px !important; 
    
     }
+ 
 //     &__whiteBtnFollow :hover{
 // background: $primary-color !important;
 // color: $white-color !important;
@@ -446,4 +447,14 @@ color: #666666;
         color: $white-color!important;
     }
     
+}
+.groupBtn{
+    width: 84px;
+    padding: 3px 10px;
+    height: 32px;
+    font-family: $font-family;
+    /* Primary */
+    color: $primary-color !important;
+    border: 1px solid $primary-color !important;
+    border-radius: 6px !important; 
 }
