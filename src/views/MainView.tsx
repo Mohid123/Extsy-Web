@@ -6,8 +6,7 @@ import MainViewRight from "../components/mainViewComponents/mainViewRight";
 const Main = () => {
     return ( 
         <div className="main">
-            <MainViewHeader/>
-            <hr className="m-0"/>
+            
             <div className="mainViewContent d-flex ">
             <div className="mainViewContent__left  d-flex justify-content-end p-5 sticky-top">
                 <MainViewLeftProfileInfo/>

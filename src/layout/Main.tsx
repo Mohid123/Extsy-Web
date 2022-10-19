@@ -1,7 +1,12 @@
+import MainViewHeader from "../components/LandingPageHeader";
+
 const MainLayout = ({children}:any) => {
     return ( 
     <div>
-        {children}
+        <MainViewHeader/>
+        <div className="MainDivCentral">
+            {children}
+        </div>
     </div> 
     );
 }

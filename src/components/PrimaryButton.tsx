@@ -4,17 +4,15 @@ type ButtonProp={
     text:string;
     height:string
     width:string;
-    background:string
+  
     // onClick:()=>{}
 }
-const PrimaryButton = ({text,height,width,background}:ButtonProp) => {
+const PrimaryButton = ({text,height,width}:ButtonProp) => {
 
     return ( 
-        <Button  htmlType="submit" className="primaryButton"  style={{height:height,width:width,background:background}} 
+        <Button  htmlType="submit" className="primaryButton px-2"  style={{height:height,width:width}} 
         // onClick={onClick}
-        >
-       {text}
-      </Button>
+        >{text} </Button>
      );
 }
  

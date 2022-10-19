@@ -16,9 +16,12 @@ const MainViewHeader = () => {
     const [notifications, setNotifications] = useState(false)
     function handleClick() {
         setNotifications(!notifications)
+             //history.push(path);
       }
+       
     return (
-        <div className="mainViewHeader d-flex p-3 justify-content-between">
+        <div className="mainViewHeader shadow">
+                    <div className="headerCentral d-flex py-3 px-0 justify-content-around">
             <div className="mainViewHeader__left    "><img src={logo} style={{ height: "25px", width: "106px" }} alt="" /></div>
             <div className="mainViewHeader__middle "><img src={homeIcon} alt="" /><img src={manyPersonIcon} alt="" /><img src={bellIcon} alt="" onClick={handleClick}/>
                 <img src={profileIcon} alt="" onClick={() => { history.push('/auth/userProfile') }} /></div>
@@ -68,7 +71,8 @@ const MainViewHeader = () => {
 
             </Card>)
             :(<></>)}
-           
+          
+ </div>
         </div>
     );
 }

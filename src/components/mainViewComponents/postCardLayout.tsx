@@ -1,7 +1,7 @@
-import  React,{useState} from 'react';
+import {useState} from 'react';
 import { Avatar, Badge, Image, Input } from "antd";
 import threeDots from '../../assets/img/threeDots.svg'
-import postCardImage from '../../assets/img/postCardImage.png'
+
 import likeIcon from '../../assets/img/likeIcon.svg'
 import commentIcon from '../../assets/img/commentIcon.svg'
 import shareIcon from '../../assets/img/postCardShareIcon.svg'
