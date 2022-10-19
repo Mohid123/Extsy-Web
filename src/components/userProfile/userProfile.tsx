@@ -2,7 +2,7 @@ import Header from "../LandingPageHeader"
 import EditUserProfile from "./editUserProfile"
 import TabsPanel from  "./Tabs";
 import TabsPanel1 from  "./TabsUserFollowing";
-import { Col, Row, Button,Tabs } from 'antd';
+import { Col, Row, Button,Tabs, Card  } from 'antd';
 import topImage from '../../assets/img/Rectangle 19.svg'
 import avatarImage from '../../assets/img/84.svg'
 import { UploadOutlined } from '@ant-design/icons';
@@ -90,7 +90,7 @@ const UserProfileInfo = () => {
      
     </Row> </div>)}
 
-       
+    
     </div>
     )
 }
