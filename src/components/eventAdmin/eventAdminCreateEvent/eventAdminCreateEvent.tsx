@@ -11,11 +11,23 @@ import usersLocation from '../../../assets/img/notif_locations.svg';
 import usersPrice from '../../../assets/img/notif_price.svg';
 import { Avatar, Tooltip } from 'antd';
 import { AntDesignOutlined, UserOutlined } from '@ant-design/icons';
+import Attendees from '../modals/Attendees.modal';
+import { useState } from 'react';
 
 
 const EventAdminCreateEvent = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const showModal = () => {
+      setIsModalOpen(true);
+  };
+
+  const hideModal = () => {
+      setIsModalOpen(false);
+  };
+//onClick={() => {isModalOpen === true && hideModal()}}
   return (
-    <div className="centralCard">
+    <div className="centralCard" onClick={() => {isModalOpen === true && hideModal()}}>
       {/* <button className='createEventButton mb-4'><span>&#10003;</span>&nbsp;Create Event</button> */}
       <div className='main-card mt-1 shadow-sm position-relative'>
         <img alt='top-img' className='img-fluid' src={topImg}></img>
@@ -78,7 +90,7 @@ const EventAdminCreateEvent = () => {
                     icon={<AntDesignOutlined  />}
                   />
               </Avatar.Group>
-              <span className='others'>+15 others</span>
+              <span onClick={showModal} className='others'>+15 others</span>
             </div>
           </div>
 
@@ -165,6 +177,10 @@ const EventAdminCreateEvent = () => {
 
         </div>
       </div>
+
+      <>
+        <Attendees isModalOpen={isModalOpen} open={showModal} onCancel={hideModal}/>
+      </>
     </div>
   )
 }
