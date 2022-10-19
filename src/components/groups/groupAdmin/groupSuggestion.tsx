@@ -14,7 +14,7 @@ const GroupSuggestion = () => {
         <p className='m-0 p-0 mainViewRight__peopleSuggestion__userName'>@steve.jobs</p>
         </div>
     </div>
-    <Button  className="groupBtn" >
+    <Button  className="groupButton" >
       Join Now
         </Button>
     </div>
@@ -27,7 +27,7 @@ const GroupSuggestion = () => {
         <p className='m-0 p-0 mainViewRight__peopleSuggestion__userName'>@steve.jobs</p>
         </div>
     </div>
-    <Button  className="groupBtn" >
+    <Button  className="groupButton" >
       Join Now
         </Button>
     </div>
@@ -40,7 +40,7 @@ const GroupSuggestion = () => {
         <p className='m-0 p-0 mainViewRight__peopleSuggestion__userName'>@steve.jobs</p>
         </div>
     </div>
-    <Button  className="groupBtn" >
+    <Button  className="groupButton" >
     Join Now
         </Button>
     </div>

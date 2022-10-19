@@ -6,8 +6,9 @@ const GroupAdminMiddle = () => {
     return ( 
     
         <GroupAdminMiddleLayout>
-       <PostCardImage  img={CardImage}/>
-       
+          <div className="p-5">
+          <PostCardImage  img={CardImage} />
+          </div>
        </GroupAdminMiddleLayout>
     
        

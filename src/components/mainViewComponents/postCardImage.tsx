@@ -7,10 +7,7 @@ const PostCardImage = ({img}:Props) => {
     
     return (
       <PostCardLayout>
-       
-
-        <Image src={img} />
-      
+        <Image src={img}  style={{width:'34.375rem'}}/>
       </PostCardLayout>
     );
 }

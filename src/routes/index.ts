@@ -5,7 +5,11 @@ import SignUpUsingEmail from "../views/auth/SignUpUsingEmail";
 import GroupAddRemoveMembers from "../views/GroupAddRemoveMembers";
 import GroupAdmin from "../views/GroupAdmin";
 import GroupManageRequest from "../views/GroupManageRequest";
+import GroupModerator from "../views/GroupModerator";
 import Groups from "../views/Groups";
+import GroupUserViewMain from "../views/GroupUserViewMain";
+import GroupUserViewMembersList from "../views/GroupUserViewMembersList";
+import GroupUserViewModerators from "../views/GroupUserViewModerators";
 import Main from "../views/MainView";
 import EventAdmin from './../components/eventAdmin/eventAdmin';
 
@@ -33,6 +37,26 @@ export const routes = [
 	{
 		path: '/groupadmin/addremovemembers',
 		component: GroupAddRemoveMembers,
+		layout: 'main',
+	},
+	{
+		path: '/groupadmin/groupmoderator',
+		component: GroupModerator,
+		layout: 'main',
+	},
+	{
+		path: '/groups/groupuserviewmain',
+		component: GroupUserViewMain,
+		layout: 'main',
+	},
+	{
+		path: '/groups/groupuserviewmemberslist',
+		component: GroupUserViewMembersList,
+		layout: 'main',
+	},
+	{
+		path: '/groups/groupuserviewmoderators',
+		component: GroupUserViewModerators,
 		layout: 'main',
 	},
 	{
