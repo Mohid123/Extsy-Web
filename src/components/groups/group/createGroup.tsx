@@ -1,10 +1,10 @@
-import React,{useState} from 'react';
+
 import { AntDesignOutlined, InfoCircleOutlined, SearchOutlined, SettingOutlined, UploadOutlined, UserOutlined } from "@ant-design/icons";
 import { Avatar, Button, Collapse, Input, message, Modal, Tabs, Tooltip, Upload } from "antd";
 import TextArea from 'antd/lib/input/TextArea';
-import addIcon from '../../assets/img/plusIcon.svg'
-import PrimaryButton from '../PrimaryButton';
-import cameraIcon from '../../assets/img/cameraIcon.svg'
+import addIcon from '../../../assets/img/plusIcon.svg'
+import PrimaryButton from '../../PrimaryButton';
+import cameraIcon from '../../../assets/img/cameraIcon.svg'
 
 const { Panel } = Collapse;
 type Prop={
