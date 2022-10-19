@@ -1,4 +1,4 @@
-import MainViewHeader from "../LandingPageHeader";
+import MainViewHeader from "../../LandingPageHeader";
 import GroupAdminLeft from "./groupAdminLeft";
 import GroupAdminRight from "./groupAdminRight";
 

@@ -1,5 +1,5 @@
 import { Avatar, Button } from "antd";
-import '../group.scss'
+import '../../group.scss'
 import GroupAdminMiddleLayout from "../groupAdminMiddleLayout";
 
 const GroupManageRequestComp = () => {

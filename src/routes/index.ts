@@ -1,4 +1,4 @@
-import AddRemoveMemberComp from "../components/groups/AddRemoveMember/addRemoveMembersComp";
+import AddRemoveMemberComp from "../components/groups/groupAdmin/AddRemoveMember/addRemoveMembersComp";
 import Login from "../views/auth/Login";
 import SignUp from "../views/auth/SignUp";
 import SignUpUsingEmail from "../views/auth/SignUpUsingEmail";

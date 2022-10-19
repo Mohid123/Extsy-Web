@@ -1,9 +1,9 @@
 import { AntDesignOutlined, UserOutlined } from "@ant-design/icons";
 import { Avatar, Tooltip } from "antd";
-import vector from "../../assets/img/Vector.svg"
-import userShield from "../../assets/img/user-shield-solid.svg";
+import vector from "../../../assets/img/Vector.svg"
+import userShield from "../../../assets/img/user-shield-solid.svg";
 
-import userGroup from "../../assets/img/userGroup.svg"
+import userGroup from "../../../assets/img/userGroup.svg"
 const GroupMemberInfo = () => {
     return (  
         <div className="p-4">

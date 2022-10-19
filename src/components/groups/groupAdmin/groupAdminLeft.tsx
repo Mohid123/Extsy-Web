@@ -1,4 +1,4 @@
-import ProfileInfo from "../mainViewComponents/profileInfo";
+import ProfileInfo from "../../mainViewComponents/profileInfo";
 import GroupAdminLeftOption from "./groupAdminLeftOption";
 
 const GroupAdminLeft = () => {

@@ -1,5 +1,5 @@
-import AddRemoveMemberComp from "../components/groups/AddRemoveMember/addRemoveMembersComp";
-import GroupAdminLayout from "../components/groups/groupAdminLayout";
+import AddRemoveMemberComp from "../components/groups/groupAdmin/AddRemoveMember/addRemoveMembersComp";
+import GroupAdminLayout from "../components/groups/groupAdmin/groupAdminLayout";
 
 const GroupAddRemoveMembers = () => {
     return (  

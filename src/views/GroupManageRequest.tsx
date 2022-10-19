@@ -1,5 +1,5 @@
-import GroupAdminLayout from "../components/groups/groupAdminLayout";
-import GroupManageRequestComp from "../components/groups/ManageRequests/groupManageRequestComp";
+import GroupAdminLayout from "../components/groups/groupAdmin/groupAdminLayout";
+import GroupManageRequestComp from "../components/groups/groupAdmin/ManageRequests/groupManageRequestComp";
 
 const GroupManageRequest = () => {
     return ( 

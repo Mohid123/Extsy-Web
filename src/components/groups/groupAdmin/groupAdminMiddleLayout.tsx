@@ -1,5 +1,4 @@
 import GroupMemberInfo from "./groupMembersInfo";
-
 type Props = {
     
     children?: JSX.Element;

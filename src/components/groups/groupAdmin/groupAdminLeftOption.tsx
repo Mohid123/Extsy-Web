@@ -1,8 +1,8 @@
 
-import userShield from "../../assets/img/user-shield-solid.svg";
-import addUser  from "../../assets/img/AddUser.svg"
-import userGroup from "../../assets/img/userGroup.svg"
-import settings from "../../assets/img/Setting.svg"
+import userShield from "../../../assets/img/user-shield-solid.svg";
+import addUser  from "../../../assets/img/AddUser.svg"
+import userGroup from "../../../assets/img/userGroup.svg"
+import settings from "../../../assets/img/Setting.svg"
 const  GroupAdminLeftOption= () => {
     return (  
         <>

@@ -1,4 +1,4 @@
-import GroupComp from "../components/groups/GroupMiddleView";
+import GroupComp from "../components/groups/group/GroupMiddleView";
 import MainViewHeader from "../components/LandingPageHeader";
 import MainViewLeftProfileInfo from "../components/mainViewComponents/mainViewLeftProfileInfo";
 import MainViewMiddle from "../components/mainViewComponents/mainViewMiddle";

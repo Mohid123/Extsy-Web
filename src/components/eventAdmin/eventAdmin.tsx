@@ -1,4 +1,4 @@
-import GroupAdminLeftOption from '../groups/groupAdminLeftOption';
+import GroupAdminLeftOption from '../groups/groupAdmin/groupAdminLeftOption';
 import Ad from '../mainViewComponents/ad';
 import ProfileInfo from './../mainViewComponents/profileInfo';
 import './eventAdmin.scss'

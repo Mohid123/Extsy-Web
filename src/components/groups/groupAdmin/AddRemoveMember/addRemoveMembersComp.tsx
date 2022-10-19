@@ -1,6 +1,6 @@
 import { SearchOutlined } from "@ant-design/icons";
 import { Avatar, Button, Input } from "antd";
-import '../group.scss'
+import '../../group.scss'
 import GroupAdminMiddleLayout from "../groupAdminMiddleLayout";
 const AddRemoveMemberComp = () => {
     return ( 
