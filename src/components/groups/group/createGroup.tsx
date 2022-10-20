@@ -7,16 +7,16 @@ import PrimaryButton from '../../PrimaryButton';
 import cameraIcon from '../../../assets/img/cameraIcon.svg'
 
 const { Panel } = Collapse;
-type Prop={
-  open:boolean;
-  onCancel:()=>{}
-}
-const CreateGroup = ({open,onCancel}:Prop) => {
+// type Prop={
+//   open:boolean;
+//   onCancel:()=>{}
+// }
+const CreateGroup = (props:any) => {
     // const [open, setOpen] = useState(false);
     const onChange = (e:any) => {
       console.log(e);
     };
-    const props = {
+    const prop = {
       name: 'file',
       action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
       headers: {
@@ -45,13 +45,14 @@ const CreateGroup = ({open,onCancel}:Prop) => {
                 // zIndex:9999
               }
             }
-            open={open}
-            onOk={() => onCancel()}
-            onCancel={() => onCancel()}
+            {...props}
+            // open={open}
+            // onOk={() => onCancel}
+            // onCancel={() => onCancel}
             width={626}
           >
             <div className="coverImg">
-              <div className='uploadCoverImg'> <Upload {...props} >
+              <div className='uploadCoverImg'> <Upload {...prop} >
             {<img src={cameraIcon}/>}<span className='uploadCoverImg__textColor ms-2'>Add Cover Image</span>
             </Upload></div>
             </div>

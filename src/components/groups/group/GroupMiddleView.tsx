@@ -391,8 +391,8 @@ const GroupComp = () => {
        
         <>
          <CreateGroup     open={open}
-          
-            onCancel={() => false }/>
+          onOk={() => setOpen(false) }
+            onCancel={() => setOpen(false) }/>
         </>
       </div>
     );
