@@ -15,6 +15,7 @@ import Main from "../views/MainView";
 import EventAdmin from './../components/eventAdmin/eventAdmin';
 import UserProfile from "../components/userProfile/userProfile"
 import ExploreUser from "../components/userProfile/exploreUser"
+import PushNotifications from "../layout/pushNotifications"
 
 export const routes = [
     {
@@ -91,6 +92,11 @@ export const routes = [
 	{
 		path: '/user/exploreUser',
 		component: ExploreUser,
+		layout: 'main',
+	},
+	{
+		path: '/pushNotifications',
+		component: PushNotifications,
 		layout: 'main',
 	}
 ]
