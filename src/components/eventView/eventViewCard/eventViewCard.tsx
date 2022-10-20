@@ -171,9 +171,9 @@ const EventViewCard = () => {
           <span className='actualDescription pb-2 mt-3 border-bottom border-light'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas metus sagittis, interdum egestas pharetra lorem in auctor enim. Dolor morbi malesuada phasellus feugiat nascetur faucibus ullamcorper tellus nec. Nunc magna ut felis, condimentum. Nulla orci venenatis vitae mattis at et dolor. Adipiscing morbi in feugiat habitasse orci fusce molestie tellus sit. Felis gravida a maecenas arcu aliquet. Sed mattis tristique sed neque eget laoreet ut. Etiam quam pulvinar enim eu, purus turpis vivamus. Sollicitudin morbi orci massa posuere volutpat nulla. Diam
           </span>
-          <div className='d-flex justify-content-start pt-2 pb-4'>
+          <div className='d-flex justify-content-start pt-2 pb-4 w-100'>
             <div className='flex-fill'>
-                <button className='interested-btn mx-2'>Interested</button>
+                <button className='interested-btn me-2'>Interested</button>
                 <button className='attending-btn'>Attend</button>
                 <span className='ignore mx-3'>Ignore</span>
             </div>
