@@ -13,14 +13,11 @@ import GroupUserViewModerators from "../views/GroupUserViewModerators";
 import Main from "../views/MainView";
 
 import EventAdmin from './../components/eventAdmin/eventAdmin';
-<<<<<<< HEAD
 import UserProfile from "../components/userProfile/userProfile"
 import ExploreUser from "../components/userProfile/exploreUser"
 import PushNotifications from "../layout/pushNotifications"
 import EventPosts from "../components/eventPosts/eventPosts";
-=======
-import EventPosts from './../components/eventPosts/eventPosts';
->>>>>>> origin/eventAdmin
+
 
 export const routes = [
     {
