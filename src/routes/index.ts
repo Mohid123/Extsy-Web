@@ -13,9 +13,14 @@ import GroupUserViewModerators from "../views/GroupUserViewModerators";
 import Main from "../views/MainView";
 
 import EventAdmin from './../components/eventAdmin/eventAdmin';
+<<<<<<< HEAD
 import UserProfile from "../components/userProfile/userProfile"
 import ExploreUser from "../components/userProfile/exploreUser"
 import PushNotifications from "../layout/pushNotifications"
+import EventPosts from "../components/eventPosts/eventPosts";
+=======
+import EventPosts from './../components/eventPosts/eventPosts';
+>>>>>>> origin/eventAdmin
 
 export const routes = [
     {
@@ -83,11 +88,6 @@ export const routes = [
 		path: '/eventAdmin',
 		component: EventAdmin,
 		layout: 'main'
-    },
-  {
-    path: '/user/userProfile',
-		component: UserProfile,
-		layout: 'main',
 	},
 	{
 		path: '/user/exploreUser',
@@ -97,6 +97,10 @@ export const routes = [
 	{
 		path: '/pushNotifications',
 		component: PushNotifications,
-		layout: 'main',
+		layout: 'main'},
+		{
+		path: '/eventPosts',
+		component: EventPosts,
+		layout: 'main'
 	}
 ]

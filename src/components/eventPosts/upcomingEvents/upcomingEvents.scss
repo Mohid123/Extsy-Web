@@ -1,0 +1,42 @@
+.event-card {
+    width: 17.75rem;
+    // height: 16.688rem;
+    // max-height: 17rem;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 25px 25px;
+}
+
+.upcoming-header {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.eventName {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #494D61;
+}
+
+.circular-img-upcoming {
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: top; // replace after actual data is available
+}
+
+.see-all {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    margin-inline: auto;
+    display: block;
+    cursor: pointer;
+}
