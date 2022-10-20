@@ -5,16 +5,17 @@ import homeIcon from "../assets/img/Home.svg"
 import bellIcon from "../assets/img/Notification.svg"
 import manyPersonIcon from "../assets/img/many person.svg"
 import profileIcon from "../assets/img/Profile.svg"
-import { useHistory } from "react-router-dom";
 import avatar from "../assets/img/96.svg"
 import ellipse from "../assets/img/Ellipse 7.svg"
 import "../layout/layout.scss"
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 
 const MainViewHeader = () => {
       const [notifications, setNotifications] = useState(false)
+      const navigate = useNavigate()
     function handleClick() {
         setNotifications(!notifications)
              //history.push(path);
@@ -28,7 +29,7 @@ const MainViewHeader = () => {
                     <div className="headerCentral d-flex py-3 px-0 justify-content-around">
             <div className="mainViewHeader__left    "><img src={logo} style={{ height: "25px", width: "106px" }} alt="" /></div>
             <div className="mainViewHeader__middle "><img src={homeIcon} alt="" /><img src={manyPersonIcon} alt="" /><img src={bellIcon} alt="" onClick={handleClick}/>
-                <img src={profileIcon} alt="" onClick={() => { history.push('/auth/userProfile') }} /></div>
+                <img src={profileIcon} alt="" onClick={() => { navigate('/auth/userProfile') }} /></div>
             <div className="mainViewHeader__right  "><Input size="small" placeholder="search" prefix={<SearchOutlined />} className="mainViewHeader__headerSearch" /></div>
             {notifications? ( <Card  className="notificationsCard"
                 style={{ width: 393 }} >

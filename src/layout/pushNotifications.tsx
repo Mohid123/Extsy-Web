@@ -1,12 +1,13 @@
 import { SearchOutlined } from "@ant-design/icons";
 import { Input, Card, Divider, Avatar } from "antd";
-import { useHistory } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import avatar from "../assets/img/96.svg"
 import ellipse from "../assets/img/Ellipse 7.svg"
 import   "../layout/layout.scss"
 
 
 const PushNotifications =() =>{
+    // const navigate = useNavigate()
 return (
     <div className="container">
         <Card  className="pushNotificationsCard"
