@@ -1,0 +1,157 @@
+.chatboxContainer{
+
+z-index: 500;
+}
+.chatbox{
+    box-sizing: border-box;
+width: 278px;
+height: 56px;
+position: fixed;
+bottom: 0px;
+background: #FFFFFF;
+border: 1px solid #F4F4F4;
+box-shadow: 0px -4px 24px rgba(0, 0, 0, 0.05), 0px 0px 1px rgba(0, 0, 0, 0.12);
+border-radius: 16px 16px 0px 0px;
+}
+.openedChatBox{
+    box-sizing: border-box;
+position: fixed;
+width: 278px;
+height: 487px;
+bottom: 0px;
+background: #FFFFFF;
+border: 1px solid #F4F4F4;
+box-shadow: 0px -4px 24px rgba(0, 0, 0, 0.05), 0px 0px 1px rgba(0, 0, 0, 0.12);
+border-radius: 16px 16px 0px 0px;
+}
+.chatInnerDiv{
+    width: 258px;
+height: 79px;
+background: rgba(191, 99, 197, 0.05);
+border-radius: 10px;
+margin-left: 10px;
+padding: 5px;
+}
+.headingFont{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 11px;
+line-height: 16px;
+/* identical to box height */
+
+
+color: rgba(60, 60, 60, 0.9);
+}
+.sunHeadingFont{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+line-height: 16px;
+/* identical to box height */
+
+
+color: rgba(60, 60, 60, 0.8);
+}
+.timeFont{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 300;
+font-size: 9px;
+line-height: 14px;
+letter-spacing: 0.01em;
+margin-left: 60px;
+color: #7C7C7C;
+
+}
+.ellipse{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    
+}
+.userChatbox{
+    box-sizing: border-box;
+
+position: fixed;
+width: 278px;
+height: 487px;
+right: 634px;
+bottom: 0px;
+
+background: #FFFFFF;
+border: 1px solid #F4F4F4;
+box-shadow: 0px -4px 24px rgba(0, 0, 0, 0.05), 0px 0px 1px rgba(0, 0, 0, 0.12);
+border-radius: 16px 16px 0px 0px;
+}
+.userChatHeader{
+    width: 258px;
+height: 79px;
+border-radius: 10px;
+margin-left: 10px;
+padding: 5px;
+}
+
+.message{
+    display: flex;
+flex-direction: row;
+align-items: center;
+padding: 5px 15px;
+padding-top: 5px;
+width: fit-content;
+height: 27px;
+left: 0px;
+margin-top: 10px;
+background: #ECECED;
+border-radius: 5px;
+}
+.message2{
+    display: flex;
+flex-direction: row;
+align-items: center;
+padding: 5px 15px;
+padding-top: 5px;
+width: fit-content;
+height: 27px;
+// float: right;
+margin-top: 10px;
+background: #BF63C5;
+border-radius: 5px;
+color: #fff;
+}
+.messageText{
+    
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+line-height: 16px;
+display: flex;
+align-items: center;
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.messageTime{
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 300;
+font-size: 9px;
+line-height: 14px;
+letter-spacing: 0.05em;
+color: #707070;
+
+}
+.messageTime2{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 9px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    color: #707070;
+   text-align: right;
+    
+    }
+    
