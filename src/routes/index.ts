@@ -13,8 +13,7 @@ import GroupUserViewModerators from "../views/GroupUserViewModerators";
 import Main from "../views/MainView";
 
 import EventAdmin from './../components/eventAdmin/eventAdmin';
-import UserProfile from "../components/userProfile/userProfile"
-import ExploreUser from "../components/userProfile/exploreUser"
+import EventPosts from './../components/eventPosts/eventPosts';
 
 export const routes = [
     {
@@ -82,15 +81,10 @@ export const routes = [
 		path: '/eventAdmin',
 		component: EventAdmin,
 		layout: 'main'
-    },
-  {
-    path: '/user/userProfile',
-		component: UserProfile,
-		layout: 'main',
 	},
 	{
-		path: '/user/exploreUser',
-		component: ExploreUser,
-		layout: 'main',
+		path: '/eventPosts',
+		component: EventPosts,
+		layout: 'main'
 	}
 ]
