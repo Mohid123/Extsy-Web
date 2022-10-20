@@ -1,0 +1,143 @@
+.card {
+    z-index: 1500;
+    position: absolute;
+    top: 150px;
+    width: 607px;
+    padding: 20px;
+    height: 376px;
+}
+
+.innerCard {
+    width: 100px;
+    border-radius: 10px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.innerCardBackground {
+    background: linear-gradient(114.78deg, rgba(132, 77, 149, ) -5.79%, rgba(99, 116, 160, ) 73.16%);
+    mix-blend-mode: multiply;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    width: 100px;
+    height: 110px;
+}
+
+.uploadCard {
+    width: 302px;
+    height: 342px;
+    z-index: 1500;
+    position: absolute;
+    top: 150px;
+    box-shadow: 0px 2px 10px rgba(45, 48, 58, 0.05);
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.imageUpload {
+    padding: 25px 15px;
+    gap: 20px;
+    z-index: 1500;
+    position: absolute;
+    top: 150px;
+    width: 350px;
+    height: 352px;
+    background: #FBFBFB;
+    box-shadow: 0px 2px 10px rgba(45, 48, 58, 0.05);
+    border-radius: 10px;
+
+}
+
+.imageUpload2 {
+    padding: 20px;
+    gap: 25px;
+    z-index: 1500;
+    position: absolute;
+    top: 150px;
+    width: 302px;
+    height: 395px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+.uploadedImage {
+    width: 100% !important;
+    height: 120px !important;
+}
+
+.closeIcon {
+    position: relative;
+    bottom: 40px;
+    right: 30px;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.galleryImage {
+    width: 100%;
+}
+
+.button {
+    border-radius: 10px;
+}
+.userStoryCard{
+    width: 552px;
+height: 759px;
+z-index: 500;
+border-radius: 10px;
+position: absolute;
+    top: 135px;
+    background-color: #000;
+}
+
+.pauseIcon{
+justify-content: center;
+width: 75px;
+height: 76px;
+margin-top: 300px;
+border-radius: 60px;
+}
+.icons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+}
+.div{
+    margin-left: 40px !important;
+    margin-top: 50px !important;
+
+}
+.commentCard{
+    width: 552px;
+    height: 398px;
+    position:absolute;
+    top: 300px;
+    z-index: 500;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.innerCommentCard{
+   background-color: #F7F8F9; 
+   padding: 10px;
+   border-radius: 10px;
+   width: 466px;
+   align-self: center;
+}
+.newComment{
+    background-color: #FBFBFB;
+    width: 502px;
+}
+.viewAllComments{
+    width: 430px;
+    background-color: #F7F8F9; 
+    padding: 10px;
+    border-radius: 10px;
+    width: 430px;
+}

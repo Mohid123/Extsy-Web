@@ -8,7 +8,6 @@ import profileIcon from "../assets/img/Profile.svg"
 import { useHistory } from "react-router-dom";
 import avatar from "../assets/img/96.svg"
 import ellipse from "../assets/img/Ellipse 7.svg"
-
 import "../layout/layout.scss"
 import { useState } from "react";
 const MainViewHeader = () => {
