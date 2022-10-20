@@ -1,0 +1,39 @@
+.interested-btn {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    color: #7C167D;
+    padding: 5px 40px;
+    width: 137px;
+    border: 1px solid #7C167D;
+    border-radius: 6px;
+}
+
+.attending-btn {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    color: white;
+    background-color: #7C167D;
+    padding: 5px 40px;
+    width: 118px;
+    border: 1px solid #7C167D;
+    border-radius: 6px;
+}
+
+.ignore {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    text-decoration-line: underline;
+    color: #7C167D;
+    margin-top: 5px;
+}
+
+.share-btn-last {
+    float: right;
+}
