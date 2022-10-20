@@ -1,6 +1,6 @@
 import { SearchOutlined } from "@ant-design/icons";
 import { Avatar, Button, Input } from "antd";
-
+import   '../groupUserView.scss';
 const MembersList = () => {
     return (
       <div className="p-4">
@@ -9,7 +9,7 @@ const MembersList = () => {
           size="small"
           placeholder="search user to add"
           prefix={<SearchOutlined />}
-          className="mainViewHeader__headerSearch__groupSearch"
+          className="groupViewMemberList"
         />
         <div className="d-flex justify-content-between  align-items-center mt-3">
           <div className="d-flex align-items-center ">

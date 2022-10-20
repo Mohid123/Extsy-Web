@@ -1,4 +1,4 @@
-import PostCardImage from "../../mainViewComponents/postCardImage";
+import PostCardImage from "../../mainViewComponents/postCard/postCardImage";
 import CardImage from '../../../assets/img/postCardImage.png'
 
 import GroupAdminMiddleLayout from "./groupAdminMiddleLayout";

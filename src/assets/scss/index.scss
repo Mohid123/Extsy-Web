@@ -268,19 +268,7 @@ border-radius: 16px!important;
 }
     }
 }
-.mainViewContent{
-    
-    &__left{
-    //    z-index: -1 !important;
-      
-            }
-            &__middle{
-      
-            }
-            &__right{
-        
-            }
-}
+
 .mainViewLeftProfileInfo{
 
     &__mainContainer{
@@ -316,9 +304,7 @@ border-radius: 16px!important;
 overflow-x: scroll;
 white-space: nowrap;
 overflow-x: hidden;
-&__content{
-   
-}
+
     }
     &__mainViewPostContainer{
         width: 646px;
@@ -347,65 +333,7 @@ border-radius: 0px 0px 10px 0px;
     }
 }
 .mainViewRight{
-    &__whiteBtnFollow{
-        padding: 3px 10px;
 
-        width: 64px;
-        height: 32px;
-        font-family: $font-family;
-        /* Primary */
-        color: $primary-color !important;
-        border: 1px solid $primary-color !important;
-        border-radius: 6px !important; 
-   
-    }
- 
-//     &__whiteBtnFollow :hover{
-// background: $primary-color !important;
-// color: $white-color !important;
-//     }
-    &__image{
-width: 336px;
-height: 213px;
-background-image: url("../img/image.png");
-/* Note: backdrop-filter has minimal browser support */
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover; 
-border-radius: 10px;
-position: relative;
-&__text{
-    position: absolute;
-    bottom: 0;
-   
-}
-    }
-    &__textStyle{
-        font-family: $font-family;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 24px;
-        color: $white-color;
-        &__paraStyle{
-            font-weight: 400;
-                line-height: 16px;
-                color: $white-color;
-        }
-    }
-    &__peopleSuggestion{
-        font-family: $font-family-roboto!important;
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 19px;
-color: #212121;
-&__userName{
-    font-weight: 300;
-font-size: 11px;
-line-height: 13px;
-}
-    }
 }
 // post story
 .container {

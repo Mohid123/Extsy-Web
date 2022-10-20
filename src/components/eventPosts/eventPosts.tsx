@@ -1,7 +1,7 @@
 import GroupAdminLeftOption from '../groups/groupAdmin/groupAdminLeftOption';
-import Ad from '../mainViewComponents/ad';
-import FriendSuggestion from '../mainViewComponents/friendSuggestion';
-import ProfileInfo from '../mainViewComponents/profileInfo';
+import Ad from '../mainViewComponents/mainViewRight/ad';
+import FriendSuggestion from '../mainViewComponents/mainViewRight/friendSuggestion';
+import ProfileInfo from '../mainViewComponents/mainViewLeft/profileInfo';
 import './eventPosts.scss';
 import Posts from './posts/posts';
 import UpcomingEvents from './upcomingEvents/upcomingEvents';

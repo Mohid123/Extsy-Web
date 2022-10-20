@@ -2,7 +2,7 @@ import { PlusOutlined } from "@ant-design/icons";
 import { Avatar, Badge } from "antd";
 import { useRef } from "react";
 import { useDraggable } from "react-use-draggable-scroll";
-
+import postCardImage from '../../../assets/img/postCardImage.png'
 type Props = {
     img: string;
     title: string;
@@ -41,12 +41,8 @@ className="mt-5  "
          size={60}
          className={ "container__storyAvatar"}
        src={
-             <img
-               src="https://joeschmoe.io/api/v1/random"
-               style={{
-                 // width: 32,
-               }}
-             />
+             postCardImage
+             
            }
          />
        </Badge>

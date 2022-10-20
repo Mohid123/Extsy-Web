@@ -1,0 +1,71 @@
+//     &__whiteBtnFollow :hover{
+// background: $primary-color !important;
+// color: $white-color !important;
+//     }
+.image{
+    width: 336px;
+    height: 213px;
+    background-image: url("../../../assets/img/image.png");
+    /* Note: backdrop-filter has minimal browser support */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    border-radius: 10px;
+    position: relative;
+    &__text{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        border:1px solid rgba(102, 102, 102, 0.35);
+        border-radius: 0 0 10px 10px;
+        background-color: white;
+       
+    }
+        
+        &__textStyle1{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+          
+         
+        }
+        &__textStyle2{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            color: #494D61;
+        }
+    }
+
+.whiteBtnFollow{
+        padding: 3px 10px;
+
+        // width: 64px;
+        height: 32px;
+        font-family: 'Poppins';
+        /* Primary */
+        color: #7C167D!important;
+        border: 1px solid  #7C167D !important;
+        border-radius: 6px !important; 
+   
+    }
+ 
+
+.friendSuggestion{
+        font-family:'Poppins'!important;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+color: #212121;
+&__userName{
+    font-weight: 300!important;
+font-size: 11px;
+line-height: 13px;
+}
+    }
