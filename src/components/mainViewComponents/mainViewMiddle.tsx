@@ -12,7 +12,7 @@ const MainViewMiddle = () => {
       </div>
       <ShareContentComp />
       <div className="p-5">
-        <PostCardImage img={postCardImage} />
+        <PostCardImage img={postCardImage} width='34.375rem'/>
         <br />
         <PostCardText />
         <br />

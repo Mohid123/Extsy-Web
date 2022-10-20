@@ -8,18 +8,22 @@ import profileIcon from "../assets/img/Profile.svg"
 import { useHistory } from "react-router-dom";
 import avatar from "../assets/img/96.svg"
 import ellipse from "../assets/img/Ellipse 7.svg"
-
 import "../layout/layout.scss"
 import { useState } from "react";
+
+
+
 const MainViewHeader = () => {
-    const history = useHistory();
-    const [notifications, setNotifications] = useState(false)
+      const [notifications, setNotifications] = useState(false)
     function handleClick() {
         setNotifications(!notifications)
              //history.push(path);
       }
-       
-    return (
+    // function handleClick(path) {
+    //     history.push(path);
+    //   }
+    return (  
+
         <div className="mainViewHeader shadow">
                     <div className="headerCentral d-flex py-3 px-0 justify-content-around">
             <div className="mainViewHeader__left    "><img src={logo} style={{ height: "25px", width: "106px" }} alt="" /></div>

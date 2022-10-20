@@ -28,3 +28,221 @@ $font-color-white:#FFFFFF;
 .ant-tabs-nav-add{
     margin-left: 80% !important;
 }
+
+:host.top-modal.ant-modal-header {
+    display: none;
+}
+
+.ant-modal.top-modal {
+    width: 40.375rem!important;
+}
+
+.ant-modal.top-modal .ant-modal-content {
+    position: relative;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0;
+    border-radius: 18px;
+    box-shadow: 0 3px 6px -4px rgb(0 0 0 / 12%), 0 6px 16px 0 rgb(0 0 0 / 8%), 0 9px 28px 8px rgb(0 0 0 / 5%);
+    pointer-events: auto;
+}
+
+.top-modal .modal-content {
+    padding-inline: 54px;
+}
+
+.top-modal .modal-image {
+    max-width: 40.375rem;
+    width: 40.375rem;
+    height: 10rem;
+    padding: 0 0!important;
+    margin: 0 0!important;
+    background-image: url('../../assets/img/Img.svg');
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.add-image {
+    bottom: 30px;
+    left: 20px;
+}
+
+.camera-text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    color: white;
+}
+
+.form-heading {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.top-modal .ant-form-item-label > label {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+    height: 16px;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.top-modal .ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+    display: none!important;
+    margin-right: 4px;
+    color: #ff4d4f;
+    font-size: 14px;
+    font-family: SimSun, sans-serif;
+    line-height: 1;
+    content: '*';
+}
+
+.top-modal .ant-form-item {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    font-feature-settings: 'tnum', "tnum";
+    margin-bottom: 15px;
+    vertical-align: top;
+}
+
+.top-modal .ant-input-group {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    font-feature-settings: 'tnum', "tnum";
+    position: relative;
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 15px;
+}
+
+.top-modal .ant-btn {
+    line-height: 1.5715;
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: center;
+    background-image: none;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 0 rgb(0 0 0 / 2%);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+    height: 38px;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    color: rgba(0, 0, 0, 0.85);
+    border-color: #d9d9d9;
+    background: #fff;
+    width: 12.938rem;
+}
+
+.top-modal .ant-btn-primary {
+    color: #fff;
+    border-color: #7C167D;
+    background: #7C167D;
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+    box-shadow: 0 2px 0 rgb(0 0 0 / 5%);
+}
+
+.moderator {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.ant-collapse {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    font-feature-settings: 'tnum', "tnum";
+    background-color: #ffffff;
+    border: 1px solid #d9d9d9;
+    border-bottom: 0;
+    border-radius: 2px;
+}
+
+.top-modal .add-btn-end {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    color: #7C167D;
+    text-align: center;
+    width: 45px;
+    height: 26px;
+    padding-inline: 6px;
+    border: 1px solid #7C167D;
+}
+
+.top-modal .ant-picker {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    font-feature-settings: 'tnum', "tnum";
+    padding: 4px 11px 4px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+    transition: border 0.3s, box-shadow 0.3s;
+    width: 100%;
+}
+
+.top-modal .ant-picker-suffix {
+    display: flex;
+    flex: none;
+    align-self: center;
+    margin-left: 4px;
+    color: rgba(0, 0, 0, 1);
+    line-height: 1;
+    pointer-events: none;
+}
+
+.usman {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+}
+
+// .ant-tabs-tab-active{
+//     border-bottom: 1px solid #7C157D !important;
+// }
