@@ -8,9 +8,9 @@ const  GroupAdminMiddleLayout= ({children}:Props) => {
         <div className="pt-5">
         <div className='coverImg' ></div>
         <GroupMemberInfo/>
-        {/* <div className="" style={{width:'580px'}}> */}
+        <div className="p-5">
         {children}
-        {/* </div> */}
+        </div>
          
        </div>
     );

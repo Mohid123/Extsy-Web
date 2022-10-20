@@ -5,9 +5,9 @@ import homeIcon from "../assets/img/Home.svg"
 import bellIcon from "../assets/img/Notification.svg"
 import manyPersonIcon from "../assets/img/many person.svg"
 import profileIcon from "../assets/img/Profile.svg"
-import { useHistory } from "react-router-dom";
+
 const MainViewHeader = () => {
-    const history = useHistory();
+  
     // function handleClick(path) {
     //     history.push(path);
     //   }
