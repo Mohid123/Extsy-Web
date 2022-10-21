@@ -59,7 +59,7 @@ const EventPosts = () => {
       <div className='d-flex flex-column'>
       {posts.map((post: PostsArr, index: number) => {
         return(
-            <Posts id={post.id} profilePicURL={post.profilePicURL} createdAt={post.createdAt} userName={post.userName} type={post.type} text={post.text} coverImageURL={post.coverImageURL} />
+            <Posts key={post.id} id={post.id} profilePicURL={post.profilePicURL} createdAt={post.createdAt} userName={post.userName} type={post.type} text={post.text} coverImageURL={post.coverImageURL} />
         )
         
       })}

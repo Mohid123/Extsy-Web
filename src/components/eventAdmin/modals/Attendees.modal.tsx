@@ -4,8 +4,8 @@ import './Attendees.modal.scss';
 const Attendees = (props: any) => {
   return (
     <>
-      <Modal title="Attendees" open={props.isModalOpen} className='position-relative attendees-modal'>
-        <div className='position-absolute cross-icon'>&#10005;</div>
+      <Modal title="Attendees" {...props} className='position-relative attendees-modal'>
+        {/* <div className='position-absolute cross-icon'>&#10005;</div> */}
         <div className='d-flex flex-column'>
           <div className='d-flex flex-row justify-content-between mb-3'>
             <img alt='rounded-img' className='img-fluid circular-img' src='https://img.posterlounge.co.uk/images/l/1898617.jpg'/>

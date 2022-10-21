@@ -15,7 +15,7 @@ const Posts = (props: PostsArr) => {
           <img alt='rounded-img' className='circular-img-posts' src={props.profilePicURL}/>
         </div>
         <div className='d-flex flex-column ms-2 flex-fill'>
-            <span className='share_name'><strong style={{color: 'black'}}>{props.userName}</strong> shared <strong style={{color:'black'}}>{props.type}</strong></span>
+            <span className='share_name'><span style={{color: 'black', fontWeight: '500'}}>{props.userName}</span> shared <span style={{color:'black', fontWeight: '500'}}>{props.type}</span></span>
             <span className='date_name'>{moment(props.createdAt * 1000).format('MMMM Do YYYY') } at {moment(props.createdAt * 1000).format('h:mm a')}</span>
         </div>
         <div className='drop-icon'>
