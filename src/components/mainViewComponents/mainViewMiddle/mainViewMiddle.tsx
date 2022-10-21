@@ -1,8 +1,8 @@
 import StoryCard from "./storyCard";
-import PostCardImage from "./postCardImage";
-import PostCardText from "./PostCardText";
-import PostCardVideo from "./postCardVideo";
-import postCardImage from '../../assets/img/postCardImage.png'
+import PostCardImage from "../postCard/postCardImage";
+import PostCardText from "../postCard/PostCardText";
+import PostCardVideo from "../postCard/postCardVideo";
+import postCardImage from '../../../assets/img/postCardImage.png'
 import ShareContentComp from "./shareContentComp";
 const MainViewMiddle = () => {
   return (

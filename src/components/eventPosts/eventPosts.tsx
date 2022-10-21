@@ -1,7 +1,7 @@
 import GroupAdminLeftOption from '../groups/groupAdmin/groupAdminLeftOption';
-import Ad from '../mainViewComponents/ad';
-import FriendSuggestion from '../mainViewComponents/friendSuggestion';
-import ProfileInfo from '../mainViewComponents/profileInfo';
+import Ad from '../mainViewComponents/mainViewRight/ad';
+import FriendSuggestion from '../mainViewComponents/mainViewRight/friendSuggestion';
+import ProfileInfo from '../mainViewComponents/mainViewLeft/profileInfo';
 import './eventPosts.scss';
 import Posts from './posts/posts';
 import UpcomingEvents from './upcomingEvents/upcomingEvents';
@@ -59,7 +59,7 @@ const EventPosts = () => {
       <div className='d-flex flex-column'>
       {posts.map((post: PostsArr, index: number) => {
         return(
-            <Posts id={post.id} profilePicURL={post.profilePicURL} createdAt={post.createdAt} userName={post.userName} type={post.type} text={post.text} coverImageURL={post.coverImageURL} />
+            <Posts key={post.id} id={post.id} profilePicURL={post.profilePicURL} createdAt={post.createdAt} userName={post.userName} type={post.type} text={post.text} coverImageURL={post.coverImageURL} />
         )
         
       })}

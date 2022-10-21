@@ -2,8 +2,8 @@ import { PlusOutlined } from "@ant-design/icons";
 import { Avatar, Badge } from "antd";
 import { useRef, useState } from "react";
 import { useDraggable } from "react-use-draggable-scroll";
-import AddStory from "../stories/addStory"
-import UserStory from "../stories/userStory"
+import AddStory from "../../stories/addStory"
+import UserStory from "../../stories/userStory"
 
 type Props = {
   img: string;

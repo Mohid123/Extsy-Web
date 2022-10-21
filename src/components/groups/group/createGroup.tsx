@@ -7,12 +7,8 @@ import PrimaryButton from '../../PrimaryButton';
 import cameraIcon from '../../../assets/img/cameraIcon.svg'
 
 const { Panel } = Collapse;
-// type Prop={
-//   open:boolean;
-//   onCancel:()=>{}
-// }
+
 const CreateGroup = (props:any) => {
-    // const [open, setOpen] = useState(false);
     const onChange = (e:any) => {
       console.log(e);
     };
@@ -46,9 +42,6 @@ const CreateGroup = (props:any) => {
               }
             }
             {...props}
-            // open={open}
-            // onOk={() => onCancel}
-            // onCancel={() => onCancel}
             width={626}
           >
             <div className="coverImg">

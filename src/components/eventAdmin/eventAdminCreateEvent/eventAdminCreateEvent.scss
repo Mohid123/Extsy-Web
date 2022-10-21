@@ -16,13 +16,54 @@
 
 .main-card {
     width: 40.375rem;
-    height: 46.438rem;
     border: none;
     border-radius: 18px;
 }
 
+@media(max-width: 1280px) {
+    .centralCard {
+        max-width: 35.375rem;
+    }
+    
+    .createEventButton {
+        background-color: #7C167D;
+        color: white;
+        font-family: 'Manrope', sans-serif;
+        font-size: 16px;
+        border-radius: 6px;
+        border: none;
+        outline: none;
+        width: 35.375rem;
+        height: 2.125rem;
+    }
+    
+    .main-card {
+        width: 35.375rem;
+        border: none;
+        border-radius: 18px;
+    }
+
+    .blurred-bottom {
+        top: 0;
+        left: 0;
+        background: radial-gradient(100% 329.18% at 0% 0%, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.03) 100%);
+        box-shadow: 0px 20px 40px rgb(0 0 0 / 5%);
+        backdrop-filter: blur(15px);
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
+        width: 35.375rem!important;
+        height: 34px!important;
+    }
+
+    .icons {
+        position: absolute;
+        top: -20px!important;
+        right: 49px;
+    }
+}
+
 .blurred-bottom {
-    top: 14%;
+    top: 14.2%;
     left: 0;
     background: radial-gradient(100% 359.18% at 0% 0%, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.03) 100%);
     box-shadow: 0px 20px 40px rgb(0 0 0 / 5%);
@@ -129,6 +170,7 @@
     font-size: 11px;
     line-height: 16px;
     color: #666666;
+    width: 100%;
 }
 
 .my-custom {

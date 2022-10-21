@@ -1,7 +1,4 @@
-import './eventAdminCreateEvent.scss';
-import topImg from '../../../assets/img/Img.svg';
-import deleteIcon from '../../../assets/img/Delete_Icons.svg';
-import editIcon from '../../../assets/img/Edit.svg';
+import './eventViewCard.scss';
 import usersIcon from '../../../assets/img/notif_badge.svg';
 import usersStory from '../../../assets/img/notif_story.svg';
 import usersClock from '../../../assets/img/notif_clock.svg';
@@ -11,11 +8,12 @@ import usersLocation from '../../../assets/img/notif_locations.svg';
 import usersPrice from '../../../assets/img/notif_price.svg';
 import { Avatar, Tooltip } from 'antd';
 import { AntDesignOutlined, UserOutlined } from '@ant-design/icons';
-import Attendees from '../modals/Attendees.modal';
+import topImg from '../../../assets/img/Img.svg';
+import Attendees from '../../eventAdmin/modals/Attendees.modal';
+import shareIcon from '../../../assets/img/share-icon.svg';
 import { useState } from 'react';
 
-
-const EventAdminCreateEvent = () => {
+const EventViewCard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const showModal = () => {
@@ -25,7 +23,6 @@ const EventAdminCreateEvent = () => {
   const hideModal = () => {
       setIsModalOpen(false);
   };
-//onClick={() => {isModalOpen === true && hideModal()}}
   return (
     <div className="centralCard">
       {/* <button className='createEventButton mb-4'><span>&#10003;</span>&nbsp;Create Event</button> */}
@@ -171,9 +168,20 @@ const EventAdminCreateEvent = () => {
           </Avatar.Group>
 
           <span className='description'>Description</span>
-          <span className='actualDescription pb-3 mt-3'>
+          <span className='actualDescription pb-2 mt-3 border-bottom border-light'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas metus sagittis, interdum egestas pharetra lorem in auctor enim. Dolor morbi malesuada phasellus feugiat nascetur faucibus ullamcorper tellus nec. Nunc magna ut felis, condimentum. Nulla orci venenatis vitae mattis at et dolor. Adipiscing morbi in feugiat habitasse orci fusce molestie tellus sit. Felis gravida a maecenas arcu aliquet. Sed mattis tristique sed neque eget laoreet ut. Etiam quam pulvinar enim eu, purus turpis vivamus. Sollicitudin morbi orci massa posuere volutpat nulla. Diam
           </span>
+          <div className='d-flex justify-content-start pt-2 pb-4 w-100'>
+            <div className='flex-fill'>
+                <button className='interested-btn me-2'>Interested</button>
+                <button className='attending-btn'>Attend</button>
+                <span className='ignore mx-3'>Ignore</span>
+            </div>
+            <div className='d-flex'>
+                <img alt='sharing is caring' className='w-75 h-75' src={shareIcon}/>
+                <span className='share-text ms-2'>Share</span>
+            </div>
+          </div>
 
         </div>
       </div>
@@ -185,4 +193,4 @@ const EventAdminCreateEvent = () => {
   )
 }
 
-export default EventAdminCreateEvent
+export default EventViewCard
