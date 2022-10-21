@@ -15,6 +15,7 @@ import EventView from "../components/eventView/eventView";
 import SignIn from "../views/auth/SignIn";
 import SignUpWithSocailLink from "../views/auth/SignUpWithSocialLink";
 import SignUp from "../views/auth/SignUp";
+import PostTypes from "../components/eventPosts/postTypes/postTypes";
 
 
 export const routes = [
@@ -102,6 +103,11 @@ export const routes = [
 	{
 		path: '/eventView',
 		component: EventView,
+		layout: 'main'
+	},
+	{
+		path: '/postTypes',
+		component: PostTypes,
 		layout: 'main'
 	}
 ]
