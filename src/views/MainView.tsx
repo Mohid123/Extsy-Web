@@ -1,7 +1,7 @@
 import MainViewHeader from "../components/LandingPageHeader";
-import MainViewLeftProfileInfo from "../components/mainViewComponents/mainViewLeftProfileInfo";
-import MainViewMiddle from "../components/mainViewComponents/mainViewMiddle";
-import MainViewRight from "../components/mainViewComponents/mainViewRight";
+import MainViewLeftProfileInfo from "../components/mainViewComponents/mainViewLeft/profileInfo";
+import MainViewMiddle from "../components/mainViewComponents/mainViewMiddle/mainViewMiddle";
+import MainViewRight from "../components/mainViewComponents/mainViewRight/mainViewRight";
 import ChatBox from '../components/chat/chat'
 
 const Main = () => {
