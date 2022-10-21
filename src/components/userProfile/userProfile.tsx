@@ -1,4 +1,3 @@
-import Header from "../LandingPageHeader"
 import EditUserProfile from "./editUserProfile"
 import TabsPanel from  "./Tabs";
 import TabsPanel1 from  "./TabsUserFollowing";
@@ -32,7 +31,7 @@ const UserProfileInfo = () => {
     setEditProfile(true)
   }
     return ( 
-        <div > <Header></Header>
+        <div > 
 {editProfile? (<EditUserProfile/>):( <div className=" container">
          <Row
       gutter={{ xs: 24, sm: 24, md: 24, lg: 8 }}

@@ -106,5 +106,10 @@ export const routes = [
 		path: '/eventView',
 		component: EventView,
 		layout: 'main'
+	},
+	{
+		path: '/user/userProfile',
+		component: UserProfile,
+		layout: 'main'
 	}
 ]

@@ -17,7 +17,7 @@ const Chat = () => {
     const [opened, setOpened] = useState(false)
     const [online, setOnline] = useState(true)
     const [userChat, setUserChat] = useState(true)
-    const [count, setCount] = useState(2)
+    const [count, setCount] = useState(0)
     
 function insertInArray(){
     // setUserChat(userChat => [...userChat, newValue] );

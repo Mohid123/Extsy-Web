@@ -10,14 +10,16 @@ import tab2Image3 from '../../assets/img/7748175 3.svg'
 import tab2Image4 from '../../assets/img/7748175 4.svg'
 import Like from '../../assets/img/Like.svg'
 import Comment from '../../assets/img/Comment.svg'
-
 import Share from '../../assets/img/Share.svg'
+import Heart from '../../assets/img/Heart.svg'
+import CryptoIcon from '../../assets/img/Crypto icons.svg'
+import Ellipse3 from '../../assets/img/Ellipse 3.svg'
 
 
 import {   } from '@ant-design/icons';
 import {
-    RightOutlined
-  } from '@ant-design/icons';
+  RightOutlined
+} from '@ant-design/icons';
 
 
 
@@ -158,88 +160,121 @@ const TabsPanel  = () => {
       <Col className="gutter-row" span={6} >
       <div className='px-2'>
         <img src={tab2Image1} alt="" />
-        <div className='d-flex px-4 justify-content-between blur-bg'>
-                                <div style={{ position: 'relative', bottom: '10px' }}>
-                                    <img src={Like} alt="" />
-
-                                    <span className='textColor'>124</span>
+        
+        <div className='d-flex px-4 justify-content-between blur-bg2'>
+                                <div >
+                                  <p className='textColor mt-2'>Monkey with hat</p> 
                                 </div>
-                                <div style={{ position: 'relative', bottom: '10px' }}>
-                                    <img src={Comment} alt="" />
-                                    <span className='textColor'>9</span>
-                                </div>
+                                
 
-                                <div style={{ position: 'relative', bottom: '10px' }}>
-                                    <img src={Share} alt="" />
+                                <div className='d-flex'>
+                                    <img src={Heart} className="" style={{width:'20px'}} alt="" />
+                                    <p className='textColor mt-2 ms-2'> 6</p>
                                 </div>
 
 
+                            </div>
+                            <div className=' monkeyDiv'>
+                             <div className='d-flex'>
+                             <img src={Ellipse3} alt="" />
+                              <p className='mt-3 ms-2'>Johinson</p>
+                             </div>
+                             <div className='d-flex'>
+                             <img src={CryptoIcon} alt="" />
+                              <p className='mt-3 ms-2'>615</p>
+                             </div>
+                             
+                             
                             </div>
       </div>
         </Col>
         <Col className="gutter-row" span={6} >
       <div className='px-2'>
         <img src={tab2Image2} alt="" />
-        <div className='d-flex px-4 justify-content-between blur-bg'>
-                                <div style={{ position: 'relative', bottom: '10px' }}>
-                                    <img src={Like} alt="" />
-
-                                    <span className='textColor'>124</span>
+        <div className='d-flex px-4 justify-content-between blur-bg2'>
+                                <div >
+                                  <p className='textColor mt-2'>Monkey with hat</p> 
                                 </div>
-                                <div style={{ position: 'relative', bottom: '10px' }}>
-                                    <img src={Comment} alt="" />
-                                    <span className='textColor'>9</span>
-                                </div>
+                                
 
-                                <div style={{ position: 'relative', bottom: '10px' }}>
-                                    <img src={Share} alt="" />
+                                <div className='d-flex'>
+                                    <img src={Heart} className="" style={{width:'20px'}} alt="" />
+                                    <p className='textColor mt-2 ms-2'> 6</p>
                                 </div>
 
 
+                            </div>
+                            <div className=' monkeyDiv'>
+                             <div className='d-flex'>
+                             <img src={Ellipse3} alt="" />
+                              <p className='mt-3 ms-2'>Johinson</p>
+                             </div>
+                             <div className='d-flex'>
+                             <img src={CryptoIcon} alt="" />
+                              <p className='mt-3 ms-2'>615</p>
+                             </div>
+                             
+                             
                             </div>
       </div>
         </Col>
         <Col className="gutter-row" span={6} >
       <div className='px-2'>
         <img src={tab2Image3} alt="" />
-        <div className='d-flex px-4 justify-content-between blur-bg'>
-                                <div style={{ position: 'relative', bottom: '10px' }}>
-                                    <img src={Like} alt="" />
-
-                                    <span className='textColor'>124</span>
+        <div className='d-flex px-4 justify-content-between blur-bg2'>
+                                <div >
+                                  <p className='textColor mt-2'>Monkey with hat</p> 
                                 </div>
-                                <div style={{ position: 'relative', bottom: '10px' }}>
-                                    <img src={Comment} alt="" />
-                                    <span className='textColor'>9</span>
-                                </div>
+                                
 
-                                <div style={{ position: 'relative', bottom: '10px' }}>
-                                    <img src={Share} alt="" />
+                                <div className='d-flex'>
+                                    <img src={Heart} className="" style={{width:'20px'}} alt="" />
+                                    <p className='textColor mt-2 ms-2'> 6</p>
                                 </div>
 
 
+                            </div>
+                            <div className=' monkeyDiv'>
+                             <div className='d-flex'>
+                             <img src={Ellipse3} alt="" />
+                              <p className='mt-3 ms-2'>Johinson</p>
+                             </div>
+                             <div className='d-flex'>
+                             <img src={CryptoIcon} alt="" />
+                              <p className='mt-3 ms-2'>615</p>
+                             </div>
+                             
+                             
                             </div>
       </div>
         </Col>
         <Col className="gutter-row" span={6} >
       <div className='px-2'>
         <img src={tab2Image4} alt="" />
-        <div className='d-flex px-4 justify-content-between blur-bg'>
-                                <div style={{ position: 'relative', bottom: '10px' }}>
-                                    <img src={Like} alt="" />
-
-                                    <span className='textColor'>124</span>
+        <div className='d-flex px-4 justify-content-between blur-bg2'>
+                                <div >
+                                  <p className='textColor mt-2'>Monkey with hat</p> 
                                 </div>
-                                <div style={{ position: 'relative', bottom: '10px' }}>
-                                    <img src={Comment} alt="" />
-                                    <span className='textColor'>9</span>
-                                </div>
+                                
 
-                                <div style={{ position: 'relative', bottom: '10px' }}>
-                                    <img src={Share} alt="" />
+                                <div className='d-flex'>
+                                    <img src={Heart} className="" style={{width:'20px'}} alt="" />
+                                    <p className='textColor mt-2 ms-2'> 6</p>
                                 </div>
 
 
+                            </div>
+                            <div className=' monkeyDiv'>
+                             <div className='d-flex'>
+                             <img src={Ellipse3} alt="" />
+                              <p className='mt-3 ms-2'>Johinson</p>
+                             </div>
+                             <div className='d-flex'>
+                             <img src={CryptoIcon} alt="" />
+                              <p className='mt-3 ms-2'>615</p>
+                             </div>
+                             
+                             
                             </div>
       </div>
         </Col>

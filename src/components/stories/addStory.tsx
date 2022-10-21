@@ -11,6 +11,10 @@ import BackArrowIcon from "../../assets/img/Back.svg"
 import Close from "../../assets/img/Close.svg"
 import galleryImage1 from "../../assets/img/Rectangle 2.svg"
 import UploadedImage from "../../assets/img/Rectangle 22.svg"
+import VideoCamera from "../../assets/img/Group 2.svg"
+import UploadIcon from "../../assets/img/Group 1.svg"
+import CloseDialog from "../../assets/img/Icons.svg"
+
 import   "./index.scss"
 
 
@@ -61,27 +65,32 @@ const AddStory = () => {
     }
  return (
     <div>
-        {card1? ( <div className=" card" >
-        <div className="d-flex justify-content-between ">
-        <h5 className="">Add to Your Story</h5>
-        <img src={CloseIcon} alt="" style={{width:'30px'}} className="cursor"onClick={()=>{handleClick('close')}}/>
-        </div>
-        <p>Upload</p>
-        <div className="d-flex">
+        {card1? ( <div className=" card p" >
+       
+        {/* <img src={CloseIcon} alt="" style={{width:'30px'}} className="cursor"onClick={()=>{handleClick('close')}}/> */}
+        
+        <div className="d-flex cardBackground">
         <Card className="innerCard text-center " onClick={()=>{handleClick('text')}}>
-            <img src={Text} alt="" /> <br />
-            <img src={Text1} alt="" />
+            <img src={UploadIcon} className="" alt="" /> <br />
+            <h6 className="innerCard__font">Upload</h6>
+            <p className="innerCard__font__subFont">Upload your <br /> image here</p>
     </Card>
     <Card className="innerCard text-center  " onClick={()=>{handleClick('image')}}>
-            <img src={Image} alt="" /> <br />
-            <img src={Text2} alt="" />
+            <img src={VideoCamera} alt="" /> <br />
+            <h6 className="innerCard__font">Upload</h6>
+            <p className="innerCard__font__subFont">Upload your <br /> image here</p>
+            
     </Card>
-    <Card className="innerCardBackground text-center  "onClick={()=>{handleClick('video')}} >
-            <img src={Video} alt="" /> <br />
-            <img src={Text3} alt="" />
+    <Card className="innerCard text-center  "onClick={()=>{handleClick('video')}} >
+            <img src={VideoCamera} alt="" /> <br />
+            <h6 className="innerCard__font">Upload</h6>
+            <p className="innerCard__font__subFont">Upload your <br /> image here</p>
+            
     </Card>
     </div>
-    <Divider></Divider>
+    <div className="text-center mt-3">
+        <img src={CloseDialog} alt="" className="cursor"onClick={()=>{handleClick('close')}} />
+    </div>
     </div>):textCard?(<div className="uploadCard">
     <h5 className="">Add to Your Storyyyy</h5>
     <p>Write something here @Dr.Dre @KayneWest <br /> Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit.</p>
