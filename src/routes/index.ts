@@ -1,5 +1,3 @@
-import AddRemoveMemberComp from "../components/groups/groupAdmin/AddRemoveMember/addRemoveMembersComp";
-import Login from "../views/auth/Login";
 import SignUp from "../views/auth/SignUp";
 import SignUpUsingEmail from "../views/auth/SignUpUsingEmail";
 import GroupAddRemoveMembers from "../views/GroupAddRemoveMembers";
@@ -11,13 +9,12 @@ import GroupUserViewMain from "../views/GroupUserViewMain";
 import GroupUserViewMembersList from "../views/GroupUserViewMembersList";
 import GroupUserViewModerators from "../views/GroupUserViewModerators";
 import Main from "../views/MainView";
-
 import EventAdmin from './../components/eventAdmin/eventAdmin';
-import UserProfile from "../components/userProfile/userProfile"
 import ExploreUser from "../components/userProfile/exploreUser"
 import PushNotifications from "../layout/pushNotifications"
 import EventPosts from "../components/eventPosts/eventPosts";
 import EventView from "../components/eventView/eventView";
+import SignIn from "../views/auth/SignIn";
 
 
 export const routes = [
@@ -67,8 +64,8 @@ export const routes = [
 		layout: 'main',
 	},
 	{
-		path: '/auth/login',
-		component: Login,
+		path: '/auth/signin',
+		component: SignIn,
 		layout: 'auth',
 	},
 	{
