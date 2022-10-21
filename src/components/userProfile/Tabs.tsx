@@ -1,5 +1,5 @@
 import {useState,useEffect} from 'react';
-import { Col, Row, Tabs,Avatar, List } from 'antd';
+import { Col, Row, Tabs,Avatar, List, Button, Divider } from 'antd';
 import tab1Image1 from '../../assets/img/Rectangle 2.svg'
 import tab1Image2 from '../../assets/img/Rectangle 2.1.svg'
 import tab1Image3 from '../../assets/img/Rectangle 2.2.svg'
@@ -14,7 +14,11 @@ import Share from '../../assets/img/Share.svg'
 import Heart from '../../assets/img/Heart.svg'
 import CryptoIcon from '../../assets/img/Crypto icons.svg'
 import Ellipse3 from '../../assets/img/Ellipse 3.svg'
+import ArrowIcon from '../../assets/img/arrowIcon.svg'
+import Bitcoin from '../../assets/img/Bitcoin Plus (Xbc).svg'
 
+
+import   "./index.scss"
 
 import {   } from '@ant-design/icons';
 import {
@@ -281,10 +285,100 @@ const TabsPanel  = () => {
         </Row>
     </Tabs.TabPane>
     <Tabs.TabPane tab="Tokens" key="3">
-    <Row
-      gutter={{ xs: 24, sm: 24, md: 24, lg: 6 }}
+    <div
+    
+      className=" upperDiv "
+      
     >
-      <Col className="gutter-row" span={6} >
+      
+      <div className=""  >
+        <h6 className='text-start'>Total balance</h6>
+        <div className='d-flex'>
+        <h4>$ 352,556.00</h4>
+        
+          <p className='ms-5 mt-2 me-2 textGreen'>+ 36%</p>
+          <img src={ArrowIcon} alt="" />
+        
+        </div>
+        
+      </div>
+      <div className="text-start"  >
+      <h6>Send</h6>
+      <div className='d-flex'>
+        <h4>$ 352,556.00</h4>
+        
+          <p className='ms-5 mt-2 me-2 textGreen'>+ 36%</p>
+          <img src={ArrowIcon} alt="" />
+        
+        </div>
+      </div>
+      <div className="text-start"  >
+      <h6>received</h6>
+      <div className='d-flex'>
+        <h4>$ 352,556.00</h4>
+        
+          <p className='ms-5 mt-2 me-2 textGreen'>+ 36%</p>
+          <img src={ArrowIcon} alt="" />
+        
+        </div>
+      </div>
+      </div>
+      <div className='header'>
+        <h6>Currency</h6>
+        <h6>Quantity</h6>
+
+        <h6>Value</h6>
+
+        <h6>Status</h6>
+
+      </div>
+      <div className='table '>
+        <div className='d-flex'>
+          <img src={Bitcoin} alt="" />
+        <div>
+        <h6 className='pb-0 mb-0 mt-2'>Bitcoin Plus</h6>
+        <p className='text-start mb-0'>BTC</p>
+        </div>
+        </div>
+        <h6 className='mt-3'>245</h6>
+        <h6 className='mt-3'>$34565</h6>
+        <h6 className=' actionBackground'>send</h6>
+
+      </div>
+      <Divider className='mt-2 mb-2'></Divider>
+      <div className='table '>
+        <div className='d-flex'>
+          <img src={Bitcoin} alt="" />
+        <div>
+        <h6 className='pb-0 mb-0 mt-2'>Bitcoin Plus</h6>
+        <p className='text-start mb-0'>BTC</p>
+        </div>
+        </div>
+        <h6 className='mt-3'>245</h6>
+        <h6 className='mt-3'>$34565</h6>
+        <h6 className=' actionBackground'>send</h6>
+
+      </div>
+      <Divider className='mt-2 mb-2' ></Divider>
+      <div className='table '>
+        <div className='d-flex'>
+          <img src={Bitcoin} alt="" />
+        <div>
+        <h6 className='pb-0 mb-0 mt-2'>Bitcoin Plus</h6>
+        <p className='text-start mb-0'>BTC</p>
+        </div>
+        </div>
+        <h6 className='mt-3'>245</h6>
+        <h6 className='mt-3'>$34565</h6>
+      <h6 className=' actionBackground'>send</h6>
+
+      </div>
+      <Divider className='mt-2 mb-2'></Divider>
+    {/* <Row
+      gutter={{ xs: 24, sm: 24, md: 24, lg: 24 }}
+    >
+      
+      <Col className="gutter-row" span={24} >
       <List
           dataSource={data}
           renderItem={item => (
@@ -299,38 +393,8 @@ const TabsPanel  = () => {
           )}
         />
         </Col>
-        <Col className="gutter-row" span={6} >
-      <List
-          dataSource={data}
-          renderItem={item => (
-            <List.Item key={item.email}>
-              <List.Item.Meta
-                avatar={<Avatar src={item.picture.large} />}
-                title={<a href="https://ant.design">{item.name.last}</a>}
-                description={item.email}
-              />
-              <RightOutlined />
-            </List.Item>
-          )}
-        />
-        </Col>
-        <Col className="gutter-row pl-5" span={6}  >
-      <List
-     
-          dataSource={data}
-          renderItem={item => (
-            <List.Item key={item.email}>
-              <List.Item.Meta
-                avatar={<Avatar src={item.picture.large} />}
-                title={<a href="https://ant.design">{item.name.last}</a>}
-                description={item.email}
-              />
-              <RightOutlined />
-            </List.Item>
-          )}
-        />
-        </Col>
-        </Row>
+      
+        </Row> */}
    
     </Tabs.TabPane>
   </Tabs>
