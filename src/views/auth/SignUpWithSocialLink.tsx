@@ -1,14 +1,12 @@
-import { Button } from "antd";
 
 import apple from  "../../assets/img/apple.svg"
 import google from "../../assets/img/google.svg"
 import facebook from "../../assets/img/facebook.svg"
-
 import WhiteButton from "../../components/WhiteButton";
 import PrimaryButton from "../../components/PrimaryButton";
 import logo from "../../assets/img/ExtsyLogo.svg"
-import image from '../../assets/img/signInPageImage.svg'
 import '../../components/authComp/signUpWithSocialLink/signUpwithSocialLink.scss'
+import LeftCoverImageComp from "../../components/authComp/signUpWithSocialLink/signUpComp";
 const SignUpWithSocailLink = () => {
     return (
       <div className="signUp">
@@ -17,20 +15,7 @@ const SignUpWithSocailLink = () => {
         </div>
         {/* <hr className="p-0 mt-2 mb-0 signUp__header" /> */}
         <div className="d-flex justify-content-center">
-          <div className=" signUpSection ">
-            <div className="left-cover-image">
-            <img src={image} alt="coverimg"/>
-          <p className="signUpSection__signUpPara mb-0 ">
-              Explore the world to experience the nature of others!
-            </p>
-            <hr style={{ width:'36.063rem' ,marginTop:'0rem', paddingTop:'0'}
-            }/>
-            <p className="signUpSection__signUpPara2 ">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-              lobortis maximus
-            </p>
-            </div>
-          </div>
+          <LeftCoverImageComp/>
           <div className=" signUpSection2 ">
         
             {/* <Button  className="signUpBtn mt-4">
