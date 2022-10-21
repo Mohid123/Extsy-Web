@@ -8,7 +8,7 @@ const MainViewRight = () => {
     <div className='mainViewRight'>
     <Ad/>
     <FriendSuggest/>
-    <ChatBox/>
+    {/* <ChatBox/> */}
     </div>
      );
 }

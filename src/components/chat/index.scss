@@ -8,6 +8,7 @@ width: 278px;
 height: 56px;
 position: fixed;
 bottom: 0px;
+right: 300px;
 background: #FFFFFF;
 border: 1px solid #F4F4F4;
 box-shadow: 0px -4px 24px rgba(0, 0, 0, 0.05), 0px 0px 1px rgba(0, 0, 0, 0.12);
@@ -16,6 +17,7 @@ border-radius: 16px 16px 0px 0px;
 .openedChatBox{
     box-sizing: border-box;
 position: fixed;
+right: 300px;
 width: 278px;
 height: 487px;
 bottom: 0px;
@@ -31,6 +33,7 @@ background: rgba(191, 99, 197, 0.05);
 border-radius: 10px;
 margin-left: 10px;
 padding: 5px;
+margin-top: 10px;
 }
 .headingFont{
     font-family: 'Poppins';
@@ -73,13 +76,11 @@ color: #7C7C7C;
 }
 .userChatbox{
     box-sizing: border-box;
-
-position: fixed;
+margin-right: 50px;
 width: 278px;
+position: relative;
 height: 487px;
-right: 634px;
-bottom: 0px;
-
+right: 0px;
 background: #FFFFFF;
 border: 1px solid #F4F4F4;
 box-shadow: 0px -4px 24px rgba(0, 0, 0, 0.05), 0px 0px 1px rgba(0, 0, 0, 0.12);
@@ -109,12 +110,12 @@ border-radius: 5px;
 .message2{
     display: flex;
 flex-direction: row;
-align-items: center;
+justify-content: end;
 padding: 5px 15px;
 padding-top: 5px;
 width: fit-content;
 height: 27px;
-// float: right;
+margin-left: auto;
 margin-top: 10px;
 background: #BF63C5;
 border-radius: 5px;
@@ -155,3 +156,13 @@ color: #707070;
     
     }
     
+.direc{
+    flex-direction: row;
+    display: flex;
+    position: fixed;
+    bottom: 0px;
+    right: 550px;
+}
+.cursor {
+    cursor: pointer;
+}
