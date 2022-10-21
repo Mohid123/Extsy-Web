@@ -18,6 +18,7 @@ import ExploreUser from "../components/userProfile/exploreUser"
 import PushNotifications from "../layout/pushNotifications"
 import EventPosts from "../components/eventPosts/eventPosts";
 import EventView from "../components/eventView/eventView";
+import PostTypes from "../components/eventPosts/postTypes/postTypes";
 
 
 export const routes = [
@@ -105,6 +106,11 @@ export const routes = [
 	{
 		path: '/eventView',
 		component: EventView,
+		layout: 'main'
+	},
+	{
+		path: '/postTypes',
+		component: PostTypes,
 		layout: 'main'
 	}
 ]

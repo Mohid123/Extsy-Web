@@ -1,0 +1,146 @@
+.post-type-card {
+    width: 40.25rem;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 0px 1px rgba(0, 0, 0, 0.12);
+    border-radius: 16px;
+    padding-top: 40px;
+    background: white;
+    height: 50.375rem;
+}
+
+.inline-card {
+    padding-inline: 50px;
+}
+
+.add-thoughts {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.thoughts {
+    padding: 25px 0;
+    color: #666666;
+}
+
+.main-image {
+    width: 100%;
+    height: 19.188rem;
+    border-radius: 18px;
+    padding-bottom: 25px;
+}
+
+.flower-img {
+    object-fit: cover;
+}
+
+.smaller-img-div {
+   width: 5rem;
+   height: 5rem;
+   border-radius: 5px;
+   padding-top: 25px;
+}
+
+.overlay-absolute {
+    position: relative;
+}
+
+.overlay-absolute:hover .overlay {
+    opacity: 0.5;
+    transition: 0.4s ease-in-out;
+}
+
+.smaller-img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 6px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background-color: #666666;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.add-button {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5px;
+    background: rgba(196, 196, 196, 0.2);
+}
+
+.input-img {
+    width: 5rem;
+    height: 5rem;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.cross-icon-img {
+    top: 10px;
+    right: 30px;
+    padding: 2px 6px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1), 0px 0px 1px rgba(0, 0, 0, 0.1); 
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    font-size: 11px;
+    background-color: white;
+    font-weight: 600;
+}
+
+.overlay-icon {
+    font-size: 12px;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 100%;
+    background-color: black;
+    opacity: 1;
+    color: white
+}
+
+.bottom-div {
+    height: 70px;
+    width: 100%;
+    background: rgba(99, 116, 160, 0.5);
+    border-radius: 0px 0px 16px 16px;
+    margin-top: 80px;
+}
+
+.photo-txt {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+}
+
+.fly {
+    background: #6374A0;
+    height: 70px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-bottom-right-radius: 16px;
+}
+
+.vertical-line {
+    border-left: 1px solid white;
+    height: 20px;
+    top: 25px;
+    left: 40%;
+}
