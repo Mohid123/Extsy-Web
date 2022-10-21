@@ -1,5 +1,3 @@
-import SignUp from "../views/auth/SignUp";
-import SignUpUsingEmail from "../views/auth/SignUpUsingEmail";
 import GroupAddRemoveMembers from "../views/GroupAddRemoveMembers";
 import GroupAdmin from "../views/GroupAdmin";
 import GroupManageRequest from "../views/GroupManageRequest";
@@ -15,6 +13,8 @@ import PushNotifications from "../layout/pushNotifications"
 import EventPosts from "../components/eventPosts/eventPosts";
 import EventView from "../components/eventView/eventView";
 import SignIn from "../views/auth/SignIn";
+import SignUpWithSocailLink from "../views/auth/SignUpWithSocialLink";
+import SignUp from "../views/auth/SignUp";
 
 
 export const routes = [
@@ -70,12 +70,12 @@ export const routes = [
 	},
 	{
 		path: '/auth/signup',
-		component: SignUp,
+		component: SignUpWithSocailLink,
 		layout: 'auth',
 	},
 	{
 		path: '/auth/signup2',
-		component: SignUpUsingEmail,
+		component: SignUp,
 		layout: 'auth',
 	},
 	{
