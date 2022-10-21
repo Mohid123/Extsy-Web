@@ -104,15 +104,15 @@ const GroupAdminLeftOption= () => {
                                 <TextArea placeholder="Description goes here..." />
                             </Form.Item>
                             <Form.Item rules={[{ required: true, message: 'Please select a start date for the event' }]} label="Start Date/Time" name="Start Date/Time">
-                                <DatePicker />
+                                <DatePicker onKeyDown={(e) => e.preventDefault()}/>
                             </Form.Item>
                             <Input.Group size="large">
                                 <Row gutter={5}>
                                     <Col span={12}>
-                                        <TimePicker />
+                                        <TimePicker onKeyDown={(e) => e.preventDefault()}/>
                                     </Col>
                                     <Col span={12}>
-                                        <TimePicker />
+                                        <TimePicker onKeyDown={(e) => e.preventDefault()} />
                                     </Col>
                                 </Row>
                             </Input.Group>
@@ -123,10 +123,10 @@ const GroupAdminLeftOption= () => {
                             <Input.Group size="large">
                                 <Row gutter={5}>
                                     <Col span={12}>
-                                        <TimePicker />
+                                        <TimePicker onKeyDown={(e) => e.preventDefault()}/>
                                     </Col>
                                     <Col span={12}>
-                                        <TimePicker />
+                                        <TimePicker onKeyDown={(e) => e.preventDefault()}/>
                                     </Col>
                                 </Row>
                             </Input.Group>
