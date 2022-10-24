@@ -1,0 +1,56 @@
+.signUp{
+    
+    &__header{
+        border-bottom: 1px solid rgba(102, 102, 102, 0.25);
+        box-shadow: 0px 20px 40px rgb(0 0 0 / 5%);
+    }
+}
+
+.signUpSection2{
+    width: 50%;
+   padding: 130px 180px 0 180px;
+
+}
+.signUpInput{
+    padding: 10px 14px;
+
+
+width: 28.75rem;
+height: 42px;
+
+/* Secondary */
+
+border: 1px solid #BF63C5;
+border-radius: 6px;
+}
+@media(min-width: 1280px) and (max-width: 1440px) {
+
+    .signUpSection{
+        width: 40%;
+        &__signUpPara{
+            width: 36.063rem;
+        height: 100px;
+            font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 2.25rem;
+        line-height: 50px;
+      
+        align-items: center;
+        
+        color: #3C3C3C;
+        }
+     
+    }
+    .left-cover-image{
+        margin-left: 2rem;
+        margin-top: 5rem;
+       
+       }
+        .signUpSection2{
+            width: 60%;
+           padding: 160px 180px 0 230px;
+        
+        }
+}
+

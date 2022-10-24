@@ -1,3 +1,29 @@
+
+.manageGrp{
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+color: #212121;
+}
 .propertiesTextStyle{
     cursor: pointer;
+}
+.groupViewMemberList{
+    height: 34px;
+    background: #F7F7F7;
+    border: 1px solid rgba(102, 102, 102, 0.35) !important;
+    border-radius: 16px !important;
+}
+.groupSearch{
+    
+        border: none !important;
+        font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    color: rgba(60, 60, 60, 0.9);
+    
 }

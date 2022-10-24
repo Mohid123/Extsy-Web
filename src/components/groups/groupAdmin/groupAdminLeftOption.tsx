@@ -12,6 +12,7 @@ import { AntDesignOutlined, CalendarOutlined, ClockCircleOutlined, UserOutlined 
 import { Row } from "react-bootstrap";
 import Col from "antd/es/grid/col";
 import PrimaryButton from "../../PrimaryButton";
+import { useNavigate } from "react-router-dom";
 
 const { Panel } = Collapse;
 
@@ -56,25 +57,25 @@ const GroupAdminLeftOption= () => {
           wrapperCol: { span: 14, offset: 4 },
         }
       : null;
-
+ const navigate = useNavigate()
     return (  
         <>
-            <div className="p-5">
-                <p>Manage Group</p>
+            <div className="p-3">
+                <p className="groupName">Manage Group</p>
                 <span className="d-flex justify-content-between ">
-                    <span onClick={showEventModal} className=" propertiesTextStyle"><img src={addUser} className="me-3 "/>Manage Requests</span> 
+                    <span onClick={showEventModal} className=" propertiesTextStyle "><img src={addUser} className="me-3 "/>Manage Requests</span> 
                 </span> 
 
                 <span className="d-flex justify-content-between mt-2">
-                    <span className=" propertiesTextStyle"><img src={userGroup} className="me-3"/>Add/Remove Members</span> 
+                    <span className=" propertiesTextStyle" onClick={()=>{navigate('/groupadmin/addremovemembers')}}><img src={userGroup} className="me-3"/>Add/Remove Members</span> 
                 </span>
 
                 <span className="d-flex justify-content-between mt-2">
-                    <span className=" propertiesTextStyle"><img src={userShield} className="me-3"/>Make Moderator</span> 
+                    <span className=" propertiesTextStyle" onClick={()=>{navigate('/groupadmin/groupmoderator')}}><img src={userShield} className="me-3"/>Make Moderator</span> 
                 </span>
                 
                 <span className="d-flex justify-content-between mt-2 ">
-                    <span className=" propertiesTextStyle"><img src={settings} className="me-3"/>Group settings</span> 
+                    <span className=" propertiesTextStyle" onClick={()=>{navigate('/groupadmin/addremovemembers')}}><img src={settings} className="me-3"/>Group settings</span> 
                 </span>  
             </div>
 

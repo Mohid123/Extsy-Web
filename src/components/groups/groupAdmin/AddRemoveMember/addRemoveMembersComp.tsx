@@ -11,7 +11,7 @@ const AddRemoveMemberComp = () => {
           size="small"
           placeholder="search user to add"
           prefix={<SearchOutlined />}
-          className="mainViewHeader__headerSearch__groupSearch"
+          className="groupViewMemberList"
         />
         <div className="d-flex justify-content-between  align-items-center mt-3">
               <div className="d-flex align-items-center ">

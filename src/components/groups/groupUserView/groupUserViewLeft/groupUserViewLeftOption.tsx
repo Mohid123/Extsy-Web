@@ -14,8 +14,8 @@ const GroupUserViewLeftOption = () => {
     return ( 
         <>
         <div className="p-5">
-            <p>Manage Group</p>
-            <Input  placeholder="search" prefix={ <SearchOutlined/>} className="mb-2" />
+            <p className="manageGrp">Manage Group</p>
+            <Input  placeholder="search" prefix={ <SearchOutlined/>} className="mb-2 groupSearch" />
                     <span className="d-flex justify-content-between " onClick={()=>navigate('/groups/groupuserviewmemberslist')}>
                   
                     <span className=" propertiesTextStyle"><img src={userGroup} className="me-3 "/>View Members</span> 

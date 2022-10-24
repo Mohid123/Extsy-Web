@@ -1,4 +1,4 @@
-import PostCardImage from "../../../mainViewComponents/postCardImage";
+import PostCardImage from "../../../mainViewComponents/postCard/postCardImage";
 import GroupAdminMiddleLayout from "../../groupAdmin/groupAdminMiddleLayout";
 import CardImage from '../../../../assets/img/postCardImage.png'
 const GroupUserViewMiddle = () => {

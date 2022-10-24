@@ -1,4 +1,4 @@
-import ProfileInfo from "../../../mainViewComponents/profileInfo";
+import ProfileInfo from "../../../mainViewComponents/mainViewLeft/profileInfo";
 import GroupUserViewLeftOption from "./groupUserViewLeftOption";
 
 const GroupUserViewLeft = () => {

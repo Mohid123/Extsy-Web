@@ -1,4 +1,4 @@
-import GroupMemberInfo from "./groupMembersInfo";
+import GroupMemberInfo from "./groupMembersInfo/groupMembersInfo";
 type Props = {
     
     children?: JSX.Element;

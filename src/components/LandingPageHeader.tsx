@@ -27,7 +27,7 @@ const MainViewHeader = () => {
 
         <div className="mainViewHeader shadow">
                     <div className="headerCentral d-flex py-3 px-0 justify-content-around">
-            <div className="mainViewHeader__left    "><img src={logo} style={{ height: "25px", width: "106px" }} alt="" /></div>
+            <div className="mainViewHeader__left    "><img src={logo} style={{ height: "25px", width: "106px", cursor:"pointer"}} alt=""  onClick={()=> navigate('/')} /></div>
             <div className="mainViewHeader__middle "><img src={homeIcon} alt="" /><img src={manyPersonIcon} alt="" /><img src={bellIcon} alt="" onClick={handleClick}/>
                 <img src={profileIcon} alt="" onClick={() => { navigate('/auth/userProfile') }} /></div>
             <div className="mainViewHeader__right  "><Input size="small" placeholder="search" prefix={<SearchOutlined />} className="mainViewHeader__headerSearch" /></div>
