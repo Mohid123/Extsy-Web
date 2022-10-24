@@ -6,7 +6,10 @@ import logo from "../../assets/img/ExtsyLogo.svg"
 import '../../components/authComp/signUp/signUp.scss'
 import LeftCoverImageComp from "../../components/authComp/signUpWithSocialLink/signUpComp";
 import { Option } from "antd/lib/mentions";
+import { useState } from "react";
+import OTPModal from "../../components/authComp/signUp/OTPModal";
 const SignUp = () => {
+  const [modalOpen, setModalOpen] = useState(false);
     return (
       <div className="signUp">
           <div className="text-center signUp__header pb-2">
@@ -77,7 +80,7 @@ const SignUp = () => {
         placeholder="+1 (555) 000-0000"
         // defaultValue="+1 (555) 000-0000"
       />
-      <Button>Send OTP</Button>
+      <Button onClick={()=> setModalOpen(true)}>Send OTP</Button>
       </div>
     </Input.Group>
       </Form.Item>
@@ -111,6 +114,11 @@ const SignUp = () => {
             </p>
           </div>
         </div>
+        <OTPModal 
+        visible={modalOpen}
+        onOk={()=>setModalOpen(false)}
+        onCancel={()=>setModalOpen(false)}
+        />
       </div>
     );
 }
