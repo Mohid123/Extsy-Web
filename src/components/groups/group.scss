@@ -5,29 +5,13 @@ $font-family-roboto:'Roboto';
 $font-color-gery:#8A8A8A;
 $font-color-black:#000000;
 $font-color-white:#FFFFFF;
-.groupButton{
-    padding: 3px 10px;
-    height: 32px;
-    font-family: $font-family-roboto;
-    /* Primary */
-    color: $primary-color !important;
-    border: 1px solid $primary-color !important;
-    border-radius: 6px !important; 
 
-}
 .option{
     color: $primary-color!important;
     
 }
-.groupPrimaryBtn{
-    color:$white-color ;
-    background-color:$primary-color !important ;
-    border: 1px solid $primary-color !important;
-    border-radius: 6px !important; 
-}
-.ant-tabs-nav-add{
-    margin-left: 80% !important;
-}
+
+
 
 :host.top-modal.ant-modal-header {
     display: none;

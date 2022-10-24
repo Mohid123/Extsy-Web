@@ -4,6 +4,7 @@ import videoIcon from "../../../assets/img/Video.svg"
 import calenderIcon from "../../../assets/img/Calendar.svg"
 import sendIcon from "../../../assets/img/Send.svg"
 import { EditOutlined } from "@ant-design/icons";
+import './mainViewMiddle.scss'
 const shareContentComp = () => {
     return (
       <div className="mainViewMiddle__mainViewPostContainer ">

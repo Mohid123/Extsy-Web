@@ -1,5 +1,5 @@
 import { Avatar } from "antd";
-
+import './mainViewLeft.scss'
 const ProfileInfo = () => {
     return ( 
         <div className="mainViewLeftProfileInfo__mainContainer">
@@ -16,17 +16,17 @@ const ProfileInfo = () => {
         />
  
 <p className="m-0 mt-2 p-1 textStyle ">
-Ali raza <br/><span className="textStyle__textStyleSmall">@ali_raza</span> 
+Ali raza <br/><span className="textStyleSmall">@ali_raza</span> 
 </p>
 </div>
 
 <div className="d-flex text-center mt-5 justify-content-around">
     <div className="">
-        <p className="m-0 p-0 textStyle__following ">Following</p>
+        <p className="m-0 p-0 following ">Following</p>
         <p className="m-0 p-0 fw-bold textStyle ">4k</p>
     </div>
     <div className="">
-        <p  className="m-0 p-0 textStyle__following ">Followers</p>
+        <p  className="m-0 p-0 following ">Followers</p>
         <p  className="m-0 p-0 fw-bold textStyle">43k</p>
     </div>
 </div>

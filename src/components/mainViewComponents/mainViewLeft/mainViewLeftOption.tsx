@@ -7,6 +7,7 @@ import sponsor from "../../../assets/img/sponsors.svg"
 import groupUser from "../../../assets/img/user-group-solid.svg"
 import p2p from "../../../assets/img/p2p.svg"
 import { useNavigate } from "react-router-dom";
+import './mainViewLeft.scss'
 const MainViewLeftOption = () => {
     const [show, setShow] = useState(true);
     const navigate = useNavigate()
