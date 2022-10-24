@@ -28,11 +28,12 @@ const PostTypes = () => {
             i++;
             reader.onload = (fileEvent) => {
                 let url = (fileEvent.target)?.result as string;
-                images.push({imageUrl: url})
+                image.push({imageUrl: url});
+                console.log(image)
             }
         }
     }
-    setImages(images);
+    setImages(image);
 }
 return (
 <div className='post-type-card'>
