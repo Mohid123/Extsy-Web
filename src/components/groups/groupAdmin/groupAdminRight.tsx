@@ -1,5 +1,5 @@
 import Ad from "../../mainViewComponents/mainViewRight/ad";
-import GroupSuggestion from "./groupSuggestion";
+import GroupSuggestion from "./groupSuggestion/groupSuggestion";
 
 const GroupAdminRight = () => {
     return ( 

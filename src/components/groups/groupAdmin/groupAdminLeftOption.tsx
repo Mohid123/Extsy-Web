@@ -60,10 +60,10 @@ const GroupAdminLeftOption= () => {
  const navigate = useNavigate()
     return (  
         <>
-            <div className="p-5">
-                <p>Manage Group</p>
+            <div className="p-3">
+                <p className="groupName">Manage Group</p>
                 <span className="d-flex justify-content-between ">
-                    <span onClick={showEventModal} className=" propertiesTextStyle"><img src={addUser} className="me-3 "/>Manage Requests</span> 
+                    <span onClick={showEventModal} className=" propertiesTextStyle "><img src={addUser} className="me-3 "/>Manage Requests</span> 
                 </span> 
 
                 <span className="d-flex justify-content-between mt-2">
