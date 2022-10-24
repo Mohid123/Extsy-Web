@@ -3,7 +3,7 @@ import { AntDesignOutlined,SearchOutlined,UserOutlined } from "@ant-design/icons
 import { Avatar, Button, Input, Tabs, Tooltip } from "antd";
 import '../group.scss'
 import './groupTabs.scss'
-import CreateGroup from './createGroup';
+import CreateGroup from './createGroupModal/createGroupModal';
 import postCardImage from "../../../assets/img/postCardImage.png"
 const initialItems = [
   {

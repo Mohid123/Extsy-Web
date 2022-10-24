@@ -1,0 +1,51 @@
+.createGroup{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #212121;
+}
+.headings{
+ font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 18px;
+color: #3C3C3C;
+
+}
+.modelInput{
+    border: none !important;
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+line-height: 16px;
+color: rgba(60, 60, 60, 0.9);
+}
+.userName{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+line-height: 16px;
+/* identical to box height */
+
+letter-spacing: 0.05em;
+
+color: #3C3C3C;
+}
+.whiteBtnAdd{
+    padding: 3px 10px;
+    font-family: 'Poppins';
+    color: #7C167D!important;
+    border: 1px solid  #7C167D !important;
+    border-radius: 6px !important; 
+}
+.primaryBtnAdded{
+    border-radius: 6px!important;
+    color: white!important ;
+    font-family: 'Poppins';
+    background-color:#7C167D  !important;
+}
