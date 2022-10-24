@@ -17,6 +17,7 @@ import { ApiService } from './api.service';
             }
             else {
                 console.log('ERROR: ', res.errors[0]);
+                // for error in toast use res.errors[0].error.message
             }
         })
     }

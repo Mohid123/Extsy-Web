@@ -67,7 +67,6 @@ export class ApiService<T> {
                     });
                 }
                 else {
-                    debugger
                     result.errors.push({
                         code: error.code,
                         text: error.response.statusText,
