@@ -7,7 +7,9 @@ const MainViewLeft = () => {
     return ( 
         <div className="mainViewLeftProfileInfo ">   
            <ProfileInfo/>
+           <br/>
            <MainViewLeftOption/> 
+           <br/>
            <UpcomingEvents/>
         </div>
      );

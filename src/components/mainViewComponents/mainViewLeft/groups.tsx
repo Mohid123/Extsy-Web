@@ -27,8 +27,9 @@ const Groups = () => {
     const [groups, setGroups] = useState(groupArray);
     return (  
         <>
-        <div className="px-5  propertiesTextStyle__group">Groups</div>
-        <div  className="p-5  pt-1">
+       
+        <div  className="landingPageOption  ">
+        <div className="  propertiesTextStyle__group">Groups</div>
         {groups.map((group: Event, index: number) => {
             return(
               <>

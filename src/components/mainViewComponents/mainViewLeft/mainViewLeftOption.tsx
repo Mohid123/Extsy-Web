@@ -15,7 +15,7 @@ const MainViewLeftOption = () => {
     const navigate = useNavigate()
     return (
       <>
-        <div className="p-5">
+        <div className="landingPageOption ">
           <NavigateOption
             url={play}
             text="Watch Now"
@@ -49,6 +49,7 @@ const MainViewLeftOption = () => {
             onClick={() => navigate("/groups")}
           />
         </div>
+        <br/>
         <Groups />
       </>
     );
