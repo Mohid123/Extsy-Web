@@ -161,7 +161,7 @@ const TabsPanel  = () => {
     <Row
       gutter={{ xs: 24, sm: 24, md: 24, lg: 8 }}
     >
-      <Col className="gutter-row" span={6} >
+      <Col className="gutter-row poppinsFont" span={6} >
       <div className='px-2'>
         <img src={tab2Image1} alt="" />
         
@@ -292,9 +292,9 @@ const TabsPanel  = () => {
     >
       
       <div className=""  >
-        <h6 className='text-start'>Total balance</h6>
+        <h6 className='text-start fs_14 fw_500 fc_cyan2'>Total balance</h6>
         <div className='d-flex'>
-        <h4>$ 352,556.00</h4>
+        <h4 className='fs_21 fw_700 fc_black'>$ 352,556.00</h4>
         
           <p className='ms-5 mt-2 me-2 textGreen'>+ 36%</p>
           <img src={ArrowIcon} alt="" />
@@ -303,9 +303,9 @@ const TabsPanel  = () => {
         
       </div>
       <div className="text-start"  >
-      <h6>Send</h6>
+      <h6 className='fs_14 fw_500 fc_cyan2'>Send</h6>
       <div className='d-flex'>
-        <h4>$ 352,556.00</h4>
+        <h4 className='fs_21 fw_700 fc_black'>$ 352,556.00</h4>
         
           <p className='ms-5 mt-2 me-2 textGreen'>+ 36%</p>
           <img src={ArrowIcon} alt="" />
@@ -313,9 +313,9 @@ const TabsPanel  = () => {
         </div>
       </div>
       <div className="text-start"  >
-      <h6>received</h6>
+      <h6 className='fs_14 fw_500 fc_cyan2'>received</h6>
       <div className='d-flex'>
-        <h4>$ 352,556.00</h4>
+        <h4 className='fs_21 fw_700 fc_black'>$ 352,556.00</h4>
         
           <p className='ms-5 mt-2 me-2 textGreen'>+ 36%</p>
           <img src={ArrowIcon} alt="" />
@@ -323,54 +323,51 @@ const TabsPanel  = () => {
         </div>
       </div>
       </div>
-      <div className='header'>
-        <h6>Currency</h6>
-        <h6>Quantity</h6>
+      <div className='header px-3'>
+        <div className='w-100'>
+         <h6 className='fs_16 fw_600 fc_black'> Currency </h6></div>
+        <div className=' w-100'>
+         <h6 className='fs_16 fw_600 fc_black'> Quantity
+         </h6>
+         </div>
 
-        <h6>Value</h6>
+        <div className='w-100'>
+         <h6 className='fs_16 fw_600 fc_black'> Value
+         </h6>
+         </div>
 
-        <h6>Status</h6>
+        <div className='w-100'>
+         <h6 className='fs_16 fw_600 fc_black'> Status
+         </h6>
+         </div>
 
       </div>
-      <div className='table '>
-        <div className='d-flex'>
+      <div className='table  px-3'>
+        <div className='d-flex w-100 p-1'>
           <img src={Bitcoin} alt="" />
-        <div>
-        <h6 className='pb-0 mb-0 mt-2'>Bitcoin Plus</h6>
-        <p className='text-start mb-0'>BTC</p>
+        <div className=''>
+        <h6 className='pb-0 mb-0 mt-2 fs_16 fw_500 fc_black'>Bitcoin Plus</h6>
+        <p className='text-start mb-0 fs_14 fw_400 fc_black'>BTC</p>
         </div>
         </div>
-        <h6 className='mt-3'>245</h6>
-        <h6 className='mt-3'>$34565</h6>
-        <h6 className=' actionBackground'>send</h6>
+        <div className='mt-3 w-100 fs_16 fw_500 fc_black'>245</div>
+        <div className='mt-3 w-100 fs_16 fw_400 fc_black'>$34565</div>
+        <div className='w-100'><h6 className='actionBackground'>send</h6></div>
 
       </div>
       <Divider className='mt-2 mb-2'></Divider>
-      <div className='table '>
-        <div className='d-flex'>
+      
+      <div className='table  px-3'>
+        <div className='d-flex w-100 p-1'>
           <img src={Bitcoin} alt="" />
-        <div>
-        <h6 className='pb-0 mb-0 mt-2'>Bitcoin Plus</h6>
-        <p className='text-start mb-0'>BTC</p>
+        <div className=''>
+        <h6 className='pb-0 mb-0 mt-2 fs_16 fw_500 fc_black'>Bitcoin Plus</h6>
+        <p className='text-start mb-0 fs_14 fw_400 fc_black'>BTC</p>
         </div>
         </div>
-        <h6 className='mt-3'>245</h6>
-        <h6 className='mt-3'>$34565</h6>
-        <h6 className=' actionBackground'>send</h6>
-
-      </div>
-      <Divider className='mt-2 mb-2' ></Divider>
-      <div className='table '>
-        <div className='d-flex'>
-          <img src={Bitcoin} alt="" />
-        <div>
-        <h6 className='pb-0 mb-0 mt-2'>Bitcoin Plus</h6>
-        <p className='text-start mb-0'>BTC</p>
-        </div>
-        </div>
-        <h6 className='mt-3'>245</h6>
-        <h6 className='mt-3'>$34565</h6>
-      <h6 className=' actionBackground'>send</h6>
+        <div className='mt-3 w-100 fs_16 fw_500 fc_black'>245</div>
+        <div className='mt-3 w-100 fs_16 fw_400 fc_black'>$34565</div>
+        <div className='w-100'><h6 className='actionBackground'>send</h6></div>
 
       </div>
       <Divider className='mt-2 mb-2'></Divider>

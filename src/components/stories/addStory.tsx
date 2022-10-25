@@ -28,6 +28,7 @@ const AddStory = () => {
 
     
     function handleClick(argument:any){
+        
         if(argument==='text')
         {
             setCard1(false)
@@ -37,6 +38,7 @@ const AddStory = () => {
         }
         else if (argument==='image')
         {
+           
             setCard1(false)
             settextCard(false)
             setimageCard(true)
@@ -49,7 +51,14 @@ const AddStory = () => {
             setimageCard(false)
             setvideoCard(true) 
         }
-        else{
+        else if (argument==='closes'){
+           console.log('card 1')
+            setCard1(true)
+            settextCard(false)
+            setimageCard(false)
+            setvideoCard(false) 
+        }
+        else {
             setCard1(false)
         }
 
@@ -69,19 +78,19 @@ const AddStory = () => {
        
         {/* <img src={CloseIcon} alt="" style={{width:'30px'}} className="cursor"onClick={()=>{handleClick('close')}}/> */}
         
-        <div className="d-flex cardBackground">
-        <Card className="innerCard text-center " onClick={()=>{handleClick('text')}}>
+        <div className="d-flex cardBackground  ">
+        <Card className="innerCard text-center cursor" onClick={()=>{handleClick('text')}}>
             <img src={UploadIcon} className="" alt="" /> <br />
             <h6 className="innerCard__font">Upload</h6>
             <p className="innerCard__font__subFont">Upload your <br /> image here</p>
     </Card>
-    <Card className="innerCard text-center  " onClick={()=>{handleClick('image')}}>
+    <Card className="innerCard text-center  cursor" onClick={()=>{handleClick('image')}}>
             <img src={VideoCamera} alt="" /> <br />
             <h6 className="innerCard__font">Upload</h6>
             <p className="innerCard__font__subFont">Upload your <br /> image here</p>
             
     </Card>
-    <Card className="innerCard text-center  "onClick={()=>{handleClick('video')}} >
+    <Card className="innerCard text-center cursor "onClick={()=>{handleClick('video')}} >
             <img src={VideoCamera} alt="" /> <br />
             <h6 className="innerCard__font">Upload</h6>
             <p className="innerCard__font__subFont">Upload your <br /> image here</p>
@@ -92,15 +101,15 @@ const AddStory = () => {
         <img src={CloseDialog} alt="" className="cursor"onClick={()=>{handleClick('close')}} />
     </div>
     </div>):textCard?(<div className="uploadCard">
-    <h5 className="">Add to Your Storyyyy</h5>
-    <p>Write something here @Dr.Dre @KayneWest <br /> Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit.</p>
+    <h5 className="fs_16 fw_500 fc_black">Add to Your Storrerey</h5>
+    <p className="fs_11 fw_300 fc_grey">Write something here @Dr.Dre @KayneWest <br /> Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit.</p>
     <Divider className="mb-3 mt-2"></Divider>
     <div className="d-flex">
-    <Card className="innerCardBackground text-center  " >
+    <Card className="innerCardBackground text-center  cursor" >
             <img src={Image} alt="" /> <br />
             <img src={Text3} alt="" />
     </Card>
-    <Card className="innerCardBackground text-center  " >
+    <Card className="innerCardBackground text-center cursor " >
             <img src={Video} alt="" /> <br />
             <img src={Text3} alt="" />
     </Card>
@@ -113,26 +122,26 @@ const AddStory = () => {
     </div>)
     :imageCard?(<div className="imageUpload">
         <div className="d-flex justify-content-between">
-        <img src={BackArrowIcon} alt="" />
-        <img src={Close} alt="" />
+        <img src={BackArrowIcon} alt=""  onClick={()=>{handleClick('closes')}} />
+        <img src={Close} alt=""  className="cursor" onClick={()=>{handleClick('closes')}}/>
         </div>
             <Row  gutter={{ xs: 24, sm: 24, md: 24, lg: 24 }} className="mt-4">
-                <Col className="gutter-row" span={8}>
-                <img src={galleryImage1} className="galleryImage px-0" alt="" />
+                <Col className="gutter-row pe-1" span={8}>
+                <img src={galleryImage1} className="galleryImage " alt="" />
                 </Col>
-                <Col className="gutter-row" span={8}>
+                <Col className="gutter-row pe-1" span={8}>
+                <img src={galleryImage1} className="galleryImage " alt="" />
+                </Col>
+                <Col className="gutter-row pe-1" span={8}>
                 <img src={galleryImage1} className="galleryImage" alt="" />
                 </Col>
-                <Col className="gutter-row" span={8}>
+                <Col className="gutter-row pe-1 mt-2" span={8}>
                 <img src={galleryImage1} className="galleryImage" alt="" />
                 </Col>
-                <Col className="gutter-row" span={8}>
+                <Col className="gutter-row pe-1 mt-2" span={8}>
                 <img src={galleryImage1} className="galleryImage" alt="" />
                 </Col>
-                <Col className="gutter-row" span={8}>
-                <img src={galleryImage1} className="galleryImage" alt="" />
-                </Col>
-                <Col className="gutter-row" span={8}>
+                <Col className="gutter-row pe-1 mt-2" span={8}>
                 <img src={galleryImage1} className="galleryImage" alt="" />
                 </Col>
             </Row>
@@ -144,13 +153,13 @@ const AddStory = () => {
        
     </div>)
     :videoCard?(<div className="imageUpload2">
-    <h5 className="">Add to Your Story</h5>
-    <p>Text</p>
-    <p>Write something here @Dr.Dre @KayneWest <br /> Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit.</p>
+    <h5 className="fs_16 fw_500 fc_black">Add to Your Story</h5>
+    <p className="fs_11 fw_400 fc_grey">Text</p>
+    <p className="fs_11 fw_300 fc_grey">Write something here @Dr.Dre @KayneWest <br /> Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit.</p>
     <Divider></Divider>
     <div>
        <img src={UploadedImage} className="uploadedImage" alt="" />
-       <img src={CloseIcon}  className="closeIcon" alt="" />
+       <img src={CloseIcon}  className="closeIcon cursor" alt="" />
     </div>
     <Row  gutter={{ xs: 24, sm: 24, md: 24, lg: 24 }} className="justify-content-center">
            <Col className="gutter-row" span={14}>
@@ -159,9 +168,9 @@ const AddStory = () => {
   </Row>
 </div>)
     :imageUploadCard?(<div className="imageUpload2">
-         <h5 className="">Add to Your Story</h5>
-         <p>Text</p>
-         <p>Write something here @Dr.Dre @KayneWest <br /> Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit.</p>
+         <h5 className="fs_16 fw_500 fc_black">Add to Your Story</h5>
+         <p className="fs_11 fw_400 fc_grey">Text</p>
+         <p className="fs_11 fw_300 fc_grey">Write something here @Dr.Dre @KayneWest <br /> Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit.</p>
          <Divider></Divider>
          <div>
             <img src={UploadedImage} className="uploadedImage" alt="" />

@@ -8,6 +8,7 @@ import image from "../../assets/img/Ellipse 14.svg"
 import image2 from "../../assets/img/Ellipse 14_2.svg"
 import ellipse from "../../assets/img/Ellipse 7.svg"
 import CloseChat from "../../assets/img/CloseChat.svg"
+import { LinkOutlined } from '@ant-design/icons';
 
 import { useState } from "react";
 
@@ -134,7 +135,14 @@ function insertInArray(){
         <p className="messageText mt-2">Fine</p>
         </div>
         <p className="messageTime2 mt-1">Yesterday, 8.30pm</p>
+        
+        <Divider className="bottomDivider"></Divider>
+        <div className="writeMessage">
+            Type your message here ....
+            <LinkOutlined  className="ms-5"/>
+        </div>
     </div>
+    
 </div>
 
         	);

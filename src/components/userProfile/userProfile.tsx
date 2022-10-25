@@ -42,40 +42,43 @@ const UserProfileInfo = () => {
         </div>
       </Col>
       <Col className="gutter-row" span={24}>
-        <div className="text-center mt-4">
-        <img src={avatarImage} style={{ width:"10%"}} alt=""/>
-        <h6 className="mt-3">Ali Raza</h6>
-        <p>@aliraza</p>
-        {userID==='my id'?( <div><Button type="primary" shape="round"  size={"large"} onClick={closeDiv}>
+        <div className="text-center  mt-4" >
+        <img src={avatarImage} style={{ width:"9%", }} className="circle" alt=""/>
+        <h6 className="mt-3 userProfile__userName">Ali Raza</h6>
+        <p className="userProfile__userEmail">@aliraza</p>
+        {userID==='my id'?( <div><Button type="primary" shape="round"  size={"large"} onClick={closeDiv} className="poppinsFont">
         Edit Profile
       </Button>
       <Button type="primary"  shape="circle" icon={<UploadOutlined style={{color:'#8A2F88'}} />} size={'large'} style={{marginLeft:'10px',backgroundColor:'#F2E8F2', borderStyle:'none'}} />
-     </div>):(<div><Button type="primary" shape="round"  size={"large"} onClick={closeDiv}>
+     </div>):(<div><Button type="primary" shape="round"  size={"large"} onClick={closeDiv} className="poppinsFont">
         Following
       </Button>
-      <Button type="primary" shape="round"  size={"large"} onClick={closeDiv} style={{marginLeft:'10px'}} ghost>
+      <Button type="primary" shape="round"  size={"large"} onClick={closeDiv} style={{marginLeft:'10px'}} ghost className="poppinsFont">
         Message
       </Button>
       <Button type="primary"  shape="circle" icon={<UploadOutlined style={{color:'#8A2F88'}} />} size={'large'} style={{marginLeft:'10px',backgroundColor:'#F2E8F2', borderStyle:'none'}} /></div>)}
      
-      <div className="d-flex justify-content-center mt-3">
+      <div className="d-flex justify-content-center poppinsFont mt-3">
         <div style={{borderRight: '1px solid #8A2F88',paddingRight:'30px',height:'30px', cursor:'pointer'}} onClick={showPosts}>
-        <h6 className="mb-0 pt-1">
+       
+      <p className=" userProfile__tabs">Posts</p>
+      <h6 className=" userProfile__tabsNumbers">
         20
       </h6>
-      <p className="">Posts</p>
       </div>
       <div style={{borderRight: '1px solid #8A2F88', paddingLeft:'30px',paddingRight:'30px',height:'30px',cursor:'pointer'}} onClick={handleClick}>
-        <h6 className="mb-0 pt-1">
+        
+      <p className="userProfile__tabs">Following</p>
+      <h6 className="  userProfile__tabsNumbers">
         20K
       </h6>
-      <p className="">Following</p>
       </div>
       <div style={{ paddingLeft:'30px',cursor:'pointer'}} onClick={handleClick}>
-        <h6 className="mb-0 pt-1">
+       
+      <p className="userProfile__tabs">Followers</p>
+      <h6 className="  userProfile__tabsNumbers">
         20K
       </h6>
-      <p className="">Followers</p>
       </div>
       </div> 
       {lists? (<TabsPanel1/>) :(<TabsPanel/>)}
