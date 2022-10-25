@@ -47,52 +47,7 @@ $font-color-white:#FFFFFF;
     top: 41% !important;
     left: 41%!important;
 }
-.postCardfontStyle{
-font-family: $font-family-roboto;
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 14px;
-/* identical to box height */
-color: $font-color-black;
- &__username{
-    font-size: 10px;
-     line-height: 12px;
-/* identical to box height */
-color: rgba(0, 0, 0, 0.46);
- }
- &__text{
-    font-size: 14px;
-line-height: 16px;
-color: $font-color-black;
- }
- &__style{
-    font-family: $font-family;
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 18px;
-&__viewAllComment{
-    font-weight: 400;
-    color: #666666;
-}
-/* identical to box height */
-color: #3C3C3C;
-&__description{
-    font-weight: 400;
-font-size: 11px;
-line-height: 16px;
-&__time{
-    font-weight: 300;
-color: rgba(60, 60, 60, 0.44);
 
-}
-&__style{
-    font-weight: 600; 
-}
-}
- }
-}
 
 // font-family: 'Poppins';
 // font-style: normal;
@@ -296,11 +251,7 @@ color: #666666;
    
 }
 //groups modal for create groups
-.groupModal{
-    border-radius: 18px 18px 0px 0px;
-   
-    overflow: hidden;
-}
+
 .coverImg{
     height: 160px;
     background-image: url("../img/modalCoverImg.svg");

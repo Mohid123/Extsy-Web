@@ -8,6 +8,7 @@ import groupUser from "../../../assets/img/user-group-solid.svg"
 import p2p from "../../../assets/img/p2p.svg"
 import { useNavigate } from "react-router-dom";
 import './mainViewLeft.scss'
+import Groups from "./groups";
 const MainViewLeftOption = () => {
     const [show, setShow] = useState(true);
     const navigate = useNavigate()
@@ -55,23 +56,7 @@ const MainViewLeftOption = () => {
        
                  </span>  
                     </div>
-                  <div className="px-5  propertiesTextStyle__group">Groups</div>
-                  <div  className="p-5 pt-4">
-                  <span className="d-flex justify-content-start ">
-                      
-                      <img src={groupUser} className="me-3 "/><span className="propertiesTextStyle">Group 1</span> 
-     
-                  </span>
-                  <span className="d-flex justify-content-start mt-2">
-                      
-                      <img src={groupUser} className="me-3"/> <span className="propertiesTextStyle">Group 1</span> 
-                      <Badge
-        className="ms-5"
-        count={show ? 109 : 0}
-        style={{ backgroundColor: '#EE1D52' }}
-      />
-                  </span>
-                  </div>
+                  <Groups/>
        </>
      );
 }

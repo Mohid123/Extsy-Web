@@ -7,6 +7,7 @@ import commentIcon from '../../../assets/img/commentIcon.svg'
 import shareIcon from '../../../assets/img/postCardShareIcon.svg'
 import bookMark from '../../../assets/img/Bookmark.svg'
 import commentImage from '../../../assets/img/commentImgIcon.svg'
+import './postCard.scss'
 type Props = {
     
     children?: JSX.Element;
@@ -38,29 +39,27 @@ const PostCardLayout = ({children}:Props) => {
 
                {children}
         <div className="py-3 d-flex justify-content-between">
-          <span>
-            <img src={likeIcon} />
-            <Badge count={count} size="small">
-              <img src={commentIcon} className="ms-3" />
-            </Badge>
-            <img src={shareIcon} className="ms-3" />
-          </span>
-          <img src={bookMark} className="me-4" />
+         <div className='d-flex align-items-center'><img src={likeIcon} className='me-2' /><span className='postCardfontStyle__iconText'>Like</span></div>
+         <div className='d-flex align-items-center'><Badge count={count} size="small">
+              <img src={commentIcon} className="" />
+            </Badge><span className='postCardfontStyle__iconText ms-2'>Comment</span></div>
+         <div className='d-flex align-items-center'><img src={shareIcon} className='me-2' /><span className='postCardfontStyle__iconText'>Share</span></div>
+         <div className='d-flex align-items-center'><img src={bookMark} className='me-2' /><span className='postCardfontStyle__iconText'>Save</span></div>
         </div>
-        <p className="fw-bold p-0 m-0 postCardfontStyle__style">42 likes</p>
-        <p className="p-0 m-0  postCardfontStyle__style__description">
+        <p className="fw-bold p-0 m-0 style">42 likes</p>
+        <p className="p-0 m-0  style__description">
           Liked by <span className="fw-bold">Almana kew</span> and{" "}
           <span className="fw-bold">others</span>
         </p>
-        <p className=" p-0 m-0 postCardfontStyle__style__description__style">
+        <p className=" p-0 m-0 style__description__style">
           <span className="fw-bold">Almana kew</span> Mentioned users
-          <span className="fw-bold"> @Dr.Dre </span>and
-          <span className="fw-bold"> @KayneWest </span>will look like this lorem
+          <span className="fw-bold tagName"> @Dr.Dre </span>and
+          <span className="fw-bold tagName"> @KayneWest </span>will look like this lorem
           ipsum ko it the greitai nusimato kaikas, ko tikrai nesitikėsit{" "}
         </p>
-        <span className="me-3 postCardfontStyle__style__description__time ">2 hours ago</span>
-        <span className="postCardfontStyle__style__description">See translation</span>
-        <p className=' postCardfontStyle__style__viewAllComment'>View all 5 comments</p>
+        <span className="me-3 style__description__time ">2 hours ago</span>
+        <span className="style__description">See translation</span>
+        <p className=' style__viewAllComment'>View all 5 comments</p>
         <div className="d-flex  px-3">
           <Avatar
             src={

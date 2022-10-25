@@ -15,8 +15,8 @@ const GroupMemberInfo = () => {
           Monotoheten makroska. Tir kar att antigyhet. Mikrootrohet it the and sodäliga. Nopp fivarar. Nynar obror för att.</p>
         
         <div className="d-flex justify-content-between">
-            <div><img src={vector}/><span className="ms-3 title__options">71 total post</span></div>
-            <p className=" title__options">show recent</p>
+            <div><img src={vector} style={{width:"20px",height:"18px"}}/><span className="ms-3 title__options">71 total post</span></div>
+            <p className=" title__options m-0 p-0">show recent</p>
         </div>
         <div className="d-flex justify-content-between">
             <div><img src={userGroup}/><span className="ms-3  title__options">10 Members</span></div>
