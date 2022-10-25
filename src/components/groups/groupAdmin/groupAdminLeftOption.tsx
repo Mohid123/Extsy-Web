@@ -60,10 +60,10 @@ const GroupAdminLeftOption= () => {
  const navigate = useNavigate()
     return (  
         <>
-            <div className="p-5">
-                <p>Manage Group</p>
+            <div className="p-3">
+                <p className="groupName">Manage Group</p>
                 <span className="d-flex justify-content-between ">
-                    <span onClick={showEventModal} className=" propertiesTextStyle"><img src={addUser} className="me-3 "/>Manage Requests</span> 
+                    <span onClick={showEventModal} className=" propertiesTextStyle "><img src={addUser} className="me-3 "/>Manage Requests</span> 
                 </span> 
 
                 <span className="d-flex justify-content-between mt-2">
@@ -75,7 +75,7 @@ const GroupAdminLeftOption= () => {
                 </span>
                 
                 <span className="d-flex justify-content-between mt-2 ">
-                    <span className=" propertiesTextStyle" onClick={()=>{navigate('/groupadmin/addremovemembers')}}><img src={settings} className="me-3"/>Group settings</span> 
+                    <span className=" propertiesTextStyle" ><img src={settings} className="me-3"/>Group settings</span> 
                 </span>  
             </div>
 
@@ -105,15 +105,15 @@ const GroupAdminLeftOption= () => {
                                 <TextArea placeholder="Description goes here..." />
                             </Form.Item>
                             <Form.Item rules={[{ required: true, message: 'Please select a start date for the event' }]} label="Start Date/Time" name="Start Date/Time">
-                                <DatePicker />
+                                <DatePicker onKeyDown={(e) => e.preventDefault()}/>
                             </Form.Item>
                             <Input.Group size="large">
                                 <Row gutter={5}>
                                     <Col span={12}>
-                                        <TimePicker />
+                                        <TimePicker onKeyDown={(e) => e.preventDefault()}/>
                                     </Col>
                                     <Col span={12}>
-                                        <TimePicker />
+                                        <TimePicker onKeyDown={(e) => e.preventDefault()} />
                                     </Col>
                                 </Row>
                             </Input.Group>
@@ -124,10 +124,10 @@ const GroupAdminLeftOption= () => {
                             <Input.Group size="large">
                                 <Row gutter={5}>
                                     <Col span={12}>
-                                        <TimePicker />
+                                        <TimePicker onKeyDown={(e) => e.preventDefault()}/>
                                     </Col>
                                     <Col span={12}>
-                                        <TimePicker />
+                                        <TimePicker onKeyDown={(e) => e.preventDefault()}/>
                                     </Col>
                                 </Row>
                             </Input.Group>

@@ -5,7 +5,8 @@ import ProfileInfo from '../mainViewComponents/mainViewLeft/profileInfo';
 import './eventPosts.scss';
 import Posts from './posts/posts';
 import UpcomingEvents from './upcomingEvents/upcomingEvents';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { getDeals } from '../../services/test-api.service';
 
 export interface PostsArr {
   id: number,
@@ -49,6 +50,10 @@ const postArray: PostsArr[] = [
 
 const EventPosts = () => {
   const [posts, setPosts] = useState(postArray);
+
+  useEffect(()=>{
+    getDeals()
+  },[])
   return (
     <div className='my-4 mainAlignmentPosts d-flex justify-content-between'>
       <div>

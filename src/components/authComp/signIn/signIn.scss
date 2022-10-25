@@ -1,0 +1,48 @@
+.signIn{
+    background: linear-gradient(114.78deg, #844D95 -5.79%, #6374A0 73.16%);
+    height: 100vh;
+    padding-top: 5px;
+    position: relative;
+}
+.signInContainer{
+    height: 50.563rem!important;
+    width: 38.625rem ;
+    background: white;
+    border-radius: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 75px;
+    margin-inline: auto;
+    text-align: center;
+   }
+   .formLabel{
+    width: 33rem !important;
+}
+.SignInInput{
+    width:33rem !important;
+    height: 56px;
+    border-radius: 24px;
+    padding: 13px 22px;
+   }
+   .signInFooter{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+   font-family: 'Poppins';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 21px;
+   /* identical to box height */
+   color: #666666;
+   background-color: white;
+   
+   }
+   #normal_login_password_help{
+    text-align: left!important;
+    margin-left: 4rem;
+   }
+   #normal_login_username_help{
+    text-align: left!important;
+    margin-left: 4rem;
+   }

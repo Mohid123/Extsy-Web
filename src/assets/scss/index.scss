@@ -47,86 +47,7 @@ $font-color-white:#FFFFFF;
     top: 41% !important;
     left: 41%!important;
 }
-.textStyle{
-    font-style: normal;
-    font-family:$font-family;
-    font-weight: 400;
-    font-size: 12px;
-    // line-height: 18px;
-    &__textStyleSmall{
 
-        font-weight: 300;
-        font-size: 10px;
-        line-height: 15px;
-        color: $font-color-gery;
-    } 
-    &__following{
-        font-size: 10px;
-    }
-
-}
-.propertiesTextStyle{
-font-family: $font-family-roboto;
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 19px;
-color: #666666;
-&__group{
-font-weight: 500;
-color: #212121;
-}
-&__colorWhite{
-    color: #FFFFFF 
-}
-
-}
-.postCardfontStyle{
-font-family: $font-family-roboto;
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 14px;
-/* identical to box height */
-color: $font-color-black;
- &__username{
-    font-size: 10px;
-     line-height: 12px;
-/* identical to box height */
-color: rgba(0, 0, 0, 0.46);
- }
- &__text{
-    font-size: 14px;
-line-height: 16px;
-color: $font-color-black;
- }
- &__style{
-    font-family: $font-family;
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 18px;
-&__viewAllComment{
-    font-weight: 400;
-    color: #666666;
-}
-/* identical to box height */
-color: #3C3C3C;
-&__description{
-    font-weight: 400;
-font-size: 11px;
-line-height: 16px;
-&__time{
-    font-weight: 300;
-color: rgba(60, 60, 60, 0.44);
-
-}
-&__style{
-    font-weight: 600; 
-}
-}
- }
-}
 
 // font-family: 'Poppins';
 // font-style: normal;
@@ -139,32 +60,16 @@ a{
     margin: auto;
   
 }
-.login{
-    background: linear-gradient(114.78deg, #844D95 -5.79%, #6374A0 73.16%);
-    height: 100vh;
-    padding-top: 5px;
-}
 
-.loginContainer{
-    height: 911px!important;
-    width:662px ;
-    background: $white-color;
-    border-radius: 24px;
-    margin-top: 30px;
-    padding-top: 75px;
-    margin-inline: auto;
-    text-align: center;
-    
-   }
-.formLabel{
-    width: 460px !important;
-}
-.loginSignUpInput{
-    width: 460px !important;
-    height: 60px;
-    border-radius: 24px;
-    padding: 13px 22px;
-   }
+
+
+
+// .loginSignUpInput{
+//     width: 460px !important;
+//     height: 60px;
+//     border-radius: 24px;
+//     padding: 13px 22px;
+//    }
    .ant-input{
     background: none!important;
    }
@@ -177,65 +82,22 @@ a{
 
    }
 
-//    sign up page scss
-.signUpSection{
-    height: 94vh;
-}
 
-.signUpSection2{
-    width: 460px;
-   padding: 100px 180px 0 180px;
-   &__signUpPara{
-    width: 460px;
-height: 168px;
-    font-family: 'Poppins';
-font-style: normal;
-font-weight: 600;
-font-size: 48px;
-line-height: 56px;
-/* or 117% */
-
-display: flex;
-align-items: center;
-
-color: #3C3C3C;
-}
-&__signUpPara2{
-    width: 460px;
-    color:#333333 ;
-}
-
-}
  .whiteBtn{
    
 border: 1px solid #333333;
-border-radius: 10px;
+border-radius: 10px!important;
    }
    .formLabelSignUp{
     width: 458px !important;
 }
 
-.signUpFooter{
- margin-top: 125px!important;
- width: 458px;
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 21px;
-/* identical to box height */
-color: #666666;
-
-}
 .signUpFormLabel{
      width: 460px !important;
 }
 // mainViewHeader scss
 .mainViewHeader{
-    &__left{
-// margin-left: 23px;
-// width: 22%;
-    }
+
     &__middle{
         width: 52%;
         display: flex;
@@ -243,9 +105,7 @@ color: #666666;
         // margin:0 142px 0 145px
 
     }
-    &__right{
-// width: 28%;
-    }
+
     &__headerSearch{
  
 padding: 8px 16px;
@@ -332,9 +192,7 @@ border-radius: 0px 0px 10px 0px;
 }
     }
 }
-.mainViewRight{
 
-}
 // post story
 .container {
     
@@ -344,12 +202,6 @@ border-radius: 0px 0px 10px 0px;
     &__storyAvatar{
         border: 2px solid $primary-color !important;
     }
-    // &__badgeBg{
-    //     padding: 15px!important;
-    //     border: 2px solid $primary-color!important;
-    //   border-radius: 5px !important;
-      
-    // }
     &__userName{
         font-family: $font-family-roboto;
 font-style: normal;
@@ -361,17 +213,8 @@ color: #666666;
   .postStoryName{
     width: 30px!important;
   }
-.createGroupBtn{
-    width: 102px!important;
-    padding: 5px 10px !important;
-    height: 28px;
-    color: $primary-color!important;
-    border: 1px solid $primary-color !important;
-    border-radius: 6px!important;
-}  
-.tabs{
-    // width:645px!important;
-}
+
+
 
 .blur-bg {
     position: relative;
@@ -428,11 +271,7 @@ color: #666666;
    
 }
 //groups modal for create groups
-.groupModal{
-    border-radius: 18px 18px 0px 0px;
-   
-    overflow: hidden;
-}
+
 .coverImg{
     height: 160px;
     background-image: url("../img/modalCoverImg.svg");
@@ -446,9 +285,6 @@ color: #666666;
     border: none !important;
 }
 .ant-collapse-item{
-    border: none !important;
-}
-.modelInput{
     border: none !important;
 }
 .ant-modal-footer{
@@ -468,6 +304,7 @@ color: #666666;
     }
     
 }
+
 // .groupBtn{
 //     width: 84px;
 //     padding: 3px 10px;

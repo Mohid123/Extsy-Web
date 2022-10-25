@@ -1,50 +1,126 @@
-import { Button } from "antd";
-
-import apple from  "../../assets/img/apple.svg"
-import google from "../../assets/img/google.svg"
-import facebook from "../../assets/img/facebook.svg"
-import Header from "../../components/Header";
-import WhiteButton from "../../components/WhiteButton";
+import { UserOutlined,LockOutlined, MailOutlined } from "@ant-design/icons";
+import { Button, Form,Input, Select } from "antd";
 import PrimaryButton from "../../components/PrimaryButton";
-
-
+import WhiteButton from "../../components/WhiteButton";
+import logo from "../../assets/img/ExtsyLogo.svg"
+import '../../components/authComp/signUp/signUp.scss'
+import LeftCoverImageComp from "../../components/authComp/signUpWithSocialLink/signUpComp";
+import { Option } from "antd/lib/mentions";
+import { useState } from "react";
+import OTPModal from "../../components/authComp/signUp/OTPModal";
 const SignUp = () => {
-    return ( 
-        <div>
-<Header/>
-        <hr className="p-0 mt-2 mb-0"/>
-        <div className="d-flex">
-            <div className="w-50 bg-info signUpSection">image</div>
-            <div className="w-50 signUpSection2">
-                <p className="signUpSection2__signUpPara">Explore the world to experience the nature of others!</p>
-                <p className="signUpSection2__signUpPara2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis maximus</p>
-                {/* <Button  className="signUpBtn mt-4">
-        <img src={facebook}  className="me-3"/>  Continue with Facebook
-        </Button> */}
-        <WhiteButton url={facebook} text="Continue with Facebook" height="65px" width="458px"/>
-        
-        <WhiteButton url={google} text="Continue with Google"  height="65px" width="458px" />
-
-        <WhiteButton url={apple} text="Continue with Apple" height="65px" width="458px"/>
-
-        <div className="formLabelSignUp d-flex justify-content-center  mt-3">
-    <hr  className="w-25 me-2"/>OR<hr  className=" ms-2 w-25"/>
-    </div>
-    <div className="d-flex justify-content-center bg-info">  <PrimaryButton   text= "Sign up with email" height="56px" width="460px" /></div>
+  const [modalOpen, setModalOpen] = useState(false);
+    return (
+      <div className="signUp">
+          <div className="text-center signUp__header pb-2">
+          <img className="ms-5 mt-3" src={logo} height="25" width="106" />
+        </div>
   
-    {/* <Button type="primary" htmlType="submit" className="signUp-form-button">
-         Sign up
-        </Button> */}
-        <div className="d-flex justify-content-between signUpFooter">
-            <p>About</p>
-            <p>Language</p>
-            <p>Privacy Policy</p>
-            <p>Marketing</p>
+        <div className="d-flex  justify-content-center">
+         <LeftCoverImageComp/>
+          <div className="w-50 signUpSection2">
+           
+
+            <Form
+              name="normal_login"
+              className="login-form"
+              initialValues={{ remember: true }}
+            >
+              <div className="formLabel text-start mb-2">Name</div>
+              <Form.Item
+                name="text"
+                rules={[
+                  { required: true, message: "Please input your Name!" },
+                ]}
+              >
+                <Input
+                  prefix={<UserOutlined className="site-form-item-icon" />}
+                  placeholder="your name"
+                  className="signUpInput"
+                />
+                 </Form.Item>
+              <div className="formLabel text-start mb-2">Email</div>
+              <Form.Item
+                name="email"
+                rules={[
+                  { required: true, message: "Please input your Email!" },
+                ]}
+              >
+                <Input
+                  prefix={<MailOutlined  className="site-form-item-icon" />}
+                  placeholder="your Email"
+                  className="signUpInput"
+                />
+              </Form.Item>
+              <div className="formLabel  text-start  mb-2">your password</div>
+              <Form.Item
+        name="password"
+        rules={[{ required: true, message: 'Please input your Password!' }]}
+      >
+        <Input.Password
+          prefix={<LockOutlined className="site-form-item-icon" />}
+          // iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
+          type="password"
+          placeholder="Password"
+          className="signUpInput"
+        />
+      </Form.Item>
+      <div className="formLabel text-start mb-2">Enter your Phone Number</div>
+      <Form.Item>
+      <Input.Group compact>
+        <div className="d-flex" style={{width:"28.75rem"}}>
+      <Select defaultValue="US">
+        <Option value="Option1">Option1</Option>
+        <Option value="Option2">Option2</Option>
+      </Select>
+      <Input
+        // style={{
+        //   width: '50%',
+        // }}
+        placeholder="+1 (555) 000-0000"
+        // defaultValue="+1 (555) 000-0000"
+      />
+      <Button onClick={()=> setModalOpen(true)}>Send OTP</Button>
+      </div>
+    </Input.Group>
+      </Form.Item>
+
+              {/* <Form.Item> */}
+              {/* <Form.Item name="remember" valuePropName="checked" noStyle>
+          <Checkbox>Remember me</Checkbox>
+        </Form.Item> */}
+              {/* </Form.Item> */}
+              <div className="text-end  mb-4"  style={{width:"28.75rem"}}>
+                <a className="" href="">
+                  Forgot your password
+                </a>
+              </div>
+
+              
+               
+              
+            </Form>
+            <PrimaryButton text="Create account" height="56px" width="460px" />
+            <WhiteButton
+              url=""
+              text="Use Social Links"
+              height="56px"
+              width="460px"
+            />
+            <p className="text-center mt-2" style={{ width: "460px" }}>
+              By signing up, you agree to the <a href="#">Terms of Service</a>
+              and <a href="#">Privacy policy </a>including{" "}
+              <a href="#">cookie use</a>
+            </p>
+          </div>
         </div>
-            </div>
-        </div>
-        </div>
-     );
+        <OTPModal 
+        visible={modalOpen}
+        onOk={()=>setModalOpen(false)}
+        onCancel={()=>setModalOpen(false)}
+        />
+      </div>
+    );
 }
  
 export default SignUp;

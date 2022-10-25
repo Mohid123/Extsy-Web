@@ -2,10 +2,10 @@
 import { AntDesignOutlined, InfoCircleOutlined, SearchOutlined, SettingOutlined, UploadOutlined, UserOutlined } from "@ant-design/icons";
 import { Avatar, Button, Collapse, Input, message, Modal, Tabs, Tooltip, Upload } from "antd";
 import TextArea from 'antd/lib/input/TextArea';
-import addIcon from '../../../assets/img/plusIcon.svg'
-import PrimaryButton from '../../PrimaryButton';
-import cameraIcon from '../../../assets/img/cameraIcon.svg'
-
+import addIcon from '../../../../assets/img/plusIcon.svg'
+import PrimaryButton from '../../../PrimaryButton';
+import cameraIcon from '../../../../assets/img/cameraIcon.svg'
+import './createGroupModal.scss'
 const { Panel } = Collapse;
 
 const CreateGroup = (props:any) => {
@@ -50,8 +50,8 @@ const CreateGroup = (props:any) => {
             </Upload></div>
             </div>
             <div className='p-5'>
-            <h5>Create Group</h5>
-            <p className="m-0 p-0">Title</p>
+            <h5 className="createGroup">Create Group</h5>
+            <p className="m-0 p-0 headings">Title</p>
             <Input
               placeholder="Enter group title"
               suffix={
@@ -66,7 +66,7 @@ const CreateGroup = (props:any) => {
             />
             <br />
             <br />
-            <p className="m-0 p-0">Description</p>
+            <p className="m-0 p-0 headings">Description</p>
             <TextArea
               placeholder="Description..."
               allowClear
@@ -79,7 +79,7 @@ const CreateGroup = (props:any) => {
                 header={
                   <>
                     <div className="d-flex justify-content-between align-items-center">
-                      <p className="mb-0 pb-0">Moderator</p>
+                      <p className="mb-0 pb-0 headings">Moderator</p>
                       <img src={addIcon} />
                     </div>
                     <Avatar.Group
@@ -88,6 +88,7 @@ const CreateGroup = (props:any) => {
                         color: "#f56a00",
                         backgroundColor: "#fde3cf",
                       }}
+                      size={17}
                     >
                       <Avatar src="https://joeschmoe.io/api/v1/random" />
                       <Avatar
@@ -135,10 +136,10 @@ const CreateGroup = (props:any) => {
                         />
                       }
                     />
-                    <p className="ms-2">Usman Ahmad</p>
+                    <p className="ms-2 userName">Usman Ahmad</p>
                   </div>
                
-                  <Button className="mainViewRight__whiteBtnFollow ">
+                  <Button className="whiteBtnAdd ">
                     Add
                   </Button>
                 </div>
@@ -158,10 +159,12 @@ const CreateGroup = (props:any) => {
                         />
                       }
                     />
-                    <p className="ms-2">Usman Ahmad</p>
+                    <p className="ms-2 userName">Usman Ahmad</p>
                   </div>
                
-                 <PrimaryButton text='Added' height='32px' width='64px'/>
+                 <Button className="primaryBtnAdded">
+                Added
+                </Button>
                 </div>
               </Panel>
             </Collapse>

@@ -1,0 +1,79 @@
+.postCardfontStyle{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    /* identical to box height */
+    color:black;
+     &__username{
+        font-size: 11px;
+         line-height: 16px;
+    /* identical to box height */
+    color:  #666666;
+     }
+     &__text{
+        font-size: 14px;
+    line-height: 21px;
+    color: black;
+     }
+    
+     &__iconText{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        /* identical to box height */
+        
+        
+        color: #3C3C3C;
+        
+     }
+    }
+    .style{
+        font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    &__viewAllComment{
+        font-size: 12px;
+        font-family: 'Poppins';
+        font-weight: 400;
+        color: #666666;
+    }
+    /* identical to box height */
+    color: #3C3C3C;
+    &__description{
+        font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+color: #3C3C3C;
+    font-size: 11px;
+    line-height: 16px;
+    &__time{
+        font-family: 'Poppins';
+        font-size: 11px;
+        font-weight: 300;
+    color: rgba(60, 60, 60, 0.44);
+    
+    }
+    &__style{
+        font-family: 'Poppins';
+     
+        font-size: 14px;
+        color: #3C3C3C;
+    }
+    }
+     }
+     .tagName{
+        color:#7C167D
+     }
+     .video-react{
+        border-radius: 18px;
+        overflow: hidden;
+     }
+     .video-react-button{
+        // border-radius: 50%!important;
+     }

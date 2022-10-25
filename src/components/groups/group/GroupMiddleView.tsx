@@ -2,7 +2,8 @@ import {useState} from 'react';
 import { AntDesignOutlined,SearchOutlined,UserOutlined } from "@ant-design/icons";
 import { Avatar, Button, Input, Tabs, Tooltip } from "antd";
 import '../group.scss'
-import CreateGroup from './createGroup';
+import './groupTabs.scss'
+import CreateGroup from './createGroupModal/createGroupModal';
 import postCardImage from "../../../assets/img/postCardImage.png"
 const initialItems = [
   {
@@ -18,8 +19,8 @@ const initialItems = [
           }
         />
         <div className="ms-3">
-          <h6 className=" m-0 p-0">Usman Ahmad</h6>
-          <p className=" m-0 p-0">
+          <h6 className=" m-0 p-0 groupName">Usman Ahmad</h6>
+          <p className=" m-0 p-0 groupDescription">
             Group description if any, Group description if any , Group
             description if any , Group description if any , Group
             description.{" "}
@@ -44,7 +45,7 @@ const initialItems = [
         <Avatar src="https://joeschmoe.io/api/v1/random" />
         <Avatar src="https://joeschmoe.io/api/v1/random" />
       </Avatar.Group>
-      <p className='m-0 p-0'>2.4k members</p>
+      <p className='m-0 p-0 member'>2.4k members</p>
     </div>
     <hr style={{marginLeft:'4.5rem'}}/>
     <div className="d-flex justify-content-between  align-items-center mt-3">
@@ -57,8 +58,8 @@ const initialItems = [
           }
         />
         <div className="ms-3">
-          <h6 className=" m-0 p-0">Usman Ahmad</h6>
-          <p className=" m-0 p-0">
+          <h6 className=" m-0 p-0 groupName">Usman Ahmad</h6>
+          <p className=" m-0 p-0 groupDescription">
             Group description if any, Group description if any , Group
             description if any , Group description if any , Group
             description.{" "}
@@ -103,7 +104,7 @@ const initialItems = [
         <Avatar src="https://joeschmoe.io/api/v1/random" />
         <Avatar src="https://joeschmoe.io/api/v1/random" />
       </Avatar.Group>
-      <p className='m-0 p-0'>2.4k members</p>
+      <p className='m-0 p-0 member'>2.4k members</p>
      
     </div>
     <hr style={{marginLeft:'4.5rem'}}/>
@@ -125,8 +126,8 @@ const initialItems = [
               }
             />
             <div className="ms-3">
-              <h6 className=" m-0 p-0">Usman Ahmad</h6>
-              <p className=" m-0 p-0">
+              <h6 className=" m-0 p-0 groupName">Usman Ahmad</h6>
+              <p className=" m-0 p-0 groupDescription">
                 Group description if any, Group description if any , Group
                 description if any , Group description if any , Group
                 description.{" "}
@@ -171,7 +172,7 @@ const initialItems = [
             <Avatar src="https://joeschmoe.io/api/v1/random" />
             <Avatar src="https://joeschmoe.io/api/v1/random" />
           </Avatar.Group>
-          <p className='m-0 p-0'>2.4k members</p>
+          <p className='m-0 p-0 member'>2.4k members</p>
         </div>
         <hr style={{marginLeft:'4.5rem'}}/>
       </div>
@@ -195,7 +196,7 @@ const GroupComp = () => {
       <div>
         <Input
           size="small"
-          placeholder="search"
+          placeholder="Explore Groups"
           prefix={<SearchOutlined />}
           className="mainViewHeader__headerSearch__groupSearch"
         />
@@ -203,8 +204,7 @@ const GroupComp = () => {
       type="editable-card"
       onChange={onChange}
       items={items}
-      addIcon={<Button className="createGroupBtn" onClick={() => setOpen(true)}>
-      Create Group
+      addIcon={<Button className="createGroupBtn" onClick={() => setOpen(true)}>Create Group
     </Button>}
     />
         <>

@@ -1,7 +1,3 @@
-import AddRemoveMemberComp from "../components/groups/groupAdmin/AddRemoveMember/addRemoveMembersComp";
-import Login from "../views/auth/Login";
-import SignUp from "../views/auth/SignUp";
-import SignUpUsingEmail from "../views/auth/SignUpUsingEmail";
 import GroupAddRemoveMembers from "../views/GroupAddRemoveMembers";
 import GroupAdmin from "../views/GroupAdmin";
 import GroupManageRequest from "../views/GroupManageRequest";
@@ -11,9 +7,7 @@ import GroupUserViewMain from "../views/GroupUserViewMain";
 import GroupUserViewMembersList from "../views/GroupUserViewMembersList";
 import GroupUserViewModerators from "../views/GroupUserViewModerators";
 import Main from "../views/MainView";
-
 import EventAdmin from './../components/eventAdmin/eventAdmin';
-import UserProfile from "../components/userProfile/userProfile"
 import ExploreUser from "../components/userProfile/exploreUser"
 import PushNotifications from "../layout/pushNotifications"
 import EventPosts from "../components/eventPosts/eventPosts";
@@ -24,6 +18,10 @@ import ImageVerification from "../components/kyc/ImageVerification"
 import IdCardVerification from "../components/kyc/IDCardVerification"
 import PassportVerification from "../components/kyc/PassportVerification"
 import Success from "../components/kyc/Success"
+import SignIn from "../views/auth/SignIn";
+import SignUpWithSocailLink from "../views/auth/SignUpWithSocialLink";
+import SignUp from "../views/auth/SignUp";
+import PostTypes from "../components/eventPosts/postTypes/postTypes";
 
 
 export const routes = [
@@ -73,18 +71,18 @@ export const routes = [
 		layout: 'main',
 	},
 	{
-		path: '/auth/login',
-		component: Login,
+		path: '/auth/signin',
+		component: SignIn,
 		layout: 'auth',
 	},
 	{
 		path: '/auth/signup',
-		component: SignUp,
+		component: SignUpWithSocailLink,
 		layout: 'auth',
 	},
 	{
 		path: '/auth/signup2',
-		component: SignUpUsingEmail,
+		component: SignUp,
 		layout: 'auth',
 	},
 	{
@@ -147,5 +145,10 @@ export const routes = [
 		path: '/kyc/success',
 		component: Success,
 		layout: 'Kyc'
+  },
+    {
+		path: '/postTypes',
+		component: PostTypes,
+		layout: 'main'
 	}
 ]
