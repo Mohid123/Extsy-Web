@@ -22,6 +22,7 @@ import SignIn from "../views/auth/SignIn";
 import SignUpWithSocailLink from "../views/auth/SignUpWithSocialLink";
 import SignUp from "../views/auth/SignUp";
 import PostTypes from "../components/eventPosts/postTypes/postTypes";
+import UserProfileInfo from "../components/userProfile/userProfile";
 
 
 export const routes = [
@@ -113,7 +114,7 @@ export const routes = [
 	},
 	{
 		path: '/user/userProfile',
-		component: UserProfile,
+		component: UserProfileInfo,
 		layout: 'main'
 	},
 	{
