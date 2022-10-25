@@ -6,7 +6,7 @@ const GroupModeratorComp = () => {
     return ( 
         <GroupAdminMiddleLayout>
          <div className="p-4">
-        <p>Moderators</p>
+        <p className="heading">Moderators</p>
         <Input
           size="small"
           placeholder="search user to add"
@@ -14,22 +14,9 @@ const GroupModeratorComp = () => {
           className="groupViewMemberList"
         />
         <div className="d-flex justify-content-between  align-items-center mt-3">
-              <div className="d-flex align-items-center ">
-                <Avatar
-                  size={30}
-                  className={"container__storyAvatar"}
-                  src={
-                    <img
-                      src="https://joeschmoe.io/api/v1/random"
-                      style={
-                        {
-                          // width: 32,
-                        }
-                      }
-                    />
-                  }
-                />
-                <p className="ms-2">Usman Ahmad</p>
+              <div className="">
+              <img alt='rounded-img' className='circular-img-frndSuggestion ' style={{width:'1.563rem',height:"25px"}} src={'https://img.posterlounge.co.uk/images/l/1898617.jpg'}/>
+                <span className="ms-2">Usman Ahmad</span>
               </div>
            
               <Button className="groupButton ">
@@ -37,22 +24,9 @@ const GroupModeratorComp = () => {
               </Button>
             </div>
             <div className="d-flex justify-content-between  align-items-center mt-3">
-              <div className="d-flex align-items-center ">
-                <Avatar
-                  size={30}
-                  className={"container__storyAvatar"}
-                  src={
-                    <img
-                      src="https://joeschmoe.io/api/v1/random"
-                      style={
-                        {
-                          // width: 32,
-                        }
-                      }
-                    />
-                  }
-                />
-                <p className="ms-2">Usman Ahmad</p>
+              <div className=" ">
+              <img alt='rounded-img' className='circular-img-frndSuggestion ' style={{width:'1.563rem',height:"25px"}} src={'https://img.posterlounge.co.uk/images/l/1898617.jpg'}/>
+              <span className="ms-2">Usman Ahmad</span>
               </div>
            
               <Button className="groupPrimaryBtn ">
