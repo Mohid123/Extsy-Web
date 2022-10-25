@@ -62,16 +62,16 @@ const EditUserProfile = ()=>{
                             </div>
                 </Col>
                 <Col className="" span={16} >
-                    <h6 >Full Name</h6>
+                    <h6  className='editUser__label'>Full Name</h6>
                     
                 <Input placeholder="" size='large' />
-                <h6 className='mt-3'>User Name</h6>
+                <h6 className='mt-3 editUser__label'>User Name</h6>
                 <Input placeholder="" size='large' />
-                <h6 className='mt-3'>Email</h6>
+                <h6 className='mt-3 editUser__label'>Email</h6>
                 <Input placeholder=""  size='large'/>
-                <h6 className='mt-3'>Phone Number</h6>
+                <h6 className='mt-3 editUser__label'>Phone Number</h6>
                 <Input placeholder=""  size='large'/>
-                <h6 className='mt-3'>DOB</h6>
+                <h6 className='mt-3 editUser__label'>DOB</h6>
                 <DatePicker onChange={onChange} size='large' style={{ width: '100%' }} />
                 <div className=' mt-3'>
                 <Button type="primary" className='px-4 pb-1'  size={"small"} >

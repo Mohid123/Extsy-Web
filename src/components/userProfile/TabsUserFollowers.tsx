@@ -64,11 +64,9 @@ const TabsPanel1  = () => {
                 title={<a href="https://ant.design">{item.name.last}</a>}
                 description={item.email}
               />
-              <Button type="text" danger  ghost style={{marginRight:'10px', borderRadius:'10px'}}>
-      Unfollow
-    </Button>
-    <Button type="primary" danger ghost  style={{ borderRadius:'10px',backgroundColor:'#F7F7F7', border:'1 px solid #F7F7F7'}}>
-      Block
+              
+    <Button type="primary"  ghost  style={{ borderRadius:'10px',backgroundColor:'#F7F7F7', color:'black', border:'none', fontSize:'11px', fontWeight:'400'}}>
+      Remove
     </Button>
             </List.Item>
           )}

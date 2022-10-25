@@ -18,7 +18,7 @@ const AddRemoveMemberComp = () => {
               <div className=" ">
               <img alt='rounded-img' className='circular-img-frndSuggestion ' style={{width:'1.563rem',height:"25px"}} src={'https://img.posterlounge.co.uk/images/l/1898617.jpg'}/>
                 <span className="ms-2">Usman Ahmad</span>
-              </div>
+           </div>
            
               <Button className="groupButton ">
                 Remove

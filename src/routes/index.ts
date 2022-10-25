@@ -12,10 +12,17 @@ import ExploreUser from "../components/userProfile/exploreUser"
 import PushNotifications from "../layout/pushNotifications"
 import EventPosts from "../components/eventPosts/eventPosts";
 import EventView from "../components/eventView/eventView";
+import CompleteKyc from "../components/kyc/CompleteKyc"
+import AccountDetails from "../components/kyc/AccountDetails"
+import ImageVerification from "../components/kyc/ImageVerification"
+import IdCardVerification from "../components/kyc/IDCardVerification"
+import PassportVerification from "../components/kyc/PassportVerification"
+import Success from "../components/kyc/Success"
 import SignIn from "../views/auth/SignIn";
 import SignUpWithSocailLink from "../views/auth/SignUpWithSocialLink";
 import SignUp from "../views/auth/SignUp";
 import PostTypes from "../components/eventPosts/postTypes/postTypes";
+import UserProfileInfo from "../components/userProfile/userProfile";
 
 
 export const routes = [
@@ -106,6 +113,41 @@ export const routes = [
 		layout: 'main'
 	},
 	{
+		path: '/user/userProfile',
+		component: UserProfileInfo,
+		layout: 'main'
+	},
+	{
+		path: '/kyc/complete',
+		component: CompleteKyc,
+		layout: 'kyc'
+	},
+	{
+		path: '/kyc/accountDetails',
+		component: AccountDetails,
+		layout: 'Kyc'
+	},
+	{
+		path: '/kyc/imageVerification',
+		component: ImageVerification,
+		layout: 'Kyc'
+	},
+	{
+		path: '/kyc/IdCardVerification',
+		component: IdCardVerification,
+		layout: 'Kyc'
+	},
+	{
+		path: '/kyc/PassportVerification',
+		component: PassportVerification,
+		layout: 'Kyc'
+	},
+	{
+		path: '/kyc/success',
+		component: Success,
+		layout: 'Kyc'
+  },
+    {
 		path: '/postTypes',
 		component: PostTypes,
 		layout: 'main'
