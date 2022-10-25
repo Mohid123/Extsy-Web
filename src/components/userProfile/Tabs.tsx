@@ -16,6 +16,8 @@ import CryptoIcon from '../../assets/img/Crypto icons.svg'
 import Ellipse3 from '../../assets/img/Ellipse 3.svg'
 import ArrowIcon from '../../assets/img/arrowIcon.svg'
 import Bitcoin from '../../assets/img/Bitcoin Plus (Xbc).svg'
+import Frame from '../../assets/img/Frame 48095420.svg'
+
 
 
 import   "./index.scss"
@@ -68,6 +70,9 @@ const TabsPanel  = () => {
     >
       <Col className="gutter-row" span={6} >
       <div className='px-2'>
+        <div className='frame'>
+          <img src={Frame} alt="" />
+        </div>
         <img src={tab1Image1} alt="" />
         <div className='d-flex px-4 justify-content-between blur-bg'>
                                 <div style={{ position: 'relative', bottom: '10px' }}>
@@ -90,6 +95,9 @@ const TabsPanel  = () => {
         </Col>
         <Col className="gutter-row" span={6} >
       <div className='px-2'>
+      <div className='frame'>
+          <img src={Frame} alt="" />
+        </div>
         <img src={tab1Image2} alt="" />
                             <div className='d-flex px-4 justify-content-between blur-bg'>
                                 <div style={{ position: 'relative', bottom: '10px' }}>
@@ -112,6 +120,9 @@ const TabsPanel  = () => {
         </Col>
         <Col className="gutter-row" span={6} >
       <div className='px-2'>
+      <div className='frame'>
+          <img src={Frame} alt="" />
+        </div>
         <img src={tab1Image3} alt="" />
         <div className='d-flex px-4 justify-content-between blur-bg'>
                                 <div style={{ position: 'relative', bottom: '10px' }}>
@@ -134,6 +145,9 @@ const TabsPanel  = () => {
         </Col>
         <Col className="gutter-row" span={6} >
       <div className='px-2'>
+      <div className='frame'>
+          <img src={Frame} alt="" />
+        </div>
         <img src={tab1Image4} alt="" />
         <div className='d-flex px-4 justify-content-between blur-bg'>
                                 <div style={{ position: 'relative', bottom: '10px' }}>
@@ -167,13 +181,13 @@ const TabsPanel  = () => {
         
         <div className='d-flex px-4 justify-content-between blur-bg2'>
                                 <div >
-                                  <p className='textColor mt-2'>Monkey with hat</p> 
+                                  <p className='textColor fs_12 fw_400 mt-2'>Monkey with hat</p> 
                                 </div>
                                 
 
                                 <div className='d-flex'>
                                     <img src={Heart} className="" style={{width:'20px'}} alt="" />
-                                    <p className='textColor mt-2 ms-2'> 6</p>
+                                    <p className='textColor mt-2 ms-2 fs_12 fw_500'> 6</p>
                                 </div>
 
 
@@ -181,11 +195,11 @@ const TabsPanel  = () => {
                             <div className=' monkeyDiv'>
                              <div className='d-flex'>
                              <img src={Ellipse3} alt="" />
-                              <p className='mt-3 ms-2'>Johinson</p>
+                              <p className='mt-3 ms-2 fs_12 fw_400 fc_grey2'>Johinson</p>
                              </div>
                              <div className='d-flex'>
                              <img src={CryptoIcon} alt="" />
-                              <p className='mt-3 ms-2'>615</p>
+                              <p className='mt-3 ms-2 fs_12 fw_400 fc_grey2'>615</p>
                              </div>
                              
                              
@@ -197,13 +211,13 @@ const TabsPanel  = () => {
         <img src={tab2Image2} alt="" />
         <div className='d-flex px-4 justify-content-between blur-bg2'>
                                 <div >
-                                  <p className='textColor mt-2'>Monkey with hat</p> 
+                                  <p className='textColor fs_12 fw_400 mt-2'>Monkey with hat</p> 
                                 </div>
                                 
 
                                 <div className='d-flex'>
                                     <img src={Heart} className="" style={{width:'20px'}} alt="" />
-                                    <p className='textColor mt-2 ms-2'> 6</p>
+                                    <p className='textColor mt-2 ms-2 fs_12 fw_500'> 6</p>
                                 </div>
 
 
@@ -211,11 +225,11 @@ const TabsPanel  = () => {
                             <div className=' monkeyDiv'>
                              <div className='d-flex'>
                              <img src={Ellipse3} alt="" />
-                              <p className='mt-3 ms-2'>Johinson</p>
+                              <p className='mt-3 ms-2 fs_12 fw_400 fc_grey2'>Johinson</p>
                              </div>
                              <div className='d-flex'>
                              <img src={CryptoIcon} alt="" />
-                              <p className='mt-3 ms-2'>615</p>
+                              <p className='mt-3 ms-2 fs_12 fw_400 fc_grey2'>615</p>
                              </div>
                              
                              
@@ -227,13 +241,13 @@ const TabsPanel  = () => {
         <img src={tab2Image3} alt="" />
         <div className='d-flex px-4 justify-content-between blur-bg2'>
                                 <div >
-                                  <p className='textColor mt-2'>Monkey with hat</p> 
+                                  <p className='textColor fs_12 fw_400 mt-2'>Monkey with hat</p> 
                                 </div>
                                 
 
                                 <div className='d-flex'>
                                     <img src={Heart} className="" style={{width:'20px'}} alt="" />
-                                    <p className='textColor mt-2 ms-2'> 6</p>
+                                    <p className='textColor mt-2 ms-2 fs_12 fw_500'> 6</p>
                                 </div>
 
 
@@ -241,11 +255,11 @@ const TabsPanel  = () => {
                             <div className=' monkeyDiv'>
                              <div className='d-flex'>
                              <img src={Ellipse3} alt="" />
-                              <p className='mt-3 ms-2'>Johinson</p>
+                              <p className='mt-3 ms-2 fs_12 fw_400 fc_grey2'>Johinson</p>
                              </div>
                              <div className='d-flex'>
                              <img src={CryptoIcon} alt="" />
-                              <p className='mt-3 ms-2'>615</p>
+                              <p className='mt-3 ms-2 fs_12 fw_400 fc_grey2'>615</p>
                              </div>
                              
                              
@@ -257,13 +271,13 @@ const TabsPanel  = () => {
         <img src={tab2Image4} alt="" />
         <div className='d-flex px-4 justify-content-between blur-bg2'>
                                 <div >
-                                  <p className='textColor mt-2'>Monkey with hat</p> 
+                                  <p className='textColor fs_12 fw_400 mt-2'>Monkey with hat</p> 
                                 </div>
                                 
 
                                 <div className='d-flex'>
                                     <img src={Heart} className="" style={{width:'20px'}} alt="" />
-                                    <p className='textColor mt-2 ms-2'> 6</p>
+                                    <p className='textColor mt-2 fs_12 fw_500 ms-2'> 6</p>
                                 </div>
 
 
@@ -271,11 +285,11 @@ const TabsPanel  = () => {
                             <div className=' monkeyDiv'>
                              <div className='d-flex'>
                              <img src={Ellipse3} alt="" />
-                              <p className='mt-3 ms-2'>Johinson</p>
+                              <p className='mt-3 ms-2 fs_12 fw_400 fc_grey2'>Johinson</p>
                              </div>
                              <div className='d-flex'>
                              <img src={CryptoIcon} alt="" />
-                              <p className='mt-3 ms-2'>615</p>
+                              <p className='mt-3 ms-2 fs_12 fw_400 fc_grey2'>615</p>
                              </div>
                              
                              
@@ -294,7 +308,7 @@ const TabsPanel  = () => {
       <div className=""  >
         <h6 className='text-start fs_14 fw_500 fc_cyan2'>Total balance</h6>
         <div className='d-flex'>
-        <h4 className='fs_21 fw_700 fc_black'>$ 352,556.00</h4>
+        <h4 className='fs_21 fw_700 fc_grey3'>$ 352,556.00</h4>
         
           <p className='ms-5 mt-2 me-2 textGreen'>+ 36%</p>
           <img src={ArrowIcon} alt="" />
@@ -305,7 +319,7 @@ const TabsPanel  = () => {
       <div className="text-start"  >
       <h6 className='fs_14 fw_500 fc_cyan2'>Send</h6>
       <div className='d-flex'>
-        <h4 className='fs_21 fw_700 fc_black'>$ 352,556.00</h4>
+        <h4 className='fs_21 fw_700 fc_grey3'>$ 352,556.00</h4>
         
           <p className='ms-5 mt-2 me-2 textGreen'>+ 36%</p>
           <img src={ArrowIcon} alt="" />
@@ -315,7 +329,7 @@ const TabsPanel  = () => {
       <div className="text-start"  >
       <h6 className='fs_14 fw_500 fc_cyan2'>received</h6>
       <div className='d-flex'>
-        <h4 className='fs_21 fw_700 fc_black'>$ 352,556.00</h4>
+        <h4 className='fs_21 fw_700 fc_grey3'>$ 352,556.00</h4>
         
           <p className='ms-5 mt-2 me-2 textGreen'>+ 36%</p>
           <img src={ArrowIcon} alt="" />

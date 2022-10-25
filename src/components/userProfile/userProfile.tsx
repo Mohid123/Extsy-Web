@@ -1,6 +1,8 @@
 import EditUserProfile from "./editUserProfile"
 import TabsPanel from  "./Tabs";
-import TabsPanel1 from  "./TabsUserFollowing";
+import FollowingTab from  "./TabsUserFollowing";
+import FollowersTab from  "./TabsUserFollowers";
+
 import { Col, Row, Button,Tabs, Card  } from 'antd';
 import topImage from '../../assets/img/Rectangle 19.svg'
 import avatarImage from '../../assets/img/84.svg'
@@ -13,19 +15,27 @@ const style = {
   
 const UserProfileInfo = () => {
     const [tabs, setTabs] = useState(true)
-    const [lists, setLists] = useState(false)
+    const [followingTab, setFollowingTab] = useState(false)
+    const [followersTab, setFollowersTab] = useState(false)
     const [editProfile, setEditProfile] = useState(false)
-    const [userID, setUserID] = useState('my iddd')
+    const [userID, setUserID] = useState('my id')
 
     
-
+    
+    const showFollowers = () =>{
+      setTabs(false)
+      setFollowersTab(true)
+      setFollowingTab(false)
+    }
   const handleClick = () =>{
     setTabs(false)
-    setLists(true)
+    setFollowingTab(true)
+    setFollowersTab(false)
   }
   const showPosts = () =>{
     setTabs(true)
-    setLists(false)
+    setFollowingTab(false)
+    setFollowersTab(false)
   }
   const closeDiv = () =>{
     setEditProfile(true)
@@ -73,7 +83,7 @@ const UserProfileInfo = () => {
         20K
       </h6>
       </div>
-      <div style={{ paddingLeft:'30px',cursor:'pointer'}} onClick={handleClick}>
+      <div style={{ paddingLeft:'30px',cursor:'pointer'}} onClick={showFollowers}>
        
       <p className="userProfile__tabs">Followers</p>
       <h6 className="  userProfile__tabsNumbers">
@@ -81,7 +91,7 @@ const UserProfileInfo = () => {
       </h6>
       </div>
       </div> 
-      {lists? (<TabsPanel1/>) :(<TabsPanel/>)}
+      {followingTab? (<FollowingTab/>) :tabs?(<TabsPanel/>):(<FollowersTab/>)}
       
         </div>
       </Col>

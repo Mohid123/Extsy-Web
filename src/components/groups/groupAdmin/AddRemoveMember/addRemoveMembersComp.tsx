@@ -26,7 +26,7 @@ const AddRemoveMemberComp = () => {
                           // width: 32,
                         }
                       }
-                    />
+                   alt="" />
                   }
                 />
                 <p className="ms-2">Usman Ahmad</p>
