@@ -75,7 +75,7 @@ const GroupAdminLeftOption= () => {
                 </span>
                 
                 <span className="d-flex justify-content-between mt-2 ">
-                    <span className=" propertiesTextStyle" onClick={()=>{navigate('/groupadmin/addremovemembers')}}><img src={settings} className="me-3"/>Group settings</span> 
+                    <span className=" propertiesTextStyle" ><img src={settings} className="me-3"/>Group settings</span> 
                 </span>  
             </div>
 

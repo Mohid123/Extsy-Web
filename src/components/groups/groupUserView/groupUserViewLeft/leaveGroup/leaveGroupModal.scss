@@ -1,0 +1,42 @@
+.leaveGrp{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 28px;
+color: #101828;
+&__message{
+    font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+color: #667085;
+}
+}
+
+.leaveBtn{
+    padding: 10px 40px;
+width:7.063rem;
+height: 37px;
+background: #EE1D52;
+border-radius: 6px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 11px;
+line-height: 16px;
+color: #F5F5F5;
+ &__cancelBtn{
+    color: #64748B;
+    padding: 10px 40px;
+    width: 120px;
+    height: 37px;
+    background: #E7EAEE;
+    border-radius: 6px;
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 11px;
+line-height: 16px;
+
+ }
+}
