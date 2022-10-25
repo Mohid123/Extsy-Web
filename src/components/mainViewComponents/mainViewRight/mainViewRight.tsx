@@ -6,6 +6,7 @@ const MainViewRight = () => {
     return ( 
     <div className='mainViewRight'>
     <Ad/>
+    <br/>
     <FriendSuggest/>
     </div>
      );
