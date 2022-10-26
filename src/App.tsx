@@ -5,6 +5,8 @@ import { BrowserRouter as Router,  Routes,Route} from "react-router-dom";
 import AuthLayout from './layout/Auth';
 import { routes } from './routes';
 import MainLayout from './layout/Main';
+import KycLayout from './layout/Kyc';
+
 
 
 function App() {
@@ -34,6 +36,17 @@ function App() {
                       <AuthLayout>
                         <route.component />
                       </AuthLayout>
+                    }
+                  />
+                );
+                case 'kyc':
+								return (
+                  <Route
+                    path={route.path}
+                    element={
+                      <KycLayout>
+                        <route.component />
+                      </KycLayout>
                     }
                   />
                 );
