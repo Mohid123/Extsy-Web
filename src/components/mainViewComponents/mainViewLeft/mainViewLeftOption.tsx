@@ -27,7 +27,7 @@ const MainViewLeftOption = () => {
             text="NFTs Marketplace"
             onClick={() => navigate("/")}
           />
-          <NavigateOption url={p2p} text="P2P" onClick={() => navigate("/")} />
+          <NavigateOption url={p2p} text="P2P" onClick={() => navigate("/p2pbuyer")} />
           <NavigateOption
             url={bookMark}
             text="Save Posts"

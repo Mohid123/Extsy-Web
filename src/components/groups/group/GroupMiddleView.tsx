@@ -193,7 +193,7 @@ const GroupComp = () => {
   
 
     return (
-      <div>
+      <div className='mt-5'>
         <Input
           size="small"
           placeholder="Explore Groups"

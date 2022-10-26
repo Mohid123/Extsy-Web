@@ -16,12 +16,18 @@ import SignIn from "../views/auth/SignIn";
 import SignUpWithSocailLink from "../views/auth/SignUpWithSocialLink";
 import SignUp from "../views/auth/SignUp";
 import PostTypes from "../components/eventPosts/postTypes/postTypes";
+import P2pBuyer from "../components/p2pBuyer/p2pBuyer";
 
 
 export const routes = [
     {
 		path: '/',
 		component: Main,
+		layout: 'main',
+	},
+	{
+		path: '/p2pbuyer',
+		component: P2pBuyer,
 		layout: 'main',
 	},
 	{
