@@ -52,7 +52,7 @@ export class ApiService<T> {
         })
         .catch((error: any) => {
             if(error) {
-                if ([401, 403].includes(error.response.status) && this.JwtToken) {
+                if ([401, 403].includes(error.response.status)) {
                     // auto logout if 401 Unauthorized or 403 Forbidden response returned from api. No need for error interceptor
                     // logout user function call
                 }
@@ -88,7 +88,7 @@ export class ApiService<T> {
             params: params,
             headers: this.setHeaders()
         }
-        return await this.handleResponse(axios.get<ApiResponse<T>>(`${environment.apiUrl}${path}`, options))
+        return await this.handleResponse<T>(axios.get<ApiResponse<T>>(`${environment.apiUrl}${path}`, options))
     }
 
     public async post(
@@ -99,7 +99,7 @@ export class ApiService<T> {
             method: 'POST',
             headers: this.setHeaders()
         }
-        return await this.handleResponse(axios.post<ApiResponse<T>>(`${environment.apiUrl}${path}`, JSON.stringify(body), options))
+        return await this.handleResponse<T>(axios.post<ApiResponse<T>>(`${environment.apiUrl}${path}`, JSON.stringify(body), options))
     }
 
     public async put(
@@ -110,7 +110,7 @@ export class ApiService<T> {
             method: 'PUT',
             headers: this.setHeaders()
         }
-        return await this.handleResponse(axios.put<ApiResponse<T>>(`${environment.apiUrl}${path}`, JSON.stringify(body), options))
+        return await this.handleResponse<T>(axios.put<ApiResponse<T>>(`${environment.apiUrl}${path}`, JSON.stringify(body), options))
     }
 
     public async delete(
@@ -122,7 +122,7 @@ export class ApiService<T> {
             headers: this.setHeaders(),
             data: JSON.stringify(body)
         }
-        return await this.handleResponse(axios.delete<ApiResponse<T>>(`${environment.apiUrl}${path}`, options))
+        return await this.handleResponse<T>(axios.delete<ApiResponse<T>>(`${environment.apiUrl}${path}`, options))
     }
 
 }

@@ -37,7 +37,7 @@ const EventAdminCreateEvent = () => {
             <span className='dateNumber'>21</span>
             <span className='dateMonth'>May</span>
           </div>
-          <div className='icons'>
+          <div className='icons-admin'>
             {/* <img className='shadow-sm rounded-circle mx-2' alt='delete-icon' src={deleteIcon}/>
             <img className='shadow-sm rounded-circle' alt='delete-icon' src={editIcon}/> */}
             <span className='editText mx-2'>Edit</span>
