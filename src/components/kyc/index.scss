@@ -65,4 +65,27 @@
 .KycContainer{
     padding-left: 80px;
     padding-right: 140px;
+    padding-top: 30px;
+}
+.previousButton{
+    background-color: #E7EAEE;
+}
+.ant-btn {
+    border-radius: 6px;
+}
+.imageBox{
+    width: 684px;
+height: 288px;
+background-image: url('../../assets/img/image\ 31.svg');
+background-position: center;
+background-size: contain;
+}
+.noteDiv{
+    width: 682px;
+height: 76px;
+box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+border-radius: 8px;
+border-left: 6px solid #F8C341;
+padding: 10px;
+
 }

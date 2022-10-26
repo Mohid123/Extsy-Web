@@ -4,6 +4,9 @@ import PassportIcon from "../../assets/img/Passport.svg"
 import AddressIcon from "../../assets/img/ID_Card.svg"
 import ArrowIcon from "../../assets/img/IconArrow.svg"
 import ButtonArrowIcon from "../../assets/img/ButtonIcon.svg"
+import {
+    RightOutlined
+  } from '@ant-design/icons';
 
 
 
@@ -13,7 +16,7 @@ import   "./index.scss"
 
 const CompleteKyc = () => {
     return (
-        <div className='KycContainer'>
+        <div className='KycContainer '>
             <h1 className='fs_40 fw_600 mt-5 mb-0'>Complete KYC</h1>
             <p className='fs_18 fw_400 fc_grey '>Please enter your relevant information</p>
             <div>
@@ -37,15 +40,14 @@ const CompleteKyc = () => {
             <div className='mt-4'>
             <Input prefix={ <img src={PassportIcon} alt=""/> }  suffix={ <img src={ArrowIcon} alt="" className='pe-3'/>} />
             </div>
-            <Button>fdsfs</Button>
+            <div className=' d-flex justify-content-end mt-5'>
+            <Button className='me-4 previousButton px-4'>Previous</Button>
             <Button
           type="primary"
-          icon={<ButtonArrowIcon />}
-         
-         
-        >
-          Click me!
+         className='px-2' >
+       Next
         </Button>
+        </div>
         </div>
     )
 }

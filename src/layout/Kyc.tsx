@@ -13,7 +13,7 @@ const MainLayout = ({children}:any) => {
             style={{ height: '100%', width:'100%' }}
           />
         </Sider>
-        <Content style={{backgroundColor:  '#FCFBFC' , height:'100vh'}} ><CompleteKyc/></Content>
+        <Content style={{backgroundColor:  '#FCFBFC' , height:'100vh'}} >{children}</Content>
       </Layout>
        
     </div> 
