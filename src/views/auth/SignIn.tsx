@@ -1,4 +1,4 @@
-import { UserOutlined,LockOutlined } from "@ant-design/icons";
+import { UserOutlined,LockOutlined, MailOutlined } from "@ant-design/icons";
 import { Form,Input } from "antd";
 
 import { useState } from "react";
@@ -26,15 +26,20 @@ const SignIn = () => {
       initialValues={{ remember: true }}
       onFinish={onFinish}
     >
-       <div className="formLabel text-start m-auto  mb-2">username</div>
+       <div className="formLabel text-start m-auto  mb-2">Email</div>
       <Form.Item
-        name="username"
-        rules={[{ required: true, message: 'Please input your Username!' }]}
+        name="email"
+        rules={[{ required: true, message: 'Please input your email!' }]}
       >
         
-        <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username"  className="SignInInput"/>
+        <Input 
+        prefix={<MailOutlined  className="site-form-item-icon" />} 
+        type='email'
+        placeholder="Email" 
+         className="SignInInput"
+         />
       </Form.Item>
-      <div className="formLabel text-start m-auto  mb-2">your password</div>
+      <div className="formLabel text-start m-auto  mb-2">Password</div>
       <Form.Item
         name="password"
         rules={[{ required: true, message: 'Please input your Password!' }]}
@@ -54,8 +59,8 @@ const SignIn = () => {
         </Form.Item> */}
 {/* </Form.Item> */}
 <div  className="formLabel text-end m-auto mb-2">
-<a className="" href="">
-          Forgot your password
+<a className="forgetPass" href="">
+          Forgot your password?
         </a>
 </div>
        
@@ -73,7 +78,7 @@ const SignIn = () => {
 
 <WhiteButton url={apple} text="Continue with Apple" height="60px" width="20.938rem"/>
 
-        <p className="mt-5">Don't have an account? <a href="#">Sign up</a></p>
+        <p className="donotHaveAcc m-2">Don't have an account? <a href="#">Sign up</a></p>
             </div>
             <div className="d-flex justify-content-center align-items-center signInFooter py-2">
             <p className="mx-4 mt-0 mb-0">About</p>

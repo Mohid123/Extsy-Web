@@ -52,7 +52,7 @@ const SignUp = () => {
                   className="signUpInput"
                 />
               </Form.Item>
-              <div className="formLabel  text-start  mb-2">your password</div>
+              <div className="formLabel  text-start  mb-2">Password</div>
               <Form.Item
         name="password"
         rules={[{ required: true, message: 'Please input your Password!' }]}
@@ -69,18 +69,22 @@ const SignUp = () => {
       <Form.Item>
       <Input.Group compact>
         <div className="d-flex" style={{width:"28.75rem"}}>
-      <Select defaultValue="US">
+        
+          <Select defaultValue="US" className="countiesDropDown">
         <Option value="Option1">Option1</Option>
         <Option value="Option2">Option2</Option>
       </Select>
+          
+      
       <Input
         // style={{
         //   width: '50%',
         // }}
+        className="phoneNoInput"
         placeholder="+1 (555) 000-0000"
         // defaultValue="+1 (555) 000-0000"
       />
-      <Button onClick={()=> setModalOpen(true)}>Send OTP</Button>
+      <Button onClick={()=> setModalOpen(true)} className='sendOTPBtn'>Send OTP</Button>
       </div>
     </Input.Group>
       </Form.Item>
@@ -90,11 +94,11 @@ const SignUp = () => {
           <Checkbox>Remember me</Checkbox>
         </Form.Item> */}
               {/* </Form.Item> */}
-              <div className="text-end  mb-4"  style={{width:"28.75rem"}}>
+              {/* <div className="text-end  mb-4"  style={{width:"28.75rem"}}>
                 <a className="" href="">
                   Forgot your password
                 </a>
-              </div>
+              </div> */}
 
               
                
@@ -107,10 +111,10 @@ const SignUp = () => {
               height="56px"
               width="460px"
             />
-            <p className="text-center mt-2" style={{ width: "460px" }}>
-              By signing up, you agree to the <a href="#">Terms of Service</a>
-              and <a href="#">Privacy policy </a>including{" "}
-              <a href="#">cookie use</a>
+            <p className="text-center mt-2 linkText" style={{ width: "460px" }}>
+              By signing up, you agree to the <a href="#" className="linkUnderLine">Terms of Service </a>
+               and <a href="#"  className="linkUnderLine">Privacy policy </a>including{" "}
+              <a href="#"  className="linkUnderLine">cookie use</a>
             </p>
           </div>
         </div>

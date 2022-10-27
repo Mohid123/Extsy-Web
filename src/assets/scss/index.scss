@@ -77,7 +77,12 @@ a{
     border-radius: 12px!important;
     color: $white-color!important ;
     background-color: $primary-color!important;
-  
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;  
+    color: #FFFFFF;
  
 
    }
@@ -87,6 +92,13 @@ a{
    
 border: 1px solid #333333;
 border-radius: 10px!important;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 27px;
+color: #333333;
+
    }
    .formLabelSignUp{
     width: 458px !important;
