@@ -129,12 +129,12 @@ export const routes = [
 	{
 		path: '/kyc/accountDetails',
 		component: AccountDetails,
-		layout: 'Kyc'
+		layout: 'kyc'
 	},
 	{
 		path: '/kyc/imageVerification',
 		component: ImageVerification,
-		layout: 'Kyc'
+		layout: 'kyc'
 	},
 	{
 		path: '/kyc/IdCardVerification',
@@ -144,11 +144,11 @@ export const routes = [
 	{
 		path: '/kyc/PassportVerification',
 		component: PassportVerification,
-		layout: 'Kyc'
+		layout: 'kyc'
 	},
 	{
 		path: '/kyc/success',
 		component: Success,
-		layout: 'Kyc'
+		layout: 'kyc'
   },
 ]

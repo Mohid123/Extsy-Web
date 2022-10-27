@@ -58,6 +58,13 @@ const AddStory = () => {
             setimageCard(false)
             setvideoCard(false) 
         }
+        else if (argument==='closeAll'){
+            console.log('card 1')
+             setCard1(false)
+             settextCard(false)
+             setimageCard(false)
+             setvideoCard(false) 
+         }
         else {
             setCard1(false)
         }
@@ -123,7 +130,7 @@ const AddStory = () => {
     :imageCard?(<div className="imageUpload">
         <div className="d-flex justify-content-between">
         <img src={BackArrowIcon} alt=""  onClick={()=>{handleClick('closes')}} />
-        <img src={Close} alt=""  className="cursor" onClick={()=>{handleClick('closes')}}/>
+        <img src={Close} alt=""  className="cursor" onClick={()=>{handleClick('closeAll')}}/>
         </div>
             <Row  gutter={{ xs: 24, sm: 24, md: 24, lg: 24 }} className="mt-4">
                 <Col className="gutter-row pe-1" span={8}>

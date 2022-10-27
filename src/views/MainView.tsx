@@ -2,7 +2,7 @@ import MainViewHeader from "../components/LandingPageHeader";
 import MainViewLeftProfileInfo from "../components/mainViewComponents/mainViewLeft/mainViewLeft";
 import MainViewMiddle from "../components/mainViewComponents/mainViewMiddle/mainViewMiddle";
 import MainViewRight from "../components/mainViewComponents/mainViewRight/mainViewRight";
-
+import ChatBox from '../components/chat/chat'
 const Main = () => {
     return ( 
         <div className="main">
@@ -19,6 +19,7 @@ const Main = () => {
                 <MainViewRight/>
             </div>
             </div>
+            <ChatBox/>
         </div>
      );
 }
