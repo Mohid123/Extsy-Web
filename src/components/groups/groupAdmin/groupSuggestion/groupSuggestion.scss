@@ -6,3 +6,43 @@ font-size: 16px;
 line-height: 24px;
 color: #494D61;
 }
+.similarGroupShadow{
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    // width:  21.125rem;
+    padding: 25px 25px;
+}
+.groupPendingBtn{
+    padding: 5px 10px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height */
+    
+    
+    color: #FFFFFF;
+width: 70px;
+height: 28px;
+
+/* Primary */
+
+background: #7C167D;
+border-radius: 6px;
+}
+.groupJoinButton{
+    padding: 5px 10px;
+width: 46px;
+height: 28px;
+
+border: 1px solid #7C167D;
+border-radius: 6px;
+
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 18px;
+color: #7C167D;
+}

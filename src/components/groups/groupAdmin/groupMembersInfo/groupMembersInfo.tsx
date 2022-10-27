@@ -6,7 +6,7 @@ import userGroup from "../../../../assets/img/userGroup.svg"
 import './groupMembersInfo.scss'
 const GroupMemberInfo = () => {
     return (  
-        <div className="p-4">
+        <div className="p-4 groupMemberInfoShadow">
          <div className="d-flex justify-content-between ">
             <h6 className="title">Group Title</h6>
             <p className="title__groupType">Public Group</p>
@@ -14,11 +14,11 @@ const GroupMemberInfo = () => {
          <p className="title__groupType">Deplattformering kack.
           Monotoheten makroska. Tir kar att antigyhet. Mikrootrohet it the and sodäliga. Nopp fivarar. Nynar obror för att.</p>
         
-        <div className="d-flex justify-content-between">
+        <div className="d-flex justify-content-between p-2">
             <div><img src={vector} style={{width:"20px",height:"18px"}}/><span className="ms-3 title__options">71 total post</span></div>
             <p className=" title__options m-0 p-0">show recent</p>
         </div>
-        <div className="d-flex justify-content-between">
+        <div className="d-flex justify-content-between p-2">
             <div><img src={userGroup}/><span className="ms-3  title__options">10 Members</span></div>
             <Avatar.Group
                       maxCount={3}
@@ -54,7 +54,7 @@ const GroupMemberInfo = () => {
                       <Avatar src="https://joeschmoe.io/api/v1/random" />
                     </Avatar.Group>
         </div>
-        <div className="d-flex justify-content-between">
+        <div className="d-flex justify-content-between p-2">
             <div><img src={userShield}/><span className="ms-3  title__options">5 Moderators</span></div>
             <Avatar.Group
                       maxCount={3}

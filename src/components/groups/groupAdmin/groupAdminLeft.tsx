@@ -5,6 +5,7 @@ const GroupAdminLeft = () => {
     return ( 
         <div className="mainViewLeftProfileInfo ">   
         <ProfileInfo/>
+        <br/>
         <GroupAdminLeftOption/> 
      </div>  
      );
