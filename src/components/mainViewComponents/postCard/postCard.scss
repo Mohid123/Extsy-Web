@@ -7,12 +7,16 @@
     /* identical to box height */
     color:black;
      &__username{
+        font-family: 'Poppins';
+        font-style: normal;
         font-size: 11px;
          line-height: 16px;
     /* identical to box height */
     color:  #666666;
      }
      &__text{
+        font-family: 'Poppins';
+        font-style: normal;
         font-size: 14px;
     line-height: 21px;
     color: black;
@@ -95,4 +99,15 @@ color: #3C3C3C;
             text-decoration-line: underline!important;
             // text-decoration-style: solid!important;
         }
+     }
+     .commentField{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 16px;
+        color: rgba(0, 0, 0, 0.36);
+        padding: 8px 11px;
+        background: #F7F8F9;
+        border-radius: 10px;
      }

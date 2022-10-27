@@ -7,7 +7,7 @@ import CreateGroup from './createGroupModal/createGroupModal';
 import postCardImage from "../../../assets/img/postCardImage.png"
 const initialItems = [
   {
-    label: "Popular Groups",
+    label:<p className='groupTabs p-0 m-0'>Popular Groups</p>,
     children: <div className="mx-3">
     <div className="d-flex justify-content-between  align-items-center mt-3">
       <div className="d-flex align-items-center ">
@@ -113,7 +113,7 @@ const initialItems = [
     closable: false,
   },
   {
-    label: "My Groups",
+    label: <p className='groupTabs p-0 m-0'>My Groups</p>,
     children: (
       <div className="mx-3">
         <div className="d-flex justify-content-between  align-items-center mt-3">
@@ -198,13 +198,14 @@ const GroupComp = () => {
           size="small"
           placeholder="Explore Groups"
           prefix={<SearchOutlined />}
-          className="mainViewHeader__headerSearch__groupSearch"
+          className="mainViewHeader__headerSearch__groupSearch mb-3"
         />
           <Tabs
       type="editable-card"
+      className='tabMain'
       onChange={onChange}
       items={items}
-      addIcon={<Button className="createGroupBtn" onClick={() => setOpen(true)}>Create Group
+      addIcon={<Button className="createGroupBtn" onClick={() => setOpen(true)}>Create
     </Button>}
     />
         <>

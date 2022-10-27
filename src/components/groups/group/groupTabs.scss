@@ -1,5 +1,5 @@
 .createGroupBtn{
-    width: 102px!important;
+    // width: 102px!important;
     padding: 2px 10px !important;
     // height: 28px;
     color: #7C167D!important;
@@ -10,7 +10,7 @@ font-style: normal;
 font-weight: 500;
 font-size: 12px;
 line-height: 18px;
-margin-left: 266px!important;
+// margin-left: 236px!important;
 }  
 .ant-tabs-tab{
     font-family: 'Poppins';
@@ -73,4 +73,18 @@ text-align: right;
 letter-spacing: 0.01em;
 
 color: #7C7C7C;
+}
+.groupTabs{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 600!important;
+font-size: 16px!important;
+line-height: 24px;
+// color: #212121;
+}
+.tabMain{
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        width:  40.375rem;
+        padding: 25px 25px;
 }

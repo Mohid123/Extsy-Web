@@ -60,7 +60,7 @@ const PostCardLayout = ({children}:Props) => {
         <span className="me-3 style__description__time ">2 hours ago</span>
         <span className="style__description">See translation</span>
         <p className=' style__viewAllComment'>View all 5 comments</p>
-        <div className="d-flex  px-3">
+        <div className="d-flex  px-3 commentField">
           <Avatar
             src={
               <Image

@@ -49,8 +49,7 @@ const MainViewLeftOption = () => {
             onClick={() => navigate("/groups")}
           />
         </div>
-        <br/>
-        <Groups />
+        
       </>
     );
 }
