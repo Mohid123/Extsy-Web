@@ -111,9 +111,10 @@ color: #333333;
 .mainViewHeader{
 
     &__middle{
-        width: 52%;
+        margin-left: 3%;
+        width: 46%;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         // margin:0 142px 0 145px
 
     }
@@ -325,4 +326,102 @@ text-align: center;
 letter-spacing: 0.05em;
 
 color: rgba(60, 60, 60, 0.8);
+}
+.headerIconText{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 21px;
+
+
+text-align: center;
+
+
+color: #666666;
+}
+// search bar
+.input-box{
+  position: relative;
+//   border: 1px solid grey;
+  max-width: 55px;
+  width: 205px;
+height: 35px;
+//   margin: 0 40px;
+  padding: 6px 5px;
+  background-color: #fff;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.input-box.open{
+  max-width: 350px;
+//   background: #F7F7F7;
+border: 1px solid rgba(102, 102, 102, 0.35)!important;
+border-radius: 16px!important;
+}
+input{
+  position: relative;
+  outline: none;
+  border: none;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  background-color: #fff;
+}
+.input-box.open{
+    padding: 0 15px 0 32px;
+}
+.icon{
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 38px;
+//   border-radius: 6px;
+  display: flex;
+  justify-content: center;
+//   background-color: #fff;
+}
+.iconCSS{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 48px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+  }
+.search-icon,
+.close-icon{
+  position: absolute;
+  top: 50%;
+  font-size: 30px;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.search-icon{
+  color: #000;
+  
+  transform: translateY(-50%) ;
+}
+.input-box.open .search-icon{
+  transform: translateY(-50%) rotate(0);
+}
+.close-icon{
+  right: 0px;
+  color: #000;
+  border-radius: 0px;
+//   background: #fff;
+  padding: 0px 10px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+.input-box.open .close-icon{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-50%) rotate(180deg);
 }
