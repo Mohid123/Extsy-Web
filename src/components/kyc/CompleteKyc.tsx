@@ -7,7 +7,7 @@ import ButtonArrowIcon from "../../assets/img/ButtonIcon.svg"
 import {
     RightOutlined
   } from '@ant-design/icons';
-
+  import { useLocation } from 'react-router-dom'
 
 
 
@@ -15,6 +15,10 @@ import   "./index.scss"
 
 
 const CompleteKyc = () => {
+  const location = useLocation();
+  function handleClick(){
+console.log(location.pathname)
+  }
     return (
         <div className='KycContainer '>
             <h1 className='fs_40 fw_600 mt-5 mb-0'>Complete KYC</h1>
@@ -42,11 +46,7 @@ const CompleteKyc = () => {
             </div>
             <div className=' d-flex justify-content-end mt-5'>
             <Button className='me-4 previousButton px-4'>Previous</Button>
-            <Button
-          type="primary"
-         className='px-2' >
-       Next
-        </Button>
+            <Button type="primary" className='px-2'onClick={()=>{handleClick()}}> Next</Button>
         </div>
         </div>
     )
