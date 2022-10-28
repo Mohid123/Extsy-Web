@@ -77,7 +77,12 @@ a{
     border-radius: 12px!important;
     color: $white-color!important ;
     background-color: $primary-color!important;
-  
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;  
+    color: #FFFFFF;
  
 
    }
@@ -87,6 +92,13 @@ a{
    
 border: 1px solid #333333;
 border-radius: 10px!important;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 27px;
+color: #333333;
+
    }
    .formLabelSignUp{
     width: 458px !important;
@@ -99,9 +111,10 @@ border-radius: 10px!important;
 .mainViewHeader{
 
     &__middle{
-        width: 52%;
+        margin-left: 3%;
+        width: 46%;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         // margin:0 142px 0 145px
 
     }
@@ -118,7 +131,7 @@ background: #F7F7F7;
 border: 1px solid rgba(102, 102, 102, 0.35)!important;
 border-radius: 16px!important;
 &__groupSearch{
-    width: 645px!important;
+    width: 40.375rem!important;
     padding: 8px 16px;
     height: 34px;
     
@@ -130,10 +143,14 @@ border-radius: 16px!important;
 }
 
 .mainViewLeftProfileInfo{
+  
+   
 
     &__mainContainer{
-        width: 284px;
+        width: 17.75rem;
        height: 190px;
+       box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+       border-radius: 10px;
        position: relative;
        &__image{
         background-image: url("../img/Rectangle.svg");
@@ -158,7 +175,7 @@ border-radius: 16px!important;
 .mainViewMiddle{
    
     &__mainViewStories{
-        width: 646px;
+        width: 40.375rem;
 // height: 102px;
 
 overflow-x: scroll;
@@ -167,11 +184,13 @@ overflow-x: hidden;
 
     }
     &__mainViewPostContainer{
-        width: 646px;
+        width: 40.375rem;
 height: 168px;
 position: relative;
+box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+border-radius: 10px;
 &__options{
-    width: 646px;
+    width: 40.375rem;
 height: 70px;
 position: absolute;
 left: 0px;
@@ -184,7 +203,7 @@ border-radius: 0px 0px 10px 10px;
 position: absolute;
 bottom: 0;
 right: 0;
-width: 88.27px;
+width:5.517rem;
 height: 70px;
 background: #6374A0;
 border-radius: 0px 0px 10px 0px;
@@ -232,7 +251,7 @@ color: #666666;
 }
 
 .edit-profile-container{
-    max-width: 865px !important;
+    max-width: 54.063rem !important;
 }
 
 .edit-profile-content{
@@ -284,4 +303,125 @@ color: #666666;
     }
     
 }
+.sortBy{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+// line-height: 18px;
+letter-spacing: 0.05em;
+padding: 3px;
+color: rgba(60, 60, 60, 0.8);
 
+}
+.recent{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 18px;
+/* identical to box height */
+
+text-align: center;
+letter-spacing: 0.05em;
+
+color: rgba(60, 60, 60, 0.8);
+}
+.headerIconText{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 21px;
+
+
+text-align: center;
+
+
+color: #666666;
+}
+// search bar
+.input-box{
+  position: relative;
+//   border: 1px solid grey;
+  max-width: 55px;
+  width: 205px;
+height: 35px;
+//   margin: 0 40px;
+  padding: 6px 5px;
+  background-color: #fff;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.input-box.open{
+  max-width: 350px;
+//   background: #F7F7F7;
+border: 1px solid rgba(102, 102, 102, 0.35)!important;
+border-radius: 16px!important;
+}
+input{
+  position: relative;
+  outline: none;
+  border: none;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  background-color: #fff;
+}
+.input-box.open{
+    padding: 0 15px 0 32px;
+}
+.icon{
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 38px;
+//   border-radius: 6px;
+  display: flex;
+  justify-content: center;
+//   background-color: #fff;
+}
+.iconCSS{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 48px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+  }
+.search-icon,
+.close-icon{
+  position: absolute;
+  top: 50%;
+  font-size: 30px;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.search-icon{
+  color: #000;
+  
+  transform: translateY(-50%) ;
+}
+.input-box.open .search-icon{
+  transform: translateY(-50%) rotate(0);
+}
+.close-icon{
+  right: 0px;
+  color: #000;
+  border-radius: 0px;
+//   background: #fff;
+  padding: 0px 10px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+.input-box.open .close-icon{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-50%) rotate(180deg);
+}

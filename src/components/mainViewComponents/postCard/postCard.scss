@@ -7,12 +7,16 @@
     /* identical to box height */
     color:black;
      &__username{
+        font-family: 'Poppins';
+        font-style: normal;
         font-size: 11px;
          line-height: 16px;
     /* identical to box height */
     color:  #666666;
      }
      &__text{
+        font-family: 'Poppins';
+        font-style: normal;
         font-size: 14px;
     line-height: 21px;
     color: black;
@@ -76,4 +80,34 @@ color: #3C3C3C;
      }
      .video-react-button{
         // border-radius: 50%!important;
+     }
+     .hyperLinkCard{
+
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 36px;
+        width: 34.375rem;
+        height: 307px;
+        text-align: center;
+        padding: 140px 0;
+        background: #6374A0;
+        border-radius: 18px;
+        &__link{
+            color:white !important;
+            text-decoration-line: underline!important;
+            // text-decoration-style: solid!important;
+        }
+     }
+     .commentField{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 16px;
+        color: rgba(0, 0, 0, 0.36);
+        padding: 8px 11px;
+        background: #F7F8F9;
+        border-radius: 10px;
      }

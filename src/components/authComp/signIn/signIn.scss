@@ -1,7 +1,7 @@
 .signIn{
     background: linear-gradient(114.78deg, #844D95 -5.79%, #6374A0 73.16%);
     height: 100vh;
-    padding-top: 5px;
+    padding-top: 101px;
     position: relative;
 }
 .signInContainer{
@@ -11,18 +11,38 @@
     border-radius: 24px;
     margin-top: 10px;
     margin-bottom: 10px;
-    padding-top: 75px;
+    padding-top: 62px;
     margin-inline: auto;
     text-align: center;
    }
    .formLabel{
     width: 33rem !important;
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+
+
+/* Sub Heading */
+
+color: #494D61;
 }
 .SignInInput{
     width:33rem !important;
     height: 56px;
-    border-radius: 24px;
-    padding: 13px 22px;
+    border: 1px solid #BF63C5;
+    border-radius: 6px;
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+
+
+color: #64748B;
    }
    .signInFooter{
     position: fixed;
@@ -38,11 +58,26 @@
    background-color: white;
    
    }
-   #normal_login_password_help{
-    text-align: left!important;
-    margin-left: 4rem;
+//    #normal_login_password_help{
+//     text-align: left!important;
+//     margin-left: 4rem;
+//    }
+ 
+//    #normal_login_email_help{
+//     text-align: left!important;
+//     margin-left: 4rem;
+//    }
+   .forgetPass{
+    text-decoration-line: underline!important;
    }
-   #normal_login_username_help{
-    text-align: left!important;
-    margin-left: 4rem;
+   .donotHaveAcc{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+
+
+color: #333333;
    }

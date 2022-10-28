@@ -5,25 +5,12 @@ import GroupAdminMiddleLayout from "../groupAdminMiddleLayout";
 const GroupManageRequestComp = () => {
     return ( 
       <GroupAdminMiddleLayout>
-        <div className="p-4">
-            <p>Manage Requests</p>
+        <div className="p-4 manageRequestShadow">
+            <p className="heading">Manage Requests</p>
             <div className="d-flex justify-content-between  align-items-center mt-3">
                   <div className="d-flex align-items-center ">
-                    <Avatar
-                      size={30}
-                      className={"container__storyAvatar"}
-                      src={
-                        <img
-                          src="https://joeschmoe.io/api/v1/random"
-                          style={
-                            {
-                              // width: 32,
-                            }
-                          }
-                        />
-                      }
-                    />
-                    <p className="ms-2">Usman Ahmad</p>
+                  <img alt='rounded-img' className='circular-img-frndSuggestion ' style={{width:'1.563rem',height:"1.563rem"}} src={'https://img.posterlounge.co.uk/images/l/1898617.jpg'}/>
+                    <p className="ms-2 p-0 m-0">Usman Ahmad</p>
                   </div>
                
                   <span className="me-3 option">
@@ -32,21 +19,8 @@ const GroupManageRequestComp = () => {
                 </div>
                 <div className="d-flex justify-content-between  align-items-center mt-3">
                   <div className="d-flex align-items-center ">
-                    <Avatar
-                      size={30}
-                      className={"container__storyAvatar"}
-                      src={
-                        <img
-                          src="https://joeschmoe.io/api/v1/random"
-                          style={
-                            {
-                              // width: 32,
-                            }
-                          }
-                        />
-                      }
-                    />
-                    <p className="ms-2">Usman Ahmad</p>
+                  <img alt='rounded-img' className='circular-img-frndSuggestion ' style={{width:'1.563rem',height:"1.563rem"}} src={'https://img.posterlounge.co.uk/images/l/1898617.jpg'}/>
+                    <p className="ms-2 p-0 m-0">Usman Ahmad</p>
                   </div>
                   <div>
                      <span className="me-3 option">
@@ -57,34 +31,7 @@ const GroupManageRequestComp = () => {
                   </Button></div>
                 
                 </div>
-                <div className="d-flex justify-content-between  align-items-center mt-3">
-                  <div className="d-flex align-items-center ">
-                    <Avatar
-                      size={30}
-                      className={"container__storyAvatar"}
-                      src={
-                        <img
-                          src="https://joeschmoe.io/api/v1/random"
-                          style={
-                            {
-                              // width: 32,
-                            }
-                          }
-                        />
-                      }
-                    />
-                    <p className="ms-2">Usman Ahmad</p>
-                  </div>
-               <div>
-               <Button className="groupPrimaryBtn me-3">
-                    approve
-                  </Button>
-                  <Button className="groupButton ">
-                    Dispprove
-                  </Button>
-               </div>
               
-                </div>
         </div>
         </GroupAdminMiddleLayout>
 

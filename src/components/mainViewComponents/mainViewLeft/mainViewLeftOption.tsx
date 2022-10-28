@@ -15,7 +15,7 @@ const MainViewLeftOption = () => {
     const navigate = useNavigate()
     return (
       <>
-        <div className="p-5">
+        <div className="landingPageOption ">
           <NavigateOption
             url={play}
             text="Watch Now"
@@ -27,7 +27,7 @@ const MainViewLeftOption = () => {
             text="NFTs Marketplace"
             onClick={() => navigate("/")}
           />
-          <NavigateOption url={p2p} text="P2P" onClick={() => navigate("/")} />
+          <NavigateOption url={p2p} text="P2P" onClick={() => navigate("/p2pbuyer")} />
           <NavigateOption
             url={bookMark}
             text="Save Posts"
@@ -49,7 +49,7 @@ const MainViewLeftOption = () => {
             onClick={() => navigate("/groups")}
           />
         </div>
-        <Groups />
+        
       </>
     );
 }

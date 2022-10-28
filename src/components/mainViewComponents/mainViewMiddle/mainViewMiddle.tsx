@@ -4,9 +4,10 @@ import PostCardText from "../postCard/PostCardText";
 import PostCardVideo from "../postCard/postCardVideo";
 import postCardImage from '../../../assets/img/postCardImage.png'
 import ShareContentComp from "./shareContentComp";
+import PostCardHyperLink from "../postCard/postCardHyperLink";
 const MainViewMiddle = () => {
   return (
-    <div className="mainViewMiddle  ">
+    <div className="mainViewMiddle mt-5 ">
       <div className="mainViewMiddle__mainViewStories  pt-2">
         <StoryCard />
       </div>
@@ -16,6 +17,8 @@ const MainViewMiddle = () => {
         <br />
         <PostCardText />
         <br />
+        <PostCardHyperLink/>
+        <br/>
         <PostCardVideo />
       </div>
     </div>

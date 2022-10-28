@@ -23,11 +23,18 @@ import ImageVerification from "../components/kyc/ImageVerification"
 import IdCardVerification from "../components/kyc/IDCardVerification"
 import PassportVerification from "../components/kyc/PassportVerification"
 import Success from "../components/kyc/Success"
+import P2pBuyer from "../components/p2pBuyer/p2pBuyer";
+
 
 export const routes = [
     {
 		path: '/',
 		component: Main,
+		layout: 'main',
+	},
+	{
+		path: '/p2pbuyer',
+		component: P2pBuyer,
 		layout: 'main',
 	},
 	{

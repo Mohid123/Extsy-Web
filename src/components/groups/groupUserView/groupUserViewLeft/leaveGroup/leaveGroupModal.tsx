@@ -7,14 +7,14 @@ const LeaveGroupModal = (props:any) => {
         // title="Modal 1000px width"
         centered
         {...props}
-        
+        className='leaveGroupModal'
         // open={open}
         // onOk={() => setOpen(false)}
         // onCancel={() => setOpen(false)}
         width={544}
         height={195}
       >
-        <div  style={{padding:'1.25rem '}}>
+        <div  style={{padding:'1.25rem '}} className='modalContent'>
         <div className="d-flex">
           {" "}
           <img src={dangerIcon} style={{width:'48px',height:'48px'}}/>
