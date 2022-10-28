@@ -1,0 +1,84 @@
+.NftContainer{
+    position: absolute;
+width: 1209px;
+left: 231px;
+top: 112px;
+background: rgba(255, 255, 255, 0.1);
+}
+.card{
+    width: 300px;
+    border-style: none !important;
+}
+
+.cardBody{
+    background: #FFFFFF;
+border-radius: 0px 0px 8px 8px;
+padding-left: 0px;
+padding-right: 0px;
+margin-top: 10px;}
+.frame2{
+    position:relative; 
+    top:50px;
+    width: 26px;
+height: 45px;
+left: 260px;
+box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+backdrop-filter: blur(30px);
+border-radius: 5px;
+padding: 2px 3px;
+    
+}
+
+.fs_11{
+    font-family: 'Poppins';
+    font-size: 11px;
+}
+.fs_12{
+    font-family: 'Poppins';
+    font-size: 12px;
+}
+.fs_14{
+    font-family: 'Poppins';
+    font-size: 14px;
+}
+.fs_16{
+    font-family: 'Poppins';
+    font-size: 16px;
+}
+.fs_24{
+    font-family: 'Poppins';
+    font-size: 24px;
+}
+.fw_300{
+    font-weight: 300;
+}
+.fw_400{
+    font-weight: 400;
+}
+.fw_500{
+    font-weight: 500;
+}
+.fw_600{
+    font-weight: 600;
+}
+.fc_black{
+    color: #000
+}
+.fc_grey{
+    color: #666666;
+}
+.fc_white{
+    color: #fff;
+}
+.fc_cyan{
+    color: #64748B;
+}
+.fc_purple{
+    color: #7C167D;
+}
+.fc_grey2{
+    color: #3C3C3C;
+}
+.fc_grey3{
+    color: #494D61;
+}

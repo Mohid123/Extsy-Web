@@ -42,7 +42,7 @@ const EditUserProfile = ()=>{
         loadMoreData();
       }, []);
     return (
-        <section className="container blue-grid edit-profile-container">
+        <section className="container blue-grid edit-profile-container mt-5">
         <Row
              gutter={24} 
              className='edit-profile-content'
@@ -74,7 +74,7 @@ const EditUserProfile = ()=>{
                 <h6 className='mt-3 editUser__label'>DOB</h6>
                 <DatePicker onChange={onChange} size='large' style={{ width: '100%' }} />
                 <div className=' mt-3'>
-                <Button type="primary" className='px-4 pb-1'  size={"small"} >
+                <Button type="primary" className='px-4 pb-1 userProfile'  >
         Save Profile
       </Button>
       </div>
@@ -99,9 +99,7 @@ const EditUserProfile = ()=>{
                 title={<a href="https://ant.design">{item.name.last}</a>}
                 description={item.email}
               />
-              <Button type="primary"  ghost style={{marginRight:'10px', borderRadius:'10px'}}>
-      Remove
-    </Button>
+             
     <Button type="primary"  ghost  style={{ borderRadius:'10px',backgroundColor:'#F7F7F7', borderStyle:'none'}}>
       Remove
     </Button>
