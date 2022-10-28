@@ -23,6 +23,10 @@ import ImageVerification from "../components/kyc/ImageVerification"
 import IdCardVerification from "../components/kyc/IDCardVerification"
 import PassportVerification from "../components/kyc/PassportVerification"
 import Success from "../components/kyc/Success"
+import MarketPlace from "../components/Nft/NftMarketPlace"
+import MarketPlace2 from "../components/Nft/NftMarketPlace2"
+import Properties from "../components/Nft/NftProperties"
+
 
 export const routes = [
     {
@@ -151,4 +155,19 @@ export const routes = [
 		component: Success,
 		layout: 'kyc'
   },
+  {
+	path: '/nft/marketplace',
+	component: MarketPlace,
+	layout: 'main'
+	},
+	{
+		path: '/nft/marketplace2',
+		component: MarketPlace2,
+		layout: 'main'
+		},
+	{
+		path: '/nft/properties',
+		component: Properties,
+		layout: 'main'
+		},
 ]

@@ -5,11 +5,12 @@ import Logo from "../assets/img/logo.svg"
 import CircleGreen from "../assets/img/circleGreen.svg"
 import Security from "../assets/img/Security-svg.svg"
 import Arrow from "../assets/img/ArrowRight.svg"
-
+import { useLocation } from 'react-router-dom'
 const { Header, Content, Footer, Sider } = Layout;
 const MainLayout = ({children}:any) => {
+  const location = useLocation();
   const [IdCard, setIdCard] = useState(false)
-  const [passport, setPassport] = useState(true)
+  const [passport, setPassport] = useState(false)
     return ( 
     <div className="container" style={{backgroundColor:'red'}}>
          <Layout >
@@ -21,7 +22,7 @@ const MainLayout = ({children}:any) => {
         <img src={CircleGreen} alt="" />
         <h6 className='fs-16 fw_600 fc_grey2 ms-3 mb-1 '>Personal Details</h6>
       </div>
-{IdCard? ( <div>
+{location.pathname==='/kyc/IdCardVerification'? ( <div>
       <div className='d-flex ps-1 mt-5'>
         <h6 className='fs-16 fw_600 fc_grey2 ms-4 mb-1 me-3'>ID Card Verification</h6>
         {IdCard?( <img src={Arrow} alt="" />):(<></>)}

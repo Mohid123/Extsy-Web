@@ -17,11 +17,7 @@ import Ellipse3 from '../../assets/img/Ellipse 3.svg'
 import ArrowIcon from '../../assets/img/arrowIcon.svg'
 import Bitcoin from '../../assets/img/Bitcoin Plus (Xbc).svg'
 import Frame from '../../assets/img/Frame 48095420.svg'
-
-
-
 import   "./index.scss"
-
 import {   } from '@ant-design/icons';
 import {
   RightOutlined

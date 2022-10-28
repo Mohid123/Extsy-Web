@@ -99,9 +99,7 @@ const EditUserProfile = ()=>{
                 title={<a href="https://ant.design">{item.name.last}</a>}
                 description={item.email}
               />
-              <Button type="primary"  ghost style={{marginRight:'10px', borderRadius:'10px'}}>
-      Remove
-    </Button>
+             
     <Button type="primary"  ghost  style={{ borderRadius:'10px',backgroundColor:'#F7F7F7', borderStyle:'none'}}>
       Remove
     </Button>
