@@ -34,7 +34,7 @@ const MainViewHeader = () => {
               onClick={() => navigate("/")}
             />
           </div>
-          <div className="mainViewHeader__middle  bg-info">
+          <div className="mainViewHeader__middle ">
             <div className=" text-center">
             <img src={HomeIcon} alt="" />
             <p className="m-0 p-0 headerIconText">HOME</p>
@@ -171,3 +171,4 @@ const MainViewHeader = () => {
 }
 
 export default MainViewHeader;
+
