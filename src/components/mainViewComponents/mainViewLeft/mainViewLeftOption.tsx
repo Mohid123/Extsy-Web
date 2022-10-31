@@ -36,12 +36,12 @@ const MainViewLeftOption = () => {
           <NavigateOption
             url={events}
             text="Events"
-            onClick={() => navigate("/p2pbuyer/cancelorder")}
+            onClick={() => navigate("/")}
           />
           <NavigateOption
             url={sponsor}
             text="Sponsors"
-            onClick={() => navigate("/p2pbuyer/buyerusdt")}
+            onClick={() => navigate("/")}
           />
           <NavigateOption
             url={groupUser}
