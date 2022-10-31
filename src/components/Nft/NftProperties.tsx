@@ -3,11 +3,12 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import image1 from '../../assets/img/NftProperties.svg'
+import image2 from '../../assets/img/unsplash_tZCrFpSNiIQ.svg'
 import CryptoIcon from '../../assets/img/Crypto icons.svg'
 import Heart from '../../assets/img/Heart2.svg'
 import Eye from '../../assets/img/Password hide and see.svg'
 import { Button, Divider } from 'antd';
-
+import "./index.scss"
 const NftProperties = () => {
     return (
         <div className="NftContainer">
@@ -51,7 +52,7 @@ const NftProperties = () => {
         <h6 className="fs_16 fw_600 fc_black2 mt-4">Description</h6>
         <p className="fs_12 fw_400 fc_grey mt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem vitae mus condimentum neque, dictum consectetur odio leo. Suspendisse risus, non adipiscing nunc integer semper in sit sed. Volutpat at gravida neque ipsum habitasse viverra sit tortor. Erat enim, augue eu luctus lacus pharetra gravida. Proin facilisi maecenas augue dolor. A, curabitur ultricies quis diam fringilla vestibulum scelerisque fermentum. Varius donec vestibulum velit semper elementum venenatis maecenas pulvinar quis. Elementum adipiscing ullamcorper id eu commodo, nullam amet sed egestas. Sed rhoncus, lectus enim pulvinar. Elit cursus faucibus egestas sed odio diam cursus enim est.</p>
     </Col>
-    <Col lg="6" md="6" sm="12">
+    <Col lg="6" md="12" sm="12">
     <div className="smallCard">
         
         
@@ -78,7 +79,7 @@ const NftProperties = () => {
 
     </div>
     </Col>
-    <Col lg="6" md="6" sm="12">
+    <Col lg="6" md="12" sm="12">
     <div className="smallCard">
         
         
@@ -105,6 +106,46 @@ const NftProperties = () => {
 
     </div>
     </Col>
+    <Col lg="12" md="12" sm="12">
+        <h6 className="fs_16 fw_600 fc_black2 text-center mt-5 mb-2">More Collection</h6>
+        </Col>
+        <Col lg="4" md="12" sm="12">
+        <Card className="card">
+                            <Card.Img variant="top" src={image2} />
+                            <Card.Body className="cardBody">
+                                <h6 className="fs_16 fw_600 fc_grey2 ms-3">The Holy Grail</h6>
+                                <Card.Text>
+                                    <p className="fs_12 fw_400 fc_grey2 ms-3">JnS Graphics</p>
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                        </Col>
+                        <Col lg="4" md="12" sm="12">
+        <Card className="card">
+                            <Card.Img variant="top" src={image2} />
+
+                            <Card.Body className="cardBody">
+                                <h6 className="fs_16 fw_600 fc_grey2 ms-3">The Holy Grail</h6>
+                                <Card.Text>
+                                    <p className="fs_12 fw_400 fc_grey2 ms-3">JnS Graphics</p>
+                                </Card.Text>
+                              
+                            </Card.Body>
+                        </Card>
+                        </Col>
+                        <Col lg="4" md="12" sm="12">
+        <Card className="card">
+                            <Card.Img variant="top"  src={image2} />
+
+                            <Card.Body className="cardBody">
+                                <h6 className="fs_16 fw_600 fc_grey2 ms-3">The Holy Grail</h6>
+                                <Card.Text>
+                                    <p className="fs_12 fw_400 fc_grey2 ms-3">JnS Graphics</p>
+                                </Card.Text>
+                              
+                            </Card.Body>
+                        </Card>
+                        </Col>
 </Row>
         </div>
     )

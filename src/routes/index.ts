@@ -23,6 +23,7 @@ import ImageVerification from "../components/kyc/ImageVerification"
 import IdCardVerification from "../components/kyc/IDCardVerification"
 import PassportVerification from "../components/kyc/PassportVerification"
 import Success from "../components/kyc/Success"
+import P2pSellUsdt from "../components/p2pBuyer/p2pSellUSDT";
 import P2pBuyer from "../components/p2pBuyer/p2pBuyer";
 import MarketPlace from "../components/Nft/NftMarketPlace"
 import MarketPlace2 from "../components/Nft/NftMarketPlace2"
@@ -52,6 +53,12 @@ export const routes = [
 		component: CancelOrder,
 		layout: 'main',
 	},
+	{
+		path: '/p2pbuyer/p2psellusdt',
+		component: P2pSellUsdt,
+		layout: 'main',
+	},
+	
 	{
 		path: '/groups',
 		component: Groups,

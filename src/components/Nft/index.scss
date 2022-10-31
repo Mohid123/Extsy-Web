@@ -6,7 +6,7 @@ top: 112px;
 background: rgba(255, 255, 255, 0.1);
 }
 .card{
-    width: 300px;
+    width: 100%;
     border-style: none !important;
 }
 .smallCard{
@@ -30,7 +30,7 @@ margin-top: 10px;}
     top:50px;
     width: 26px;
 height: 45px;
-left: 260px;
+left: 85%;
 box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
 backdrop-filter: blur(30px);
 border-radius: 5px;

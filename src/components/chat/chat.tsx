@@ -27,19 +27,19 @@ function insertInArray(){
     return (
         <div className="">
             <div className="chatbox">
-                <div className="d-flex justify-content-between">
-                    <div>
+                <div className="d-flex justify-content-between cursor" onClick={() => { setOpened(true) }}>
+                    <div >
                         <img src={postIcon} className="ms-3 mt-3" alt="" />
                         <img src={Message} className="ms-3 mt-3" alt="" />
                     </div>
-                    <img src={ChevronUp} className="me-4 mt-3 cursor" alt="" onClick={() => { setOpened(true) }} />
+                    <img src={ChevronUp} className="me-4 mt-3 " alt=""  />
                 </div>
 
             </div>
             {opened ? (<div className="openedChatBox">
-                <div className="d-flex justify-content-between">
+                <div className="d-flex justify-content-between cursor " onClick={() => { setOpened(false) }}>
                     <img src={Message} className="ms-3 mt-3" alt="" />
-                    <img src={ChevronDown} className="me-4 mt-3 cursor" alt="" onClick={() => { setOpened(false) }} />
+                    <img src={ChevronDown} className="me-4 mt-3 " alt=""  />
                 </div>
                 <Divider></Divider>
                 <div className="chatInnerDiv cursor" onClick={()=>{setCount(count+1)}}>
@@ -121,18 +121,18 @@ function insertInArray(){
         <Divider className="mt-2 ps-5"></Divider>
 
         <div className="message">
-            <p className="messageText mt-2">Hi</p>
+            <p className="messageText mb-0">Hi</p>
         </div>
         <div className="message">
-            <p className="messageText mt-2">How are you</p>
+            <p className="messageTextmb-0">How are you</p>
           
         </div>
         <p className="messageTime mt-1">Yesterday, 8.30pm</p>
         <div className="message2">
-        <p className="messageText mt-2">Fine</p>
+        <p className="mb-0 ">Fine</p>
         </div>
         <div className="message2">
-        <p className="messageText mt-2">Fine</p>
+        <p className=" mb-0 " >Fine</p>
         </div>
         <p className="messageTime2 mt-1">Yesterday, 8.30pm</p>
         
