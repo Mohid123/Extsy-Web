@@ -9,12 +9,12 @@ import Back from "../../assets/img/BackArrow.svg"
 import ThumbBlack from "../../assets/img/Thumb IconBlack.svg"
 import commentImage from '../../assets/img/commentImgIcon.svg'
 import chevronDown from '../../assets/img/Shape2.svg'
-import { Col, Row, Button,Input, Card, Avatar, Image  } from 'antd';
+import { Col, Row, Button,Input, Modal, Avatar, Image  } from 'antd';
 
 const UserStory = () => {
     const [viewAllComments, setViewAllComments] = useState(false)
     const [comments, setComments] = useState(false)
-
+    const [card1, setCard1] = useState(true)
     return ( 
         <div className="userStoryCard">
             <div className="text-center">

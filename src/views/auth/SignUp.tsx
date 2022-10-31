@@ -13,7 +13,7 @@ const SignUp = () => {
     return (
       <div className="signUp">
           <div className="text-center signUp__header pb-2">
-          <img className="ms-5 mt-3" src={logo} height="25" width="106" />
+          <img className="ms-5 mt-3" src={logo} height="25" width="106" alt="" />
         </div>
   
         <div className="d-flex  justify-content-center">

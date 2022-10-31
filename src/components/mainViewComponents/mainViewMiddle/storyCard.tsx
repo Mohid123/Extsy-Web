@@ -4,19 +4,18 @@ import { useDraggable } from "react-use-draggable-scroll";
 import AddStory from "../../stories/addStory"
 import UserStory from "../../stories/userStory"
 import addStoryIcon from "../../../assets/img/add story icon.png"
+import {  Card, Divider,  Button, Row, Col, Modal } from "antd";
 import './storyCard.scss'
 
-type Props = {
-  img: string;
-  title: string;
-}
+// type Props = {
+//   img: string;
+//   title: string;
+// }
 const StoryCard = () => {
   const [addStory, setAddStory] = useState(false)
   const [userStory, setUserStory] = useState(false)
   
-  // We will use React useRef hook to reference the wrapping div:
   const containerRef: any = useRef(null);
-  // Now we pass the reference to the useDraggable hook:
   const { events } = useDraggable(containerRef);
 
   const someNumbers = [1, 2, 3, 4, 5, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7];
@@ -24,17 +23,20 @@ function handleClick (){
 setAddStory(!addStory)
 setUserStory(false)
 }
+const handleCancel = () => {
+  setUserStory(false);
+};
   return (
-    // add reference and events to the wrapping div
     <div className="container" {...events} ref={containerRef}>
-        {addStory? (<AddStory/>) :userStory? (<UserStory/>) :(<></>)}
+        {addStory? (<AddStory/>) :userStory? (
+       <Modal open={userStory} onCancel={handleCancel}> <UserStory/> </Modal>) :(<></>)}
       <span className="me-2 userStory " onClick={handleClick}>
         
                       <img alt='rounded-img' className='circular-img-frndSuggestion cursor ' style={{width:'4.063rem',height:"65px"}} src={'https://img.posterlounge.co.uk/images/l/1898617.jpg'}/>
 
        
         <p className="text-center container__userName ">your story</p>
-         <img src={addStoryIcon} className='storyIcon cursor'  onClick={handleClick}/>
+         <img src={addStoryIcon} className='storyIcon cursor' alt=""  onClick={handleClick}/>
       </span>
 
       {

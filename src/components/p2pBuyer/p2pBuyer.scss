@@ -3,3 +3,83 @@
     border-radius: 10px;
     padding: 25px 25px;
 }
+ .firstColumn{
+    width: 495px;
+height: 880px;
+background: #FFFFFF;
+box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+margin-top: 50px;
+padding: 25px;
+}
+.secondColumn{
+    width: 495px;
+height: 880px;
+background: #FFFFFF;
+box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+margin-top: 50px;
+padding-right: 10px;
+}
+.innerDiv{
+padding: 20px;
+width: 495px;
+height: 145px;
+background-color: rgba(191, 99, 197, 0.05);
+}
+.fs_11{
+    font-family: 'Poppins';
+    font-size: 11px;
+}
+.fs_12{
+    font-family: 'Poppins';
+    font-size: 12px;
+}
+.fs_14{
+    font-family: 'Poppins';
+    font-size: 14px;
+}
+.fs_16{
+    font-family: 'Poppins';
+    font-size: 16px;
+}
+.fs_24{
+    font-family: 'Poppins';
+    font-size: 24px;
+}
+.fw_300{
+    font-weight: 300;
+}
+.fw_400{
+    font-weight: 400;
+}
+.fw_500{
+    font-weight: 500;
+}
+.fw_600{
+    font-weight: 600;
+}
+.fc_black{
+    color: #000
+}
+.fc_grey{
+    color: #666666;
+}
+.fc_white{
+    color: #fff;
+}
+.fc_cyan{
+    color: #64748B;
+}
+.fc_purple{
+    color: #7C167D;
+}
+.fc_grey2{
+    color: #3C3C3C;
+}
+.fc_grey3{
+    color: #494D61;
+}
+.fc_black2{
+    color: #191D23;
+}

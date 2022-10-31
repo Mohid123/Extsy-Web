@@ -31,7 +31,7 @@ const MainViewHeader = () => {
       }
      const [isActive, setIsActive]= useState(false);
      const [show, setShow] = useState(true);
-     const [home, setHome] = useState(false);
+     const [home, setHome] = useState(true);
      const [explore, setExplore] = useState(false);
      const [marketPlace, setMarketPlace] = useState(false);
      const [p2p, setP2p] = useState(false);
@@ -53,7 +53,6 @@ const MainViewHeader = () => {
                 {home?( <img src={Home} alt="" />):( <img src={MarketPlace2} alt="" />)}
            
            
-            {/* <p className="m-0 p-0 headerIconText">HOME</p> */}
             </div>
             <div className=" text-center"  onClick={() => {
                 {navigate("/user/exploreUser"); setHome(false);setExplore(true);setMarketPlace(false);setP2p(false)}
