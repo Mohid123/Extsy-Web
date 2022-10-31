@@ -6,7 +6,8 @@ import './eventPosts.scss';
 import Posts from './posts/posts';
 import UpcomingEvents from './upcomingEvents/upcomingEvents';
 import { useState, useEffect } from 'react';
-import { getDeals } from '../../services/test-api.service';
+import { getDeals, login } from '../../services/test-api.service';
+import { AuthCredentials } from '../../models/auth-credentials.model';
 
 export interface PostsArr {
   id: number,
@@ -46,13 +47,19 @@ const postArray: PostsArr[] = [
     text: 'Why method might be a dying school in modern HollyWood?',
     coverImageURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWjYqWzAJUImGHRULv94xiuAxrKXpQ4JsaEg&usqp=CAU'
    }
-]
+];
+
+const payload: AuthCredentials = {
+  email: 'haider@gmail.com',
+  password: 'Qwertyuiop@2'
+}
 
 const EventPosts = () => {
   const [posts, setPosts] = useState(postArray);
 
-  useEffect(()=>{
-    getDeals()
+  useEffect(() => {
+    getDeals();
+    login(payload)
   },[])
   return (
     <div className='my-4 mainAlignmentPosts d-flex justify-content-between'>

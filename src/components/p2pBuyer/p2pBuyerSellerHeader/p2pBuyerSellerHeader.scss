@@ -1,0 +1,57 @@
+.buyerSellerHeader{
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+}
+.p2pBuyerSellerSearch{
+    width: 37rem;
+    height: 40px;
+background: #FFFFFF;
+border: 1px solid #DDE2E4;
+border-radius: 6px;
+}
+.buyerSellerBadge{
+    // top: 3px!important;
+    // right: 4px!important;
+}
+.circular-img-buyerSeller{
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: top; // replace after actual data is available
+}
+.buyerSellerHeaderTabs{
+    font-family: 'poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 24px;
+text-align: center;
+letter-spacing: -0.006em;
+color: #252C32;
+}
+.ant-tabs-tab-remove{
+    display: none;
+}
+.ant-tabs-nav-add {
+     margin-left: auto !important; 
+     border: none!important;
+     background: none!important;
+}
+.ant-tabs-nav-list{
+    width: 100%;
+}
+.FlatDropMenu{
+    // margin-left: 99%!important;
+}
+.ant-tabs-tab {
+    margin: 0 20px!important;
+    padding: 12px 0px !important
+}
+.ant-tabs-tab-active{
+    // for border
+    // border-bottom: 2px solid aqua !important;
+}
+.ant-tabs-card .ant-tabs-nav .ant-tabs-tab{
+    background: none!important;
+    border: none!important;
+}

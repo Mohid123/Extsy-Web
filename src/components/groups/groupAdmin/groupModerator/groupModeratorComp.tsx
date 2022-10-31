@@ -33,6 +33,16 @@ const GroupModeratorComp = () => {
                Added
               </Button>
             </div>
+            <div className="d-flex justify-content-between  align-items-center mt-3">
+              <div className=" ">
+              <img alt='rounded-img' className='circular-img-frndSuggestion ' style={{width:'1.563rem',height:"25px"}} src={'https://img.posterlounge.co.uk/images/l/1898617.jpg'}/>
+              <span className="ms-2">Usman Ahmad</span>
+              </div>
+           
+              <Button className="removeButton ">
+               Remove
+              </Button>
+            </div>
           
     </div>
     </GroupAdminMiddleLayout>

@@ -15,12 +15,12 @@ const AddRemoveMemberComp = () => {
           className="groupViewMemberList"
         />
         <div className="d-flex justify-content-between  align-items-center mt-3">
-              <div className=" ">
+              <div className=" d-flex   align-items-cente">
               <img alt='rounded-img' className='circular-img-frndSuggestion ' style={{width:'1.563rem',height:"25px"}} src={'https://img.posterlounge.co.uk/images/l/1898617.jpg'}/>
-                <span className="ms-2">Usman Ahmad</span>
+                <p className="ms-2 m-0 p-0">Usman Ahmad</p>
               </div>
            
-              <Button className="groupButton ">
+              <Button className="removeButton ">
                 Remove
               </Button>
             </div>

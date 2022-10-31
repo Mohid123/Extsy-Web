@@ -119,24 +119,12 @@ const CreateGroup = (props:any) => {
                 }
                 key="2"
               >
+                <div className="forShadow">
                 <Input placeholder="Search user.." className="modelInput" />
                 <div className="d-flex justify-content-between  align-items-center mt-3">
                   <div className="d-flex align-items-center ">
-                    <Avatar
-                      size={30}
-                      className={"container__storyAvatar"}
-                      src={
-                        <img
-                          src="https://joeschmoe.io/api/v1/random"
-                          style={
-                            {
-                              // width: 32,
-                            }
-                          }
-                        />
-                      }
-                    />
-                    <p className="ms-2 userName">Usman Ahmad</p>
+                  <img alt='rounded-img' className='circular-img-frndSuggestion ' style={{width:'1.563rem',height:"1.563rem"}} src={'https://img.posterlounge.co.uk/images/l/1898617.jpg'}/>
+                    <p className="ms-2 userName p-0 m-0">Usman Ahmad</p>
                   </div>
                
                   <Button className="whiteBtnAdd ">
@@ -145,26 +133,15 @@ const CreateGroup = (props:any) => {
                 </div>
                 <div className="d-flex justify-content-between  align-items-center mt-3">
                   <div className="d-flex align-items-center ">
-                    <Avatar
-                      size={30}
-                      className={"container__storyAvatar"}
-                      src={
-                        <img
-                          src="https://joeschmoe.io/api/v1/random"
-                          style={
-                            {
-                              // width: 32,
-                            }
-                          }
-                        />
-                      }
-                    />
-                    <p className="ms-2 userName">Usman Ahmad</p>
+                  <img alt='rounded-img' className='circular-img-frndSuggestion ' style={{width:'1.563rem',height:"1.563rem"}} src={'https://img.posterlounge.co.uk/images/l/1898617.jpg'}/>
+
+                    <p className="ms-2 userName p-0 m-0">Usman Ahmad</p>
                   </div>
                
                  <Button className="primaryBtnAdded">
                 Added
                 </Button>
+                </div>
                 </div>
               </Panel>
             </Collapse>

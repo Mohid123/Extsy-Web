@@ -40,3 +40,11 @@ line-height: 16px;
 
  }
 }
+.leaveGroupModal{
+    box-shadow: 0px 2px 10px -4px rgba(16, 24, 40, 0.15);
+border-radius: 12px 12px !important;
+overflow: hidden;
+}
+.ant-modal-content{    
+    border-radius: 12px;
+}
