@@ -424,3 +424,9 @@ input{
   pointer-events: auto;
   transform: translateY(-50%) rotate(180deg);
 }
+
+.BoxShadow{
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 25px 25px;
+}

@@ -18,7 +18,7 @@ const MainViewMiddle = () => {
         <ShareContentComp />
 
         <br />
-        <PostCardImage img={postCardImage} width="36.25rem" />
+        <PostCardImage img={postCardImage} width="37.375rem" />
         <br />
         <Sponsor />
         <br />
