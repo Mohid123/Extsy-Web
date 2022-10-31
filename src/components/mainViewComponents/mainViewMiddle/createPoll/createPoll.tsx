@@ -4,9 +4,14 @@ import Modal from 'react-bootstrap/Modal';
 import circle from '../../../../assets/img/circle.svg'
 import greenCircle from '../../../../assets/img/greenCircle.svg'
 import './createPoll.scss'
-const CreatePoll = (Props:any) => {
+type Props ={
+  show:any,
+  onHide:any,
+  onClick? :()=>void 
+}
+const CreatePoll = ({show,onClick,onHide}:Props) => {
     return ( 
-        <Modal  {...Props} animation={false}>
+        <Modal  show={show} animation={false}>
         
         <Modal.Body>
             
@@ -78,7 +83,7 @@ const CreatePoll = (Props:any) => {
               
               </Form.Item>
               <div className='text-center'>
-              <Button className='pollCancel'>Cancel</Button>
+              <Button className='pollCancel' onClick={()=>{onHide(false)}}>Cancel</Button>
               <Button className='createPoll ms-2'>Create Poll</Button>
               </div>
     </Form>

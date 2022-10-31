@@ -21,7 +21,7 @@ const NftMarketPlace = () => {
             </div>
            
                 <Row >
-                    <Col lg="3" md="6" sm="12"  >
+                    <Col lg="3" md="6" sm="12">
                         <Card className="card">
                         <div className="frame2  " >
                            <p className="fc_white fs_11 mt-1 mb-0 "> 202 </p>
