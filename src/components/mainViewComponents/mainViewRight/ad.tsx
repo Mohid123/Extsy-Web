@@ -10,7 +10,7 @@ import './mainViewRight.scss'
 //   background?:string
 // }
 const contentStyle: any = {
-  height : '339px',
+  height : '200px',
   color: '#fff',
   lineHeight: '339px',
   textAlign: 'center',
