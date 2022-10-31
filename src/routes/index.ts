@@ -26,6 +26,9 @@ import Success from "../components/kyc/Success"
 import P2pBuyer from "../components/p2pBuyer/p2pBuyer";
 import BuyerUSDT from "../components/p2pBuyer/buyer/buyerUSDT";
 import CancelOrder from "../components/p2pBuyer/buyer/cancelOrder";
+import MarketPlace from "../components/Nft/NftMarketPlace"
+import MarketPlace2 from "../components/Nft/NftMarketPlace2"
+import Properties from "../components/Nft/NftProperties"
 
 
 export const routes = [
@@ -148,12 +151,12 @@ export const routes = [
 	{
 		path: '/kyc/accountDetails',
 		component: AccountDetails,
-		layout: 'Kyc'
+		layout: 'kyc'
 	},
 	{
 		path: '/kyc/imageVerification',
 		component: ImageVerification,
-		layout: 'Kyc'
+		layout: 'kyc'
 	},
 	{
 		path: '/kyc/IdCardVerification',
@@ -163,11 +166,26 @@ export const routes = [
 	{
 		path: '/kyc/PassportVerification',
 		component: PassportVerification,
-		layout: 'Kyc'
+		layout: 'kyc'
 	},
 	{
 		path: '/kyc/success',
 		component: Success,
-		layout: 'Kyc'
+		layout: 'kyc'
   },
+  {
+	path: '/nft/marketplace',
+	component: MarketPlace,
+	layout: 'main'
+	},
+	{
+		path: '/nft/marketplace2',
+		component: MarketPlace2,
+		layout: 'main'
+		},
+	{
+		path: '/nft/properties',
+		component: Properties,
+		layout: 'main'
+		},
 ]

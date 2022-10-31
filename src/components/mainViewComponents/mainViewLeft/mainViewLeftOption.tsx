@@ -25,7 +25,7 @@ const MainViewLeftOption = () => {
           <NavigateOption
             url={bookMark}
             text="NFTs Marketplace"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/nft/marketplace")}
           />
           <NavigateOption url={p2p} text="P2P" onClick={() => navigate("/p2pbuyer")} />
           <NavigateOption
@@ -36,7 +36,7 @@ const MainViewLeftOption = () => {
           <NavigateOption
             url={events}
             text="Events"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/eventAdmin")}
           />
           <NavigateOption
             url={sponsor}

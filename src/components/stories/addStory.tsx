@@ -1,4 +1,4 @@
-import {  Card, Divider,  Button, Row, Col } from "antd";
+import {  Card, Divider,  Button, Row, Col, Modal } from "antd";
 import CloseIcon from "../../assets/img/Close.svg"
 import Video from "../../assets/img/Camerabadges for story.svg"
 import Image from "../../assets/img/picture badges for story.svg"
@@ -25,8 +25,32 @@ const AddStory = () => {
     const [imageCard, setimageCard] = useState(false)
     const [videoCard, setvideoCard] = useState(false)
     const [imageUploadCard, setImageUploadCard] = useState(false)
-
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const showModal = () => {
+        setCard1(true);
+      };
     
+      const handleOk = () => {
+        setCard1(false);
+      };
+    
+      const handleCancel = () => {
+        setCard1(false);
+      };
+      const closeTextCard = () => {
+        settextCard(false);
+      };
+      const closeImageCard = () => {
+        setimageCard(false)
+      };
+      const closeImageUploadCard = () => {
+        setImageUploadCard(false)
+      };
+      
+      const closeVideoCard = () => {
+        setvideoCard(false)
+      };
+      
     function handleClick(argument:any){
         
         if(argument==='text')
@@ -58,6 +82,13 @@ const AddStory = () => {
             setimageCard(false)
             setvideoCard(false) 
         }
+        else if (argument==='closeAll'){
+            console.log('card 1')
+             setCard1(false)
+             settextCard(false)
+             setimageCard(false)
+             setvideoCard(false) 
+         }
         else {
             setCard1(false)
         }
@@ -74,9 +105,8 @@ const AddStory = () => {
     }
  return (
     <div>
-        {card1? ( <div className=" card p" >
-       
-        {/* <img src={CloseIcon} alt="" style={{width:'30px'}} className="cursor"onClick={()=>{handleClick('close')}}/> */}
+        <Modal  open={card1}   onCancel={handleCancel} >
+           <div className=" card2 " >
         
         <div className="d-flex cardBackground  ">
         <Card className="innerCard text-center cursor" onClick={()=>{handleClick('text')}}>
@@ -100,7 +130,11 @@ const AddStory = () => {
     <div className="text-center mt-3">
         <img src={CloseDialog} alt="" className="cursor"onClick={()=>{handleClick('close')}} />
     </div>
-    </div>):textCard?(<div className="uploadCard">
+
+    </div>
+          </Modal>
+          <Modal  open={textCard}   onCancel={closeTextCard} >
+          <div className="uploadCard">
     <h5 className="fs_16 fw_500 fc_black">Add to Your Storrerey</h5>
     <p className="fs_11 fw_300 fc_grey">Write something here @Dr.Dre @KayneWest <br /> Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit.</p>
     <Divider className="mb-3 mt-2"></Divider>
@@ -119,11 +153,106 @@ const AddStory = () => {
     <Button type="primary" className=" px-5 button" size="large" >Upload</Button>
     </div>
 
-    </div>)
-    :imageCard?(<div className="imageUpload">
+    </div>
+          </Modal>
+          <Modal  open={imageCard}   onCancel={closeImageCard} >
+          <div className="imageUpload">
         <div className="d-flex justify-content-between">
         <img src={BackArrowIcon} alt=""  onClick={()=>{handleClick('closes')}} />
-        <img src={Close} alt=""  className="cursor" onClick={()=>{handleClick('closes')}}/>
+        <img src={Close} alt=""  className="cursor" onClick={()=>{handleClick('closeAll')}}/>
+        </div>
+            <Row  gutter={{ xs: 24, sm: 24, md: 24, lg: 24 }} className="mt-4">
+                <Col className="gutter-row pe-1" span={8}>
+                <img src={galleryImage1} className="galleryImage " alt="" />
+                </Col>
+                <Col className="gutter-row pe-1" span={8}>
+                <img src={galleryImage1} className="galleryImage " alt="" />
+                </Col>
+                <Col className="gutter-row pe-1" span={8}>
+                <img src={galleryImage1} className="galleryImage" alt="" />
+                </Col>
+                <Col className="gutter-row pe-1 mt-2" span={8}>
+                <img src={galleryImage1} className="galleryImage" alt="" />
+                </Col>
+                <Col className="gutter-row pe-1 mt-2" span={8}>
+                <img src={galleryImage1} className="galleryImage" alt="" />
+                </Col>
+                <Col className="gutter-row pe-1 mt-2" span={8}>
+                <img src={galleryImage1} className="galleryImage" alt="" />
+                </Col>
+            </Row>
+            <Row  gutter={{ xs: 24, sm: 24, md: 24, lg: 24 }} className="justify-content-center">
+                <Col className="gutter-row" span={10}>
+            <Button type="primary" className="mt-4 px-5 button" size="large" onClick={chooseImage}>Choose</Button>
+       </Col>
+       </Row>
+       
+    </div>
+          </Modal>
+          <Modal open={videoCard}   onCancel={closeVideoCard}>
+          <div className="imageUpload2">
+    <h5 className="fs_16 fw_500 fc_black">Add to Your Story</h5>
+    <p className="fs_11 fw_400 fc_grey">Text</p>
+    <p className="fs_11 fw_300 fc_grey">Write something here @Dr.Dre @KayneWest <br /> Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit.</p>
+    <Divider></Divider>
+    <div>
+       <img src={UploadedImage} className="uploadedImage" alt="" />
+       <img src={CloseIcon}  className="closeIcon cursor" alt="" />
+    </div>
+    <Row  gutter={{ xs: 24, sm: 24, md: 24, lg: 24 }} className="justify-content-center">
+           <Col className="gutter-row" span={14}>
+       <Button type="primary" className="mt-4 px-5 button" size="large" onClick={chooseImage}>Upload</Button>
+  </Col>
+  </Row>
+</div>
+          </Modal>
+          <Modal open={imageUploadCard}   onCancel={closeImageUploadCard}>
+          <div className="imageUpload2">
+         <h5 className="fs_16 fw_500 fc_black">Add to Your Story</h5>
+         <p className="fs_11 fw_400 fc_grey">Text</p>
+         <p className="fs_11 fw_300 fc_grey">Write something here @Dr.Dre @KayneWest <br /> Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit.</p>
+         <Divider></Divider>
+         <div>
+            <img src={UploadedImage} className="uploadedImage" alt="" />
+            <img src={CloseIcon}  className="closeIcon" alt="" />
+         </div>
+         <Row  gutter={{ xs: 24, sm: 24, md: 24, lg: 24 }} className="justify-content-center">
+                <Col className="gutter-row" span={14}>
+            <Button type="primary" className="mt-4 px-5 button" size="large" onClick={chooseImage}>Upload</Button>
+       </Col>
+       </Row>
+    </div>
+          </Modal>
+        {/* {card1? (
+            <div></div>
+            )
+            :textCard?(
+            <div className="uploadCard">
+    <h5 className="fs_16 fw_500 fc_black">Add to Your Storrerey</h5>
+    <p className="fs_11 fw_300 fc_grey">Write something here @Dr.Dre @KayneWest <br /> Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit.</p>
+    <Divider className="mb-3 mt-2"></Divider>
+    <div className="d-flex">
+    <Card className="innerCardBackground text-center  cursor" >
+            <img src={Image} alt="" /> <br />
+            <img src={Text3} alt="" />
+    </Card>
+    <Card className="innerCardBackground text-center cursor " >
+            <img src={Video} alt="" /> <br />
+            <img src={Text3} alt="" />
+    </Card>
+    </div>
+    <Divider className="mt-3 mb-3"></Divider>
+    <div className="text-center">
+    <Button type="primary" className=" px-5 button" size="large" >Upload</Button>
+    </div>
+
+    </div>
+    )
+    :imageCard?(
+    <div className="imageUpload">
+        <div className="d-flex justify-content-between">
+        <img src={BackArrowIcon} alt=""  onClick={()=>{handleClick('closes')}} />
+        <img src={Close} alt=""  className="cursor" onClick={()=>{handleClick('closeAll')}}/>
         </div>
             <Row  gutter={{ xs: 24, sm: 24, md: 24, lg: 24 }} className="mt-4">
                 <Col className="gutter-row pe-1" span={8}>
@@ -183,7 +312,7 @@ const AddStory = () => {
        </Row>
     </div>)
     :(<></>)
-    }
+    } */}
    
     </div>
  )

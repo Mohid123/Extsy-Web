@@ -18,8 +18,8 @@ const LeaveGroupModal = (props:any) => {
         <div className="d-flex">
           {" "}
           <img src={dangerIcon} style={{width:'48px',height:'48px'}}/>
-          <div className="ms-2">   <h4 className="p-0 m-0 leaveGrp">Leave Group !</h4>
-           <p className="p-0 m-0 leaveGrp__message">Are you sure you want to leave this group? This action cannot be undone.</p></div>
+          <div className="ms-2">   <h4 className="p-0 m-0 leaveGrp">Delete Event !</h4>
+           <p className="p-0 m-0 leaveGrp__message">Are you sure you want to delete this event? This action cannot be undone.</p></div>
        
         </div>
  <div className='d-flex justify-content-end mt-2'>
