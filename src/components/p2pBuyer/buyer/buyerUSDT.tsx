@@ -126,7 +126,7 @@ const BuyerUSDT = () => {
         <Checkbox onChange={onChange} className='mb-3 detailText'>By placing an order, you indicate that you agree to the P2P Transactions Rules</Checkbox>
       <br/>
       <Button className='cancelOrder' onClick={()=>{navigate('/p2pbuyer')}}>Cancel Order</Button>
-      <Button className='buyNow ms-2'>Buy Now</Button>
+      <Button className='buyNow ms-2' onClick={()=>{navigate('/p2pbuyer/p2psellusdt')}}>Buy Now</Button>
       </div>
       </div>
     );

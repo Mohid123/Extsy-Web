@@ -4,11 +4,12 @@ import BuySellTable from "./buySellTable";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Authentication from '../../assets/img/Authentication.svg'
-import AvatarImage from '../../assets/img/P2p/Ellipse 3.svg'
-import CloseICon from '../../assets/img/P2p/Close.svg'
-
+import AvatarImage from '../../assets/img/p2p/Ellipse 3.svg'
+import CloseICon from '../../assets/img/p2p/Close.svg'
+import { useNavigate } from 'react-router-dom'
 
 const SellUSDT = () => {
+    const navigate = useNavigate()
     return (
         <div>
             <Row>
@@ -97,7 +98,7 @@ const SellUSDT = () => {
                             </Row></Timeline.Item>
                         </Timeline>
                         <div className="text-center">
-                            <Button type="primary" className='px-5 pb-1 ' style={{ borderRadius: '10px', backgroundColor: '#F7F7F7', color: 'black', border: 'none' }} >
+                            <Button type="primary" className='px-5 pb-1 ' style={{ borderRadius: '10px', backgroundColor: '#F7F7F7', color: 'black', border: 'none' }} onClick={()=>navigate('/p2pbuyer/cancelorder')}>
                                 Cancel order
                             </Button>
                             <Button type="primary" className='px-5 ms-5'  >

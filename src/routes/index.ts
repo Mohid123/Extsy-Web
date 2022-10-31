@@ -53,6 +53,7 @@ export const routes = [
 		component: CancelOrder,
 		layout: 'main',
 	},
+	{
 		path: '/p2pbuyer/p2psellusdt',
 		component: P2pSellUsdt,
 		layout: 'main',
