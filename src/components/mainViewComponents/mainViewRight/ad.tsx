@@ -14,6 +14,20 @@ const Ad = () => {
          
           </div>
         </div>
+        <br/>
+        {/* <br/> */}
+        <div className="nftAd">
+          {/* <div className="image__text "> */}
+            {/* <h6 className="mainViewRight__textStyle ">
+              Ad Sponser Heading here
+            </h6> */}
+            {/* <p className="image__textStyle1 p-0 m-0 p-2">
+            Discover the most usnique NFT Marketplace
+            <p className="m-0 p-0 image__textStyle2">Visit Now</p>
+            </p> */}
+         
+          {/* </div> */}
+        </div>
       </>
     );
 }

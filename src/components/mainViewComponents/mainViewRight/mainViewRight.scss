@@ -2,6 +2,16 @@
 // background: $primary-color !important;
 // color: $white-color !important;
 //     }
+.nftAd{
+    width:21.125rem;
+height: 339px;
+background-image: url("../../../assets/img/NFT post.svg");
+background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    border-radius: 10px;
+    position: relative;
+}
 .image{
     width: 21.125rem;
     height: 213px;
