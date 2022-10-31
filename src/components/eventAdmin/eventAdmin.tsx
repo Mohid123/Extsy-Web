@@ -14,7 +14,8 @@ const EventAdmin = () => {
         <EventAdminOption/>
       </div>
       <EventAdminCreateEvent/>
-      <Ad/>
+      <div><Ad/></div>
+      
     </div>
   )
 }
