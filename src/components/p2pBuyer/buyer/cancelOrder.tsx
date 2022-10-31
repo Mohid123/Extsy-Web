@@ -3,7 +3,9 @@ import arrowRightCircle from'../../../assets/img/p2p/arrow-right-circle.svg'
 import { Button, Checkbox } from 'antd';
 import TextArea from 'antd/lib/input/TextArea';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 const CancelOrder = () => {
+  const navigate = useNavigate()
     const [check, setCheck] =useState(false)
     const onChange = (e:any) => {
         
@@ -79,8 +81,8 @@ const CancelOrder = () => {
           />
         </div>
         <div className="d-flex justify-content-end">
-          <Button className="cancelOrder">Go Back</Button>
-          <Button className="buyNow ms-2">Cancel Order</Button>
+          <Button className="cancelOrder" onClick={()=>{navigate('/p2pbuyer/p2psellusdt')}}>Go Back</Button>
+          <Button className="buyNow ms-2" onClick={()=>{navigate('/p2pbuyer')}}>Cancel Order</Button>
         </div>
       </div>
     );

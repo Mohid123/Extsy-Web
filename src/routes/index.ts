@@ -30,6 +30,11 @@ import MarketPlace2 from "../components/Nft/NftMarketPlace2"
 import Properties from "../components/Nft/NftProperties"
 import BuyerUSDT from "../components/p2pBuyer/buyer/buyerUSDT";
 import CancelOrder from "../components/p2pBuyer/buyer/cancelOrder";
+import BuyerUSDT from "../components/p2pBuyer/buyer/buyerUSDT";
+import CancelOrder from "../components/p2pBuyer/buyer/cancelOrder";
+import MarketPlace from "../components/Nft/NftMarketPlace"
+import MarketPlace2 from "../components/Nft/NftMarketPlace2"
+import Properties from "../components/Nft/NftProperties"
 
 
 export const routes = [
