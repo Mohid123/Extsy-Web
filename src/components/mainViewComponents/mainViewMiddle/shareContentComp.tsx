@@ -8,9 +8,15 @@ import sendIcon from "../../../assets/img/Send.svg"
 import { EditOutlined } from "@ant-design/icons";
 import './mainViewMiddle.scss'
 import CreatePoll from "./createPoll/createPoll";
+import TextArea from "antd/lib/input/TextArea";
 const ShareContentComp = () => {
  
   const [createPoll, setCreatePoll] = useState(false)
+  const [postText, setPostText] = useState("")
+  const onChangeTextArea = (e:any) => {
+        setPostText(e.target.value)
+        console.log(postText)
+  }
     return (
       <div className="mainViewMiddle__mainViewPostContainer ">
         <div className="d-flex pt-4 ps-2">
@@ -25,14 +31,19 @@ const ShareContentComp = () => {
             }
           />
           <span className="d-flex align-items-center">
-            <Input
-              placeholder="write something..."
-              bordered={false}
-              className="writeSomething"
-            />
-            <EditOutlined
+          <TextArea
+            bordered={false}
+            onChange={onChangeTextArea}
+            value={postText}
+           rows={4}
+           style={{ width: "36.75rem",height:"70px" }}
+           placeholder={`Write your own feedback...`}
+           className="writeSomething"
+         />
+         { !postText &&  <EditOutlined
+            className="pencil"
               style={{ width: "18px !important", height: "17px !important" }}
-            />
+            />}
           </span>
         </div>
         <div className="mainViewMiddle__mainViewPostContainer__options d-flex justify-content-around align-items-center">
