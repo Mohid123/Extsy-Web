@@ -102,7 +102,7 @@ const MainViewHeader = () => {
   {/* <i className="uil uil-times close-icon"  onClick={()=>setIsActive(!isActive)}/> */}
 </div>
             {/* search */}
-            <Badge dot={show}  className='buyerSellerBadge  me-3'>
+            <Badge dot={show}  className='buyerSellerBadge cursor  me-3'>
               <img src={bellIcon} className="" onClick={() => {
                handleClick();
               }}/>
@@ -153,7 +153,7 @@ const MainViewHeader = () => {
                         </div>
                     </div>
                     <div className="text-center">
-                        <h6 className="notifications__seeAll" onClick={() => { navigate('/pushNotifications'); handleClick() }}>See All</h6>
+                        <h6 className="notifications__seeAll cursor" onClick={() => { navigate('/pushNotifications'); handleClick() }}>See All</h6>
                     </div>
 
             </Card>)

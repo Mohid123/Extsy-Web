@@ -2,9 +2,10 @@ import {useState,useEffect} from 'react';
 import CheckMark from "../../assets/img/KYC - Check mark.svg"
 import { Button } from 'antd';
 import   "./index.scss"
-
+import { useNavigate } from "react-router-dom";
 
 const Success = () => {
+    const navigate = useNavigate()
     return (
         <div>
             <div className='success__image'>

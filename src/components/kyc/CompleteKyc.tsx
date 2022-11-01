@@ -4,6 +4,7 @@ import PassportIcon from "../../assets/img/Passport.svg"
 import AddressIcon from "../../assets/img/ID_Card.svg"
 import ArrowIcon from "../../assets/img/IconArrow.svg"
 import ButtonArrowIcon from "../../assets/img/ButtonIcon.svg"
+import { useNavigate } from "react-router-dom";
 import {
     RightOutlined
   } from '@ant-design/icons';
@@ -15,6 +16,7 @@ import   "./index.scss"
 
 
 const CompleteKyc = () => {
+  const navigate = useNavigate()
   const location = useLocation();
   function handleClick(){
 console.log(location.pathname)
@@ -46,7 +48,7 @@ console.log(location.pathname)
             </div>
             <div className=' d-flex justify-content-end mt-5'>
             <Button className='me-4 previousButton px-4'>Previous</Button>
-            <Button type="primary" className='px-2'onClick={()=>{handleClick()}}> Next</Button>
+            <Button type="primary" className='px-2' onClick={() => { navigate("/kyc/IdCardVerification")}}> Next</Button>
         </div>
         </div>
     )
