@@ -10,9 +10,9 @@ import CloseICon from '../../assets/img/P2p/Close.svg'
 
 const SellUSDT = () => {
     return (
-        <div>
-            <Row>
-                <Col lg="5" md="12" sm="12">
+        <div className="">
+            <Row className="justify-content-around">
+                <Col lg="6" md="12" sm="12">
                     <div className="firstColumn">
                         <h6 className="fs_24 fw_600">Order Details</h6>
                         <div className="ms-2 mt-5">
