@@ -1,7 +1,6 @@
 //THIS FILE IS FOR EXAMPLE ONLY. DELETE IT WHEN API INTEGRATION STARTS
 //THIS FILE IS FOR EXAMPLE ONLY. DELETE IT WHEN API INTEGRATION STARTS
 
-import { AuthCredentials } from '../models/auth-credentials.model';
 import { ApiResponse } from '../models/response.model';
 import { SignInResponse } from '../models/sign-in-response.model';
 // import { setItem, StorageItem } from '../utils/local-storage.utils';
@@ -27,7 +26,7 @@ import { ApiService } from './api.service';
     }
 
     // POST REQ
-    export const login = (payload: AuthCredentials) => {
+    export const login = (payload: any) => {
         apiservice.post(`/auth/login`, payload).then((res: ApiResponse<SignInResponse | any>) => {
             if(!res.hasErrors()) {
                 console.log(res)

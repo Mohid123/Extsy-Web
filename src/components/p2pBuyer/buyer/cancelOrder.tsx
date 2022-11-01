@@ -1,5 +1,5 @@
 import './cancelOrder.scss'
-import arrowRightCircle from'../../../assets/img/p2p/arrow-right-circle.svg'
+import arrowRightCircle from'../../../assets/img/arrow-right-circle.svg'
 import { Button, Checkbox } from 'antd';
 import TextArea from 'antd/lib/input/TextArea';
 import { useState } from 'react';

@@ -1,6 +1,6 @@
 import { DownOutlined, SearchOutlined } from "@ant-design/icons";
 import { Button, Dropdown, Input, Menu, Space } from "antd";
-import check from '../../assets/img/p2p/Check.svg'
+import check from '../../assets/img/P2p/Check.svg'
 const menu = (
     <Menu
       items={[

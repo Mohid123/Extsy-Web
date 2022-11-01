@@ -28,6 +28,10 @@ export class ApiService<T> {
         return getItem(StorageItem.JwtToken)?.toString() || '';
     }
 
+    get currentUser(): any {
+        return getItem(StorageItem.User) || {};
+    }
+
     private objectToQueryString(obj: any): string {
         const str = [];
         for (const p in obj)

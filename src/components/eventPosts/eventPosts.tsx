@@ -5,9 +5,10 @@ import ProfileInfo from '../mainViewComponents/mainViewLeft/profileInfo';
 import './eventPosts.scss';
 import Posts from './posts/posts';
 import UpcomingEvents from './upcomingEvents/upcomingEvents';
-import { useState, useEffect } from 'react';
-import { getDeals, login } from '../../services/test-api.service';
-import { AuthCredentials } from '../../models/auth-credentials.model';
+import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { AuthCredentials, loginUser } from '../../store/reducers/userSlice';
+
 
 export interface PostsArr {
   id: number,
@@ -17,6 +18,11 @@ export interface PostsArr {
   type: string,
   text: string,
   coverImageURL: string;
+}
+
+const creds: AuthCredentials = {
+  email: "shahahsan56@gmail.com",
+  password: "qwertyuiop"
 }
 
 const postArray: PostsArr[] = [
@@ -49,20 +55,17 @@ const postArray: PostsArr[] = [
    }
 ];
 
-const payload: AuthCredentials = {
-  email: 'haider@gmail.com',
-  password: 'Qwertyuiop@2'
-}
 
 const EventPosts = () => {
   const [posts, setPosts] = useState(postArray);
+  const dispatch = useDispatch<any>();
+  const logUser = () => {
+    dispatch(loginUser(creds))
+  }
 
-  useEffect(() => {
-    getDeals();
-    login(payload)
-  },[])
   return (
     <div className='my-4 mainAlignmentPosts d-flex justify-content-between'>
+      {/* <button className='p-5' onClick={logUser}>LOGIN</button> */}
       <div>
         <ProfileInfo />
         <GroupAdminLeftOption/>
