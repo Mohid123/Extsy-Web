@@ -11,7 +11,8 @@ const MainLayout = ({children}:any) => {
         <div className="MainDivCentral">
             {children}
         </div>
-        <ChatBox/>
+        {url.pathname.includes("/p2pbuyer")? "":  <ChatBox/>}
+        
     </div> 
     );
 }

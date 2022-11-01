@@ -1,12 +1,13 @@
 import {useState,useEffect} from 'react';
 import { Input,Button } from 'antd';
 import ArrowCircle from "../../assets/img/arrow-right-circle.svg"
-
+import { useNavigate } from "react-router-dom";
 
 import   "./index.scss"
 
 
 const AccountDetails = () => {
+    const navigate = useNavigate()
     return (
         <div className='KycContainer '>
         <h1 className='fs_40 fw_600 mt-5 mb-0'> Account Details</h1>
@@ -30,7 +31,7 @@ const AccountDetails = () => {
             <Button className='me-4 previousButton px-4'>Previous</Button>
             <Button
           type="primary"
-         className='px-2' >
+         className='px-2' onClick={() => { navigate("/kyc/success")}}>
        Next
         </Button>
         </div>

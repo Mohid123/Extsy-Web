@@ -71,7 +71,7 @@ const ShareContentComp = () => {
         <CreatePoll
         show={createPoll}
     
-        onHide={()=> setCreatePoll(false) }
+        onHide={setCreatePoll }
         // onCancel={() => setCreatePoll(false) }
         />
       </div>

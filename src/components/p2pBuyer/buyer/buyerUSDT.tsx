@@ -4,10 +4,12 @@ import completionRate from '../../../assets/img/p2p/completion rate icon.svg'
 import check from '../../../assets/img/p2p/Check.svg'
 import './buyerUSDT.scss'
 import { Button, Checkbox, Input } from 'antd'
+import { useNavigate } from 'react-router-dom'
 const BuyerUSDT = () => {
     const onChange = (e:any) => {
         console.log(`checked = ${e.target.checked}`);
       };
+      const navigate = useNavigate()
     return (
       <div className="BoxShadow mt-5 buyerUSDT mx-auto">
         <div className="d-flex">
@@ -123,8 +125,8 @@ const BuyerUSDT = () => {
         </div>
         <Checkbox onChange={onChange} className='mb-3 detailText'>By placing an order, you indicate that you agree to the P2P Transactions Rules</Checkbox>
       <br/>
-      <Button className='cancelOrder'>Cancel Order</Button>
-      <Button className='buyNow ms-2'>Buy Now</Button>
+      <Button className='cancelOrder' onClick={()=>{navigate('/p2pbuyer')}}>Cancel Order</Button>
+      <Button className='buyNow ms-2' onClick={()=>{navigate('/p2pbuyer/p2psellusdt')}}>Buy Now</Button>
       </div>
       </div>
     );

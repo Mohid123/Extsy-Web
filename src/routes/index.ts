@@ -58,7 +58,6 @@ export const routes = [
 		component: P2pSellUsdt,
 		layout: 'main',
 	},
-	
 	{
 		path: '/groups',
 		component: Groups,
