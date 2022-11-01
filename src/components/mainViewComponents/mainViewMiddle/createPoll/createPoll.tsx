@@ -1,8 +1,12 @@
 
+import { CloseCircleOutlined } from '@ant-design/icons';
 import { Button, DatePicker, Form, Input } from 'antd';
+import TextArea from 'antd/lib/input/TextArea';
+import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import circle from '../../../../assets/img/circle.svg'
 import greenCircle from '../../../../assets/img/greenCircle.svg'
+import vector from '../../../../assets/img/plusIconBlack.svg'
 import './createPoll.scss'
 type Props ={
   show:any,
@@ -10,6 +14,36 @@ type Props ={
   onClick? :()=>void 
 }
 const CreatePoll = ({show,onClick,onHide}:Props) => {
+  const [addDescription, setAddDescription] = useState(false)
+  const [inputList, setInputList] = useState([ <> <Input 
+    key={0}
+    style={{width:"539px", height:"50px"}}
+    type='text'
+    placeholder="write something..." 
+     className="mb-2"
+     />
+     <Input 
+     key={1}
+     style={{width:"539px", height:"50px"}}
+     type='text'
+     placeholder="write something..." 
+      className="mb-2"
+      /></>])
+      const removeInput = (key:number) =>{
+        setInputList(inputList.slice(0,key))
+      }
+
+      const addInputOption= ()=>{
+        setInputList(inputList.concat(<Input 
+          key={inputList.length}
+          suffix={<CloseCircleOutlined  onClick={()=>{removeInput(inputList.length)}}/>}
+          allowClear
+          style={{width:"539px", height:"50px"}}
+          type='text'
+          placeholder="write something..." 
+           className="mb-2"
+           />))
+      }
     return ( 
         <Modal  show={show} animation={false}>
         
@@ -35,30 +69,26 @@ const CreatePoll = ({show,onClick,onHide}:Props) => {
          />
        
       </Form.Item>
-      <p className="formLabel text-start m-auto  mb-2">+ Add Description</p>
+
+      {!addDescription &&
+        <p className="formLabel p-0 m-0 text-start m-auto  mb-2 cursor " onClick={()=> setAddDescription(true)}><img src={vector} className='me-1'/>Add Description</p>}
+      
+     { addDescription && <TextArea
+           
+            rows={4}
+            style={{ width: "36.75rem" }}
+            placeholder="Write your own feedback..."
+            className="writeFeedback"
+          />
+          }
       <div className="formLabel text-start m-auto  mb-2">Answer Options</div>
       <Form.Item
         name="title"
         rules={[{ required: true, message: 'Please input your option!' }]}
       >
-        
-        <Input 
-        style={{width:"539px", height:"50px"}}
-        type='text'
-        placeholder="option 1" 
-         className=""
-         />
-         <br/>
-         <br/>
-            <Input 
-        style={{width:"539px", height:"50px"}}
-        type='text'
-        placeholder="option 2" 
-         className=""
-         />
-       
+        {inputList}
       </Form.Item>
-      <Button>Add option</Button>
+      <Button onClick={()=>{addInputOption()}}>Add option</Button>
       <br/>
          <br/>
         <p className="formLabel text-start m-auto  mb-2">Settings</p>
@@ -83,7 +113,7 @@ const CreatePoll = ({show,onClick,onHide}:Props) => {
               
               </Form.Item>
               <div className='text-center'>
-              <Button className='pollCancel' onClick={()=>{onHide(false)}}>Cancel</Button>
+              <Button className='pollCancel' onClick={()=>{onHide(false);setAddDescription(false)}}>Cancel</Button>
               <Button className='createPoll ms-2'>Create Poll</Button>
               </div>
     </Form>

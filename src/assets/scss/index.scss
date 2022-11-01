@@ -206,6 +206,7 @@ width:5.517rem;
 height: 70px;
 background: #6374A0;
 border-radius: 0px 0px 10px 0px;
+cursor: pointer;
 }
 }
     }
@@ -429,4 +430,7 @@ input{
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
     border-radius: 10px;
     padding: 25px 25px;
+}
+.cursor{
+    cursor: pointer;
 }

@@ -85,6 +85,16 @@ letter-spacing: 0.01em;
 
 color: #7C7C7C;
 }
+.ant-tabs-card {
+    // border: none !important;
+    border: none !important;
+   }
+   .ant-tabs-nav{
+    border: none !important;
+   }
+   .ant-tabs-tab{
+    border: none !important;
+   }
 .groupTabs{
     font-family: 'Poppins';
 font-style: normal;
@@ -98,4 +108,7 @@ line-height: 24px;
         border-radius: 10px;
         width:  40.375rem;
         padding: 25px 25px;
+}
+.ant-tabs-tab-active{
+    border-bottom:3px solid #7C167D !important;
 }
