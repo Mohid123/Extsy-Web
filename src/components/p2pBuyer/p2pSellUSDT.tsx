@@ -1,6 +1,6 @@
-import { DownOutlined } from "@ant-design/icons";
-import { Dropdown, Menu, Space, Tabs, Timeline, Button } from "antd";
-import BuySellTable from "./buySellTable";
+import { LinkOutlined } from "@ant-design/icons";
+import {  Timeline, Button, Divider } from "antd";
+// import BuySellTable from "./buySellTable";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Authentication from '../../assets/img/Authentication.svg'
@@ -11,9 +11,9 @@ import { useNavigate } from 'react-router-dom'
 const SellUSDT = () => {
     const navigate = useNavigate()
     return (
-        <div>
-            <Row>
-                <Col lg="5" md="12" sm="12">
+        <div className="">
+            <Row className="justify-content-around">
+                <Col lg="6" md="12" sm="12">
                     <div className="firstColumn">
                         <h6 className="fs_24 fw_600">Order Details</h6>
                         <div className="ms-2 mt-5">
@@ -153,10 +153,19 @@ const SellUSDT = () => {
         <div className="message2">
         <p className=" fs_16 fw_400 mb-1">Done</p>
         </div>
-                   
-                    
+        
+        <div className=" writeMessageBox">
+        <Divider></Divider>
+        <div className="d-flex" >
+        <LinkOutlined  className="ms-4"/>
+           <p  className="ms-3 fs_16 fw_500 me-5"> Type your message here .... </p>
+           <Button type="primary" className=' ms-5'  >
+                                Send
+                            </Button>
+                            </div>
+        </div>
                     </div>
-                    
+                   
                 </Col>
             </Row>
         </div>

@@ -32,11 +32,6 @@ import BuyerUSDT from "../components/p2pBuyer/buyer/buyerUSDT";
 import CancelOrder from "../components/p2pBuyer/buyer/cancelOrder";
 
 
-
-
-
-
-
 export const routes = [
     {
 		path: '/',
@@ -63,7 +58,6 @@ export const routes = [
 		component: P2pSellUsdt,
 		layout: 'main',
 	},
-	
 	{
 		path: '/groups',
 		component: Groups,

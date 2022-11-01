@@ -16,10 +16,10 @@ const BuyerSellerHeader = () => {
       <img src={logo} style={{ height: "25px", width: "106px", cursor:"pointer"}} alt=""  onClick={()=> navigate('/')} />
       <Input placeholder="search" prefix={<SearchOutlined />} className="p2pBuyerSellerSearch" />
         <div className=''>
-            <img src={order }/><span className='ms-1 buyerSellerHeaderTabs'>Orders</span>
-            <img src={heart } className='ms-3'/><span  className='ms-1 buyerSellerHeaderTabs'>Favorites</span>
+            <img src={order } alt='' /><span className='ms-1 buyerSellerHeaderTabs'>Orders</span>
+            <img src={heart } className='ms-3' alt=''/><span  className='ms-1 buyerSellerHeaderTabs'>Favorites</span>
            <Badge count={count} size="small" className='buyerSellerBadge ms-4 me-3'>
-              <img src={bellIcon} className="" />
+              <img src={bellIcon} className="" alt='' />
             </Badge>
             <img alt='rounded-img' onClick={()=> navigate('/user/userProfile')} className='circular-img-buyerSeller' src={'https://www.lct.org/media/filer_public_thumbnails/filer_public/6e/a9/6ea9c4c6-8b21-478b-97e2-b7d0fd17787c/weaver_sigourney_headshot.jpg__270x310_q85_subsampling-2.jpg'}/>
         </div>
