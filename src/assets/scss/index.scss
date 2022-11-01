@@ -109,14 +109,25 @@ color: #333333;
 }
 // mainViewHeader scss
 .mainViewHeader{
+    &__left{
+        // width: 286px;
+        margin-left: 30px;
+        width: 25%;
+    }
 
     &__middle{
-        width: 46%;
+        // width: 46%;
+        width:50%;
         display: flex;
         justify-content: space-between;
         // margin:0 142px 0 145px
 
     }
+     &__right{
+        // width: 286px;
+        width: 25%;
+        margin-right: 30px;
+     }
 
     &__headerSearch{
  
@@ -214,7 +225,7 @@ cursor: pointer;
 
 // post story
 .container {
-    
+    // width: 40.375rem;
     display: flex;
     overflow: hidden;
     white-space: nowrap;

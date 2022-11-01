@@ -11,7 +11,7 @@ const MainViewLayout = ({children}:Props) => {
          
         <div className="mainViewContent d-flex ">
         
-        <div className="mainViewContent__left  d-flex justify-content-end p-5">
+        <div className="mainViewContent__left  d-flex justify-content-end p-3">
             <MainViewLeftProfileInfo/>
         </div>
         <div className="mainViewContent__middle d-flex justify-content-center
@@ -19,7 +19,7 @@ const MainViewLayout = ({children}:Props) => {
             {children}
             
         </div>
-        <div className="mainViewContent__right d-flex justify-content-start p-5">
+        <div className="mainViewContent__right d-flex justify-content-start p-3">
             <MainViewRight/>
         </div>
         </div>

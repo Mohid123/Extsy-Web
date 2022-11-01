@@ -84,7 +84,7 @@ const MainViewHeader = () => {
               {/* <p className="m-0 p-0 headerIconText">P2P</p> */}
             </div>
           </div>
-          <div className="mainViewHeader__right d-flex align-items-center">
+          <div className="mainViewHeader__right d-flex align-items-center  justify-content-end">
             {/* search */}
             <div className={`input-box ${ isActive ? "open" :""}`}>
   <input type="text" placeholder="Search..." />

@@ -11,7 +11,7 @@ import PostCardOption from "../postCard/postCardOption";
 const MainViewMiddle = () => {
   return (
     <div className="mainViewMiddle mt-5 ">
-      <div className="p-5 pt-0">
+      <div className="p-3 pt-0">
         <div className="mainViewMiddle__mainViewStories  pt-2">
           <StoryCard />
         </div>
