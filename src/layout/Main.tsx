@@ -7,11 +7,12 @@ const MainLayout = ({children}:any) => {
     
     return ( 
     <div>
-        {url.pathname === "/p2pbuyer"? <BuyerSellerHeader/>:  <MainViewHeader/>}
+        {url.pathname.includes("/p2pbuyer")? <BuyerSellerHeader/>:  <MainViewHeader/>}
         <div className="MainDivCentral">
             {children}
         </div>
-        <ChatBox/>
+        {url.pathname.includes("/p2pbuyer")? "":  <ChatBox/>}
+        
     </div> 
     );
 }

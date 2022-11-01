@@ -1,4 +1,5 @@
 import { Avatar, Image, Input } from "antd";
+import { useState } from "react";
 import imageIcon from "../../../assets/img/ImageIcon.svg"
 import videoIcon from "../../../assets/img/Video.svg"
 import calenderIcon from "../../../assets/img/Calendar.svg"
@@ -6,7 +7,10 @@ import pollsIcon from "../../../assets/img/polls.svg"
 import sendIcon from "../../../assets/img/Send.svg"
 import { EditOutlined } from "@ant-design/icons";
 import './mainViewMiddle.scss'
-const shareContentComp = () => {
+import CreatePoll from "./createPoll/createPoll";
+const ShareContentComp = () => {
+ 
+  const [createPoll, setCreatePoll] = useState(false)
     return (
       <div className="mainViewMiddle__mainViewPostContainer ">
         <div className="d-flex pt-4 ps-2">
@@ -52,6 +56,11 @@ const shareContentComp = () => {
           <span
             style={{ marginRight: "87px" }}
             className="propertiesTextStyle__colorWhite"
+            onClick={()=> {
+              
+              setCreatePoll(!createPoll)
+              console.log('poll btn pressssd',createPoll);
+            }}
           >
             <img src={pollsIcon} width="20.7" height="20" />{" "}Polls
           </span>
@@ -59,8 +68,14 @@ const shareContentComp = () => {
             <img src={sendIcon} width="20.7" height="20" />
           </span>
         </div>
+        <CreatePoll
+        show={createPoll}
+    
+        onHide={setCreatePoll }
+        // onCancel={() => setCreatePoll(false) }
+        />
       </div>
     );
 }
  
-export default shareContentComp;
+export default ShareContentComp;

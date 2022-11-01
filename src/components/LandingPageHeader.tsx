@@ -64,7 +64,12 @@ const MainViewHeader = () => {
             {/* <p className="m-0 p-0 headerIconText">Explore</p> */}
             </div>
             <div className=" text-center cursor "  onClick={() => {
-                {navigate("/nft/marketplace"); setHome(false);setExplore(false);setMarketPlace(true);setP2p(false)}
+                {
+                navigate("/nft/marketplace")
+                 setHome(false)
+                 setExplore(false)
+                 setMarketPlace(true)
+                 setP2p(false)}
               }}>
                 {marketPlace?( <img src={MarketPlace} alt="" />):(  <img src={MarketPlaceInactive} alt=""  />)}
           
@@ -97,12 +102,12 @@ const MainViewHeader = () => {
   {/* <i className="uil uil-times close-icon"  onClick={()=>setIsActive(!isActive)}/> */}
 </div>
             {/* search */}
-            <Badge dot={show}  className='buyerSellerBadge  me-3 cursor'>
+            <Badge dot={show}  className='buyerSellerBadge  me-3'>
               <img src={bellIcon} className="" onClick={() => {
                handleClick();
-              }} alt=''/>
+              }}/>
             </Badge>
-            <img alt='rounded-img' className='circular-img-buyerSeller cursor' src={'https://www.lct.org/media/filer_public_thumbnails/filer_public/6e/a9/6ea9c4c6-8b21-478b-97e2-b7d0fd17787c/weaver_sigourney_headshot.jpg__270x310_q85_subsampling-2.jpg'}  onClick={() => {
+            <img alt='rounded-img' className='circular-img-buyerSeller' src={'https://www.lct.org/media/filer_public_thumbnails/filer_public/6e/a9/6ea9c4c6-8b21-478b-97e2-b7d0fd17787c/weaver_sigourney_headshot.jpg__270x310_q85_subsampling-2.jpg'}  onClick={() => {
                 navigate("/user/userProfile");
               }}/>
           </div>
@@ -159,3 +164,4 @@ const MainViewHeader = () => {
 }
 
 export default MainViewHeader;
+

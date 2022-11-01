@@ -1,0 +1,59 @@
+.btn-close {
+    display: none !important;
+}
+.modal-content{
+    padding: 25px 50px;
+width: 639px;
+// height: 831px;
+
+background: #FFFFFF;
+border: 1px solid #F4F4F4;
+box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+border-radius: 10px;
+}
+.modal-body{
+    padding: 0 !important;
+}
+.settingOption{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 22px;
+}
+.pollCancel{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 11px;
+line-height: 16px;
+/* identical to box height */
+
+
+color: #64748B;
+    padding: 10px 40px;
+
+width: 120px;
+height: 37px;
+
+background: #E7EAEE;
+border-radius: 6px;
+}
+.createPoll{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 11px;
+line-height: 16px;
+/* identical to box height */
+
+
+color: #F5F5F5;
+    padding: 10px 40px;
+
+    width: 141px;
+    height: 37px;
+
+    background: #7C167D;
+    border-radius: 6px; 
+}

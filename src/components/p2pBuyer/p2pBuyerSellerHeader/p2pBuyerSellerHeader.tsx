@@ -12,7 +12,7 @@ const BuyerSellerHeader = () => {
     const [count, setCount] = useState(5);
     return (  
         <div className=' buyerSellerHeader'>
-          <div className='d-flex justify-content-between mx-5 p-3'>
+          <div className='d-flex justify-content-between mx-5 p-3 align-items-center'>
       <img src={logo} style={{ height: "25px", width: "106px", cursor:"pointer"}} alt=""  onClick={()=> navigate('/')} />
       <Input placeholder="search" prefix={<SearchOutlined />} className="p2pBuyerSellerSearch" />
         <div className=''>

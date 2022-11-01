@@ -25,6 +25,8 @@ import PassportVerification from "../components/kyc/PassportVerification"
 import Success from "../components/kyc/Success"
 import P2pSellUsdt from "../components/p2pBuyer/p2pSellUSDT";
 import P2pBuyer from "../components/p2pBuyer/p2pBuyer";
+import BuyerUSDT from "../components/p2pBuyer/buyer/buyerUSDT";
+import CancelOrder from "../components/p2pBuyer/buyer/cancelOrder";
 import MarketPlace from "../components/Nft/NftMarketPlace"
 import MarketPlace2 from "../components/Nft/NftMarketPlace2"
 import Properties from "../components/Nft/NftProperties"
@@ -42,11 +44,20 @@ export const routes = [
 		layout: 'main',
 	},
 	{
+		path: '/p2pbuyer/buyerusdt',
+		component: BuyerUSDT,
+		layout: 'main',
+	},
+	{
+		path: '/p2pbuyer/cancelorder',
+		component: CancelOrder,
+		layout: 'main',
+	},
+	{
 		path: '/p2pbuyer/p2psellusdt',
 		component: P2pSellUsdt,
 		layout: 'main',
 	},
-	
 	{
 		path: '/groups',
 		component: Groups,

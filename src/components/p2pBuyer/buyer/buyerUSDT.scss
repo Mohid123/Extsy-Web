@@ -1,0 +1,141 @@
+.buyerUSDT{
+    width: 56.875rem;
+}
+.buyerName{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 36px;
+color: #3C3C3C;
+}
+.idd{
+    font-family: 'Poppins';
+font-style: normal;
+    font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.05em;
+color: #666666;
+}
+.sellerProfile{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+color: #3C3C3C;
+}
+.totalTrades{
+    
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 18px;
+color: #3C3C3C;
+
+}
+.totalTradesInDigit{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 18px;
+color: #666666;
+
+}
+.usdtBuy{
+    width: 30.625rem;
+}
+.wantToBuy{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+color: #191D23;
+}
+.buyInput{
+padding: 8px 22px;
+width: 440px;
+height: 40px;
+border: 1px solid #D0D5DD;
+border-radius: 4px;
+&__inputText{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+color: #64748B;
+}
+
+}
+
+.avaBalance{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #666666;
+    
+}
+.amount{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #7C167D;
+    
+}
+.buyDetail{
+    width: 17.25rem;
+
+}
+.fieldWidth{
+    width: 15%;
+    // background-color: #64748B;
+}
+.detailText{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    
+    color: #666666;
+    &__detailAmount{
+        font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+        color: #7C167D;
+    }
+}
+.cancelOrder{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 21px;
+color: #64748B;
+
+height: 41px;
+background: #E7EAEE;
+border-radius: 6px;
+}
+.buyNow{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    height: 41px;
+    color: #F5F5F5;
+background: #7C167D;
+border-radius: 6px;
+}
