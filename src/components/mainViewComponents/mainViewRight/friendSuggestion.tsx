@@ -50,7 +50,7 @@ const FriendSuggestion = () => {
         </Button>
     </div>
      }
-     {index === 2  && <hr style={{color: 'black', width: '290px', opacity: 0.2}}/>}
+     {index === 2  && <hr style={{color: 'black', opacity: 0.2}}/>}
      {index === 2  && <span className='see-all'>See all</span>}
      </>  )
 })}

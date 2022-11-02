@@ -32,20 +32,28 @@ const Ad = () => {
         </div>
         <br/>
         {/* <br/> */}
-        <div className="nftAd">
+        {/* <div className="nftAd">
         <Carousel autoplay>
     <div>
-      <h3 style={contentStyle}><img src={img1}  style={{width:'21.125rem'}}/></h3>
+      <h3 style={contentStyle}><img src={img1}  
+      // style={{width:'21.125rem'}}
+      /></h3>
     
     </div>
     <div>
-      <h3 ><img src={img1} style={{width:'21.125rem'}}/></h3>
+      <h3 ><img src={img1} 
+      // style={{width:'21.125rem'}}
+      /></h3>
     </div>
     <div>
-      <h3 ><img src={img1}  style={{width:'21.125rem'}}/></h3>
+      <h3 ><img src={img1} 
+      //  style={{width:'21.125rem'}}
+       /></h3>
     </div>
     <div>
-      <h3 ><img src={img1}  style={{width:'21.125rem'}}/></h3>
+      <h3 ><img src={img1}  
+      // style={{width:'21.125rem'}}
+      /></h3>
     </div>
   </Carousel>
           </div>
@@ -56,7 +64,7 @@ const Ad = () => {
             <p className="m-0 p-0 image__textStyle2">Visit Now</p>
             </p>
          
-          </div>
+          </div> */}
        
       </>
     );

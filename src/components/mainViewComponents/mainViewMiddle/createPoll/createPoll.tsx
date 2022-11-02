@@ -17,14 +17,14 @@ const CreatePoll = ({show,onClick,onHide}:Props) => {
   const [addDescription, setAddDescription] = useState(false)
   const [inputList, setInputList] = useState([ <> <Input 
     key={0}
-    style={{width:"539px", height:"50px"}}
+    style={{ height:"50px"}}
     type='text'
     placeholder="write something..." 
      className="mb-2"
      />
      <Input 
      key={1}
-     style={{width:"539px", height:"50px"}}
+     style={{height:"50px"}}
      type='text'
      placeholder="write something..." 
       className="mb-2"
@@ -38,7 +38,7 @@ const CreatePoll = ({show,onClick,onHide}:Props) => {
           key={inputList.length}
           suffix={<CloseCircleOutlined  onClick={()=>{removeInput(inputList.length)}}/>}
           allowClear
-          style={{width:"539px", height:"50px"}}
+          style={{ height:"50px"}}
           type='text'
           placeholder="write something..." 
            className="mb-2"
@@ -62,7 +62,7 @@ const CreatePoll = ({show,onClick,onHide}:Props) => {
       >
         
         <Input 
-        style={{width:"539px", height:"50px"}}
+        style={{ height:"50px"}}
         type='text'
         placeholder="title.." 
          className=""
@@ -76,7 +76,7 @@ const CreatePoll = ({show,onClick,onHide}:Props) => {
      { addDescription && <TextArea
            
             rows={4}
-            style={{ width: "36.75rem" }}
+            // style={{ width: "36.75rem" }}
             placeholder="Write your own feedback..."
             className="writeFeedback"
           />
@@ -108,7 +108,7 @@ const CreatePoll = ({show,onClick,onHide}:Props) => {
            
               >
                 <DatePicker 
-                 style={{width:"539px", height:"50px"}}
+                 style={{ height:"50px"}}
                 onKeyDown={(e) => e.preventDefault()} />
               
               </Form.Item>

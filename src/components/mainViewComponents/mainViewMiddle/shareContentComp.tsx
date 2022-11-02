@@ -19,7 +19,7 @@ const ShareContentComp = () => {
   }
     return (
       <div className="mainViewMiddle__mainViewPostContainer ">
-        <div className="d-flex pt-4 ps-2">
+        <div className="d-flex pt-4 ">
           <Avatar
             src={
               <Image
@@ -30,21 +30,21 @@ const ShareContentComp = () => {
               />
             }
           />
-          <span className="d-flex align-items-center">
+        
           <TextArea
             bordered={false}
             onChange={onChangeTextArea}
             value={postText}
            rows={4}
-           style={{ width: "36.75rem",height:"70px" }}
+           style={{height:"70px" }}
            placeholder={`Write your own feedback...`}
-           className="writeSomething"
+           className="writeSomething "
          />
          { !postText &&  <EditOutlined
             className="pencil"
               style={{ width: "18px !important", height: "17px !important" }}
             />}
-          </span>
+          
         </div>
         <div className="mainViewMiddle__mainViewPostContainer__options d-flex justify-content-around align-items-center">
           <span className="propertiesTextStyle__colorWhite">
