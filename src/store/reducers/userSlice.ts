@@ -22,6 +22,17 @@ export const loginUser = createAsyncThunk('auth/login', async (authCredentials: 
     })
 })
 
+export const getUserPostCount = createAsyncThunk('post/getUserCount', async(userID: string) => {
+    return await apiService.get(`/post/getUserPostCount/${userID}`).then((response: any) => {
+        if(!response.hasErrors()) {
+            return response
+        }
+        else {
+            throw response.errors[0]
+        }
+    })
+})
+
 export interface User {
     profilePicURL: string,
     admin: boolean,
@@ -84,6 +95,14 @@ const userSlice = createSlice({
             state.user = action?.payload?.data?.user;
         })
         builder.addCase(loginUser.rejected, (state, action) => {
+            // add toast here for error message
+        })
+
+        // getUserCount
+        builder.addCase(getUserPostCount.fulfilled, (state, action) => {
+            state.user.postCount = action?.payload?.data
+        })
+        builder.addCase(getUserPostCount.rejected, (state, action) => {
             // add toast here for error message
         })
     }

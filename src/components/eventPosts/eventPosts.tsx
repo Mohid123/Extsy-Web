@@ -7,7 +7,9 @@ import Posts from './posts/posts';
 import UpcomingEvents from './upcomingEvents/upcomingEvents';
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { AuthCredentials, loginUser } from '../../store/reducers/userSlice';
+import { AuthCredentials, getUserPostCount, loginUser } from '../../store/reducers/userSlice';
+import { deletePost, getPostByUserIdWithAllData, getPosts, getVotersForChoice } from '../../store/reducers/postsSlice';
+import { getAllStoriesWithAllData, getStoriesByUserIDWithData } from '../../store/reducers/storiesSlice';
 
 
 export interface PostsArr {
@@ -20,9 +22,39 @@ export interface PostsArr {
   coverImageURL: string;
 }
 
-const creds: AuthCredentials = {
-  email: "shahahsan56@gmail.com",
-  password: "qwertyuiop"
+const creds: any = {
+  page: 1,
+  postedTo: 'Club',
+  offset: 0,
+  limit: 10,
+}
+
+const deleteCreds = '634c64b6ac5829a8d511466d'
+const getUserByIdCreds = {
+  userId: 'dKSL5ifxwjXfQNSRJDackgnEiLJ2',
+  isPollRequired: false,
+  offset: 0,
+  limit: 10
+}
+
+const getVoters = {
+  limit: 10,
+  offset: 0,
+  choice: 1,
+  postId: '636234c582fab64fb63f4993'
+}
+
+const geRRRR = {
+  offset: 0,
+  limit: 10,
+  userId: 'dKSL5ifxwjXfQNSRJDackgnEiLJ2'
+}
+
+
+
+const authcreds: AuthCredentials = {
+  email: 'shahahsan56@gmail.com',
+  password: 'qwertyuiop'
 }
 
 const postArray: PostsArr[] = [
@@ -60,12 +92,19 @@ const EventPosts = () => {
   const [posts, setPosts] = useState(postArray);
   const dispatch = useDispatch<any>();
   const logUser = () => {
-    dispatch(loginUser(creds))
+    // dispatch(loginUser(authcreds))
+    // dispatch(getPosts(creds))
+    // dispatch(deletePost(deleteCreds))
+    // dispatch(getPostByUserIdWithAllData(getUserByIdCreds))
+    //dispatch(getUserPostCount('dKSL5ifxwjXfQNSRJDackgnEiLJ2'))
+    // dispatch(getVotersForChoice(getVoters))
+    // dispatch(getAllStoriesWithAllData(geRRRR))
+    // dispatch(getStoriesByUserIDWithData(geRRRR))
   }
 
   return (
     <div className='my-4 mainAlignmentPosts d-flex justify-content-between'>
-      {/* <button className='p-5' onClick={logUser}>LOGIN</button> */}
+      {/* <button className='p-5' onClick={logUser}>Get users</button> */}
       <div>
         <ProfileInfo />
         <GroupAdminLeftOption/>

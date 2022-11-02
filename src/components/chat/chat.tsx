@@ -13,7 +13,6 @@ import { LinkOutlined } from '@ant-design/icons';
 import { useState } from "react";
 
 import "./index.scss"
-import { increment } from "../../store/counterSlice";
 const Chat = () => {
     const [opened, setOpened] = useState(false)
     const [online, setOnline] = useState(true)

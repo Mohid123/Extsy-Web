@@ -49,6 +49,7 @@ export class ApiService<T> {
                 delete res.request
                 delete res.statusText
                 res.status = true;
+                delete res.headers
                 delete result.headers
                 Object.assign(result, res);
                 return result;
@@ -128,5 +129,12 @@ export class ApiService<T> {
         }
         return await this.handleResponse<T>(axios.delete<ApiResponse<T>>(`${environment.apiUrl}${path}`, options))
     }
+
+    public async postMedia(
+        path: string,
+        body: any = {}
+      ): Promise<ApiResponse<T>> {
+        return await this.handleResponse<T>(axios.post<ApiResponse<T>>(`${environment.apiUrl}${path}`, body));
+      }
 
 }
