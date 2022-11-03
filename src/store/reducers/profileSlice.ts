@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { ApiResponse } from '../../models/response.model';
 import { ApiService } from '../../services/api.service';
 import { setItem, StorageItem } from '../../utils/local-storage.utils';
 
@@ -6,32 +7,6 @@ export interface AuthCredentials {
     email: string,
     password: string,
 }
-
-const apiService = new ApiService();
-
-export const loginUser = createAsyncThunk('auth/login', async (authCredentials: AuthCredentials) => {
-    return await apiService.post('/auth/loginByEmail', authCredentials).then((response: any) => {
-        if(!response.hasErrors()) {
-            setItem(StorageItem.User, response?.data?.user || null);
-            setItem(StorageItem.JwtToken, response?.data?.token || null);
-            return response
-        }
-        else {
-            throw response.errors[0];
-        }
-    })
-})
-
-export const getUserPostCount = createAsyncThunk('post/getUserCount', async(userID: string) => {
-    return await apiService.get(`/post/getUserPostCount/${userID}`).then((response: any) => {
-        if(!response.hasErrors()) {
-            return response
-        }
-        else {
-            throw response.errors[0]
-        }
-    })
-})
 
 export interface User {
     profilePicURL: string,
@@ -83,16 +58,43 @@ export interface User {
     id: string
 }
 
-const initialState = { user: {} } as User | any
 
-const userSlice = createSlice({
-    name: 'User',
+const apiService = new ApiService();
+
+export const loginUser = createAsyncThunk('auth/login', async (authCredentials: AuthCredentials) => {
+    return await apiService.post('/auth/loginByEmail', authCredentials).then((response: ApiResponse<any>) => {
+        if(!response.hasErrors()) {
+            setItem(StorageItem.User, response?.data?.user || null);
+            setItem(StorageItem.JwtToken, response?.data?.token || null);
+            return response
+        }
+        else {
+            throw response.errors[0];
+        }
+    })
+})
+
+export const getUserPostCount = createAsyncThunk('post/getUserCount', async(userID: string) => {
+    return await apiService.get(`/post/getUserPostCount/${userID}`).then((response: ApiResponse<any>) => {
+        if(!response.hasErrors()) {
+            return response
+        }
+        else {
+            throw response.errors[0]
+        }
+    })
+})
+
+const initialState = { profile: {} } as User | any
+
+const profileSlice = createSlice({
+    name: 'Profile',
     initialState,
     reducers: {
     },
     extraReducers(builder) {
         builder.addCase(loginUser.fulfilled, (state, action) => {
-            state.user = action?.payload?.data?.user;
+            state.profile = action?.payload?.data?.user;
         })
         builder.addCase(loginUser.rejected, (state, action) => {
             // add toast here for error message
@@ -108,4 +110,4 @@ const userSlice = createSlice({
     }
 })
 
-export default userSlice.reducer
+export default profileSlice.reducer

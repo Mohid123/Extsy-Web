@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { ApiResponse } from "../../models/response.model";
 import { ApiService } from "../../services/api.service";
 import { Media } from "../../services/media.service";
 
@@ -77,7 +78,7 @@ export const getAllStoriesWithAllData = createAsyncThunk('post/getAllStories', a
         offset: options.offset,
         limit: options.limit
     }
-    return await apiService.get(`/post/getAllStoriesWithAllData/${options.postedTo}`, params).then((response: any) => {
+    return await apiService.get(`/post/getAllStoriesWithAllData/${options.postedTo}`, params).then((response: ApiResponse<any>) => {
         if(!response.hasErrors()) {
             return response
         }
@@ -92,7 +93,7 @@ export const getStoriesByUserIDWithData = createAsyncThunk('post/getAllStorieswi
         offset: options.offset,
         limit: options.limit
     }
-    return await apiService.get(`/post/getStoriesByUserIdWithAllData/${options.userId}`, params).then((response: any) => {
+    return await apiService.get(`/post/getStoriesByUserIdWithAllData/${options.userId}`, params).then((response: ApiResponse<any>) => {
         if(!response.hasErrors()) {
             return response
         }

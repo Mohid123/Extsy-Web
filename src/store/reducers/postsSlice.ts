@@ -1,5 +1,7 @@
 /* eslint-disable no-self-assign */
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { params } from "../../models/params.model";
+import { ApiResponse } from "../../models/response.model";
 import { ApiService } from "../../services/api.service";
 import { Media } from "../../services/media.service";
 
@@ -63,10 +65,46 @@ export interface Posts {
     media: Media[]
 }
 
+export interface PostReaction {
+    id: string,
+    userID: string,
+    postID: string,
+    reactionName: string,
+    reactionNumber: number
+}
+
+export interface Comment {
+    id: string,
+    userID: string,
+    postID: string,
+    replyToCommentID: string,
+    taggedUsers: [string],
+    commentedDate: {},
+    type: string,
+    textFirst: string,
+    textSecond: string,
+    commentText: string,
+    captureFileURL: string,
+    hyperlink: string,
+    reactionCount: 0
+}
+
+export interface SavePost {
+    id: string,
+    userID: string,
+    postID: string,
+    groupID: string,
+    eventID: string
+}
+
+interface postByUserID extends params {
+    isPollRequired: boolean
+}
+
 const initialState = {posts: [] } as Posts | any
 
 export const addPost = createAsyncThunk('post/AddPost', async(post: Posts) => {
-    return await apiService.post('/post/AddPost', post).then((response: any) => {
+    return await apiService.post('/post/AddPost', post).then((response: ApiResponse<any>) => {
         if(!response.hasErrors()) {
             return response
         }
@@ -77,7 +115,7 @@ export const addPost = createAsyncThunk('post/AddPost', async(post: Posts) => {
 });
 
 export const editPost = createAsyncThunk('post/EditPost', async(post: Posts) => {
-    return await apiService.post('/post/EditPost', post).then((response: any) => {
+    return await apiService.post('/post/EditPost', post).then((response: ApiResponse<any>) => {
         if(!response.hasErrors()) {
             return {post, response}
         }
@@ -89,11 +127,11 @@ export const editPost = createAsyncThunk('post/EditPost', async(post: Posts) => 
 
 export const getPosts = createAsyncThunk('post/getPosts', async (options: {page: number, postedTo: string, offset: any, limit: any}) => {
     options.page--;
-    const params: any = {
+    const params: params = {
       offset: options.page ? options.limit * options.page : 0,
       limit: options.limit,
     }
-    return await apiService.get(`/post/getAllPosts/${options.postedTo}`, params).then((response: any) => {
+    return await apiService.get(`/post/getAllPosts/${options.postedTo}`, params).then((response: ApiResponse<any>) => {
         if(!response.hasErrors()) {
             return response
         }
@@ -104,7 +142,7 @@ export const getPosts = createAsyncThunk('post/getPosts', async (options: {page:
 })
 
 export const deletePost = createAsyncThunk(`post/deletePost`, async(id: string) => {
-    return await apiService.get(`/post/deletePost/${id}`).then((response: any) => {
+    return await apiService.get(`/post/deletePost/${id}`).then((response: ApiResponse<any>) => {
         if(!response.hasErrors()) {
             return {id, response}
         }
@@ -115,7 +153,7 @@ export const deletePost = createAsyncThunk(`post/deletePost`, async(id: string) 
 })
 
 export const addVote = createAsyncThunk('post/addVote', async(options: {postId: string, choiceNumber: number}) => {
-    return await apiService.get(`/post/addVote/${options.postId}/${options.choiceNumber}`).then((response: any) => {
+    return await apiService.get(`/post/addVote/${options.postId}/${options.choiceNumber}`).then((response: ApiResponse<any>) => {
         if(!response.hasErrors()) {
             return response
         }
@@ -126,7 +164,7 @@ export const addVote = createAsyncThunk('post/addVote', async(options: {postId: 
 })
 
 export const getPostByIdWithAllData = createAsyncThunk('post/getPostByIdWithData', async(id: string) => {
-    return await apiService.get(`/post/getPostByIdWithAllData/${id}`).then((response: any) => {
+    return await apiService.get(`/post/getPostByIdWithAllData/${id}`).then((response: ApiResponse<any>) => {
         if(!response.hasErrors()) {
             return response
         }
@@ -137,12 +175,12 @@ export const getPostByIdWithAllData = createAsyncThunk('post/getPostByIdWithData
 })
 
 export const getPostByUserIdWithAllData = createAsyncThunk('post/getPostByUserId', async(options: {isPollRequired: boolean, offset: any, limit: any, userId: string}) => {
-    const params: any = {
+    const params: postByUserID = {
         isPollRequired: options.isPollRequired,
         offset: options.offset,
         limit: options.limit
     }
-    return await apiService.get(`/post/getPostByUserIdWithAllData/${options.userId}`, params).then((response: any) => {
+    return await apiService.get(`/post/getPostByUserIdWithAllData/${options.userId}`, params).then((response: ApiResponse<any>) => {
         if(!response.hasErrors()) {
             return {options, response}
         }
@@ -153,11 +191,44 @@ export const getPostByUserIdWithAllData = createAsyncThunk('post/getPostByUserId
 })
 
 export const getVotersForChoice = createAsyncThunk('post/getVotersForChoice', async(options: {limit: any, offset: any, choice: number, postId: string}) => {
-    const params: any = {
+    const params: params = {
         limit: options.limit,
         offset: options.offset
     }
-    return await apiService.get(`/post/getVotersForChoice/${options.postId}/${options.choice}`, params).then((response: any) => {
+    return await apiService.get(`/post/getVotersForChoice/${options.postId}/${options.choice}`, params).then((response: ApiResponse<any>) => {
+        if(!response.hasErrors()) {
+            return response
+        }
+        else {
+            throw response.errors[0]
+        }
+    })
+})
+
+export const addPostReaction = createAsyncThunk('post/addPostReaction', async(reaction: PostReaction) => {
+    return await apiService.post(`/post-reaction/addPostReaction`, reaction).then((response: ApiResponse<any>) => {
+        if(!response.hasErrors()) {
+            return response
+        }
+        else {
+            throw response.errors[0]
+        }
+    })
+})
+
+export const addComment = createAsyncThunk('post/addComment', async(comment: Comment) => {
+    return await apiService.post('/comment/addComment', comment).then((response: ApiResponse<any>) => {
+        if(!response.hasErrors()) {
+            return response
+        }
+        else {
+            throw response.errors[0]
+        }
+    })
+})
+
+export const savePost = createAsyncThunk('post/savePost', async(savePost: SavePost) => {
+    return await apiService.post('/save-post/addSavePost', savePost).then((response: ApiResponse<any>) => {
         if(!response.hasErrors()) {
             return response
         }
@@ -231,6 +302,30 @@ const postSlice = createSlice({
             })
         })
         builder.addCase(getPostByUserIdWithAllData.rejected, (state, action) => {
+            // add toast here for error message
+        })
+
+         // addPostReaction
+        builder.addCase(addPostReaction.fulfilled, (state, action) => {
+            console.log(action.payload)
+        })
+        builder.addCase(addPostReaction.rejected, (state, action) => {
+            // add toast here for error message
+        })
+
+        // addComment
+        builder.addCase(addComment.fulfilled, (state, action) => {
+            
+        })
+        builder.addCase(addComment.rejected, (state, action) => {
+            // add toast here for error message
+        })
+
+        // savePost
+        builder.addCase(savePost.fulfilled, (state, action) => {
+            console.log(action.payload)
+        })
+        builder.addCase(savePost.rejected, (state, action) => {
             // add toast here for error message
         })
     }

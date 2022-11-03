@@ -7,9 +7,10 @@ import Posts from './posts/posts';
 import UpcomingEvents from './upcomingEvents/upcomingEvents';
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { AuthCredentials, getUserPostCount, loginUser } from '../../store/reducers/userSlice';
-import { deletePost, getPostByUserIdWithAllData, getPosts, getVotersForChoice } from '../../store/reducers/postsSlice';
+import { AuthCredentials, getUserPostCount, loginUser } from '../../store/reducers/profileSlice';
+import { addPostReaction, deletePost, getPostByUserIdWithAllData, getPosts, getVotersForChoice, PostReaction } from '../../store/reducers/postsSlice';
 import { getAllStoriesWithAllData, getStoriesByUserIDWithData } from '../../store/reducers/storiesSlice';
+import { followUser, getAllUsers, searchUserByName } from '../../store/reducers/usersSlice';
 
 
 export interface PostsArr {
@@ -50,7 +51,13 @@ const geRRRR = {
   userId: 'dKSL5ifxwjXfQNSRJDackgnEiLJ2'
 }
 
-
+const payload: PostReaction = {
+  id: '',
+  userID: 'iEezSVBgLDd6wkVRnP9AIo6wCQF3',
+  postID: '84537acd-7a36-4cd8-b691-bd266806dc4a',
+  reactionName: 'like',
+  reactionNumber: 1
+}
 
 const authcreds: AuthCredentials = {
   email: 'shahahsan56@gmail.com',
@@ -100,11 +107,15 @@ const EventPosts = () => {
     // dispatch(getVotersForChoice(getVoters))
     // dispatch(getAllStoriesWithAllData(geRRRR))
     // dispatch(getStoriesByUserIDWithData(geRRRR))
+    // dispatch(addPostReaction(payload))
+    dispatch(getAllUsers({offset: 0, limit: 10}))
+    // dispatch(searchUserByName({offset: 0, limit: 10, name: 'bobby_g'}))
+    // dispatch(followUser({currentUserId: 'VdjXS8YgJTYa0CVDKHKi81P5IQd2', followerId: 'QhhcOe4pPDg83GnKA91JshUTwAI2'}))
   }
 
   return (
     <div className='my-4 mainAlignmentPosts d-flex justify-content-between'>
-      {/* <button className='p-5' onClick={logUser}>Get users</button> */}
+      <button className='p-5' onClick={logUser}>Get users</button>
       <div>
         <ProfileInfo />
         <GroupAdminLeftOption/>
