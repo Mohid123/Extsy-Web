@@ -36,7 +36,7 @@ const MainViewHeader = () => {
      const [marketPlace, setMarketPlace] = useState(false);
      const [p2p, setP2p] = useState(false);
     return (
-      <div className="mainViewHeader shadow">
+      <div className="mainViewHeader shadow bg-white">
         <div className="headerCentral d-flex py-3 px-0 align-items-center ">
           <div className="mainViewHeader__left    ">
             <img

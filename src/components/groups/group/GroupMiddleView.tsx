@@ -185,7 +185,7 @@ const GroupComp = () => {
         />
           <Tabs
       type="editable-card"
-      className='tabMain'
+      className='tabMain bg-white'
       onChange={onChange}
       items={items}
       addIcon={<Button className="createGroupBtn" onClick={() => setOpen(true)}>Create

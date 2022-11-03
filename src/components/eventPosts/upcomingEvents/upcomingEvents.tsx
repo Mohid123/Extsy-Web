@@ -37,7 +37,7 @@ const eventArray: Event[] = [
 const UpcomingEvents = () => {
   const [events, setEvents] = useState(eventArray);
   return (
-    <div className='event-card'>
+    <div className='event-card bg-white'>
       <span className='upcoming-header'>Upcoming events</span>
     {events.map((event: Event, index: number) => {
         const date = moment(event.date * 1000).format('MMMM Do YYYY/h:mm a')

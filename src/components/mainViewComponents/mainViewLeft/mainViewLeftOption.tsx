@@ -15,7 +15,7 @@ const MainViewLeftOption = () => {
     const navigate = useNavigate()
     return (
       <>
-        <div className="landingPageOption ">
+        <div className="landingPageOption bg-white ">
           <NavigateOption
             url={play}
             text="Watch Now"

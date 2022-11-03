@@ -13,7 +13,7 @@ const CancelOrder = () => {
         setCheck(e.target.checked)
       };
     return (
-      <div className="BoxShadow mt-5 buyerUSDT mx-auto">
+      <div className="BoxShadow mt-5 buyerUSDT mx-auto bg-white">
         <p className="orderCancelHeading">Order Cancellation</p>
         <div className="orderCancelForm BoxShadow">
           <div className="d-flex align-items-start">

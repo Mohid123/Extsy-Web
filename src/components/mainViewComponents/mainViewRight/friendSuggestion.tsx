@@ -32,7 +32,7 @@ const FriendSuggestion = () => {
     const [frndSuggestion, setFrmdSuggestion] = useState(frndSuggestionArray);
     return ( 
         
-            <div className='frndSuggest'>
+            <div className='frndSuggest bg-white'>
     <p className='friendSuggestion'>People you may know:</p>
     {frndSuggestion.map((friend: Event, index: number) => {
         return (

@@ -4,7 +4,8 @@ import BuyerSellerComp from "./buyerSellerComp";
 import './p2pBuyer.scss';
 const P2pBuyer = () => {
     return ( 
-        <div className="BoxShadow mt-5 main">
+      <div className="pb-5">
+        <div className="BoxShadow mt-5 main bg-white">
      <Tabs defaultActiveKey="1">
     <Tabs.TabPane tab="Buy" key="1">
      <BuyerSellerComp type='Buy' />
@@ -13,6 +14,7 @@ const P2pBuyer = () => {
     <BuyerSellerComp  type='Sell'/>
     </Tabs.TabPane>
   </Tabs>
+        </div>
         </div>
      );
 }

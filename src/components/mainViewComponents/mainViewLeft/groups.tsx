@@ -28,7 +28,7 @@ const Groups = () => {
     return (  
         <>
        
-        <div  className="landingPageOption  ">
+        <div  className="landingPageOption  bg-white">
         <div className="  propertiesTextStyle__group">Groups</div>
         {groups.map((group: Event, index: number) => {
             return(

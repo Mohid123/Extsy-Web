@@ -15,7 +15,7 @@ type Props = {
 const PostCardLayout = ({children}:Props) => {
     const [count, setCount] = useState(5);
     return (
-      <div className="postCardLayout p-4">
+      <div className="postCardLayout p-4 bg-white">
         <div className="d-flex justify-content-between">
           <div className="d-flex">
             <Avatar

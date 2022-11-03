@@ -18,7 +18,7 @@ const ShareContentComp = () => {
         console.log(postText)
   }
     return (
-      <div className="mainViewMiddle__mainViewPostContainer ">
+      <div className="mainViewMiddle__mainViewPostContainer bg-white">
         <div className="d-flex pt-4 ">
           <Avatar
             src={
