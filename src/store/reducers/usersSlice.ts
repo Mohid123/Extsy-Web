@@ -5,7 +5,7 @@ import { ApiResponse } from '../../models/response.model';
 
 const apiService = new ApiService();
 
-const initialState = { users: [] } as User | any
+const initialState = { users: [], status: 'idle'  } as User | any
 
 export const getAllUsers = createAsyncThunk('profile/getAllUsers', async(options: {offset: any, limit: any}) => {
     const params: any = {
@@ -27,7 +27,7 @@ export const searchUserByName = createAsyncThunk('profile/searchUserByName', asy
         offset: options.offset,
         limit: options.limit
     }
-    return await apiService.get(`/profile/profile/searchProfileByName/${options.name}`, params).then((response: ApiResponse<any>) => {
+    return await apiService.get(`/profile/searchProfileByName/${options.name}`, params).then((response: ApiResponse<any>) => {
         if(!response.hasErrors()) {
             return response
         }
@@ -64,8 +64,12 @@ const userSlice = createSlice({
     initialState,
     reducers:{},
     extraReducers(builder) {
+        builder.addCase(getAllUsers.pending, (state, action) => {
+            state.status = 'loading'
+          })
         builder.addCase(getAllUsers.fulfilled, (state, action) => {
             state.users = action?.payload?.data
+            state.status = 'succeeded'
         })
         builder.addCase(getAllUsers.rejected, (state, action) => {
             // throw toast

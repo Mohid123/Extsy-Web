@@ -23,47 +23,6 @@ export interface PostsArr {
   coverImageURL: string;
 }
 
-const creds: any = {
-  page: 1,
-  postedTo: 'Club',
-  offset: 0,
-  limit: 10,
-}
-
-const deleteCreds = '634c64b6ac5829a8d511466d'
-const getUserByIdCreds = {
-  userId: 'dKSL5ifxwjXfQNSRJDackgnEiLJ2',
-  isPollRequired: false,
-  offset: 0,
-  limit: 10
-}
-
-const getVoters = {
-  limit: 10,
-  offset: 0,
-  choice: 1,
-  postId: '636234c582fab64fb63f4993'
-}
-
-const geRRRR = {
-  offset: 0,
-  limit: 10,
-  userId: 'dKSL5ifxwjXfQNSRJDackgnEiLJ2'
-}
-
-const payload: PostReaction = {
-  id: '',
-  userID: 'iEezSVBgLDd6wkVRnP9AIo6wCQF3',
-  postID: '84537acd-7a36-4cd8-b691-bd266806dc4a',
-  reactionName: 'like',
-  reactionNumber: 1
-}
-
-const authcreds: AuthCredentials = {
-  email: 'shahahsan56@gmail.com',
-  password: 'qwertyuiop'
-}
-
 const postArray: PostsArr[] = [
    {
     id: 1,
@@ -108,14 +67,14 @@ const EventPosts = () => {
     // dispatch(getAllStoriesWithAllData(geRRRR))
     // dispatch(getStoriesByUserIDWithData(geRRRR))
     // dispatch(addPostReaction(payload))
-    dispatch(getAllUsers({offset: 0, limit: 10}))
+    // dispatch(getAllUsers({offset: 0, limit: 10}))
     // dispatch(searchUserByName({offset: 0, limit: 10, name: 'bobby_g'}))
     // dispatch(followUser({currentUserId: 'VdjXS8YgJTYa0CVDKHKi81P5IQd2', followerId: 'QhhcOe4pPDg83GnKA91JshUTwAI2'}))
   }
 
   return (
     <div className='my-4 mainAlignmentPosts d-flex justify-content-between'>
-      <button className='p-5' onClick={logUser}>Get users</button>
+      {/* <button className='p-5' onClick={logUser}>Get users</button> */}
       <div>
         <ProfileInfo />
         <GroupAdminLeftOption/>

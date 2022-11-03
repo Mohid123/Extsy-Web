@@ -36,7 +36,7 @@ export interface Events {
     dynamicUrl: string
 }
 
-const initialState = { events: [] } as Events | any;
+const initialState = { events: [], status: 'idle' } as Events | any;
 
 export const getAllEvents = createAsyncThunk('events/getAllEvents', async(options: {offset: any, limit: any}) => {
     const params: params = {
@@ -73,11 +73,16 @@ const eventSlice = createSlice({
     initialState,
     reducers: {},
     extraReducers(builder) {
+        builder.addCase(getAllEvents.pending, (state, action) => {
+            state.status = 'loading'
+        })
         builder.addCase(getAllEvents.fulfilled, (state, action) => {
             state.events = action?.payload?.data;
+            state.status = 'succeeded'
         })
         builder.addCase(getAllEvents.rejected, (state, action) => {
             // throw error
+            state.status = 'failed'
         })
 
         builder.addCase(searchEvents.fulfilled, (state, action) => {
