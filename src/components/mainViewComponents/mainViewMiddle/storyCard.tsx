@@ -27,7 +27,7 @@ const handleCancel = () => {
   setUserStory(false);
 };
   return (
-    <div className="container" {...events} ref={containerRef}>
+    <div className="storyContainer" {...events} ref={containerRef}>
         {addStory? (<AddStory/>) :userStory? (
        <Modal open={userStory} onCancel={handleCancel}> <UserStory/> </Modal>) :(<></>)}
       <span className="me-2 userStory " onClick={handleClick}>

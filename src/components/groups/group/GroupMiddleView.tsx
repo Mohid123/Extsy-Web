@@ -11,13 +11,7 @@ const initialItems = [
     children: <div className="mx-3">
     <div className="d-flex justify-content-between  align-items-center mt-3">
       <div className="d-flex align-items-center ">
-        <Avatar
-          style={{width:'92px', height:'58px'}}
-          // className={"container__storyAvatar"}
-          src={
-            postCardImage 
-          }
-        />
+      <img alt='rounded-img' className='circular-img-upcoming' src={'https://img.posterlounge.co.uk/images/l/1898617.jpg'}/>
         <div className="ms-3">
           <h6 className=" m-0 p-0 groupName">Usman Ahmad</h6>
           <p className=" m-0 p-0 groupDescription">
@@ -50,13 +44,8 @@ const initialItems = [
     <hr style={{marginLeft:'4.5rem'}}/>
     <div className="d-flex justify-content-between  align-items-center mt-3">
       <div className="d-flex align-items-center ">
-        <Avatar
-          style={{width:'92px', height:'58px'}}
-          // className={"container__storyAvatar"}
-          src={
-            postCardImage 
-          }
-        />
+      <img alt='rounded-img' className='circular-img-upcoming' src={'https://img.posterlounge.co.uk/images/l/1898617.jpg'}/>
+     
         <div className="ms-3">
           <h6 className=" m-0 p-0 groupName">Usman Ahmad</h6>
           <p className=" m-0 p-0 groupDescription">
@@ -118,13 +107,7 @@ const initialItems = [
       <div className="mx-3">
         <div className="d-flex justify-content-between  align-items-center mt-3">
           <div className="d-flex align-items-center ">
-            <Avatar
-              style={{width:'92px', height:'58px'}}
-              // className={"container__storyAvatar"}
-              src={
-                postCardImage 
-              }
-            />
+          <img alt='rounded-img' className='circular-img-upcoming' src={'https://img.posterlounge.co.uk/images/l/1898617.jpg'}/>
             <div className="ms-3">
               <h6 className=" m-0 p-0 groupName">Usman Ahmad</h6>
               <p className=" m-0 p-0 groupDescription">
@@ -202,7 +185,7 @@ const GroupComp = () => {
         />
           <Tabs
       type="editable-card"
-      className='tabMain'
+      className='tabMain bg-white'
       onChange={onChange}
       items={items}
       addIcon={<Button className="createGroupBtn" onClick={() => setOpen(true)}>Create

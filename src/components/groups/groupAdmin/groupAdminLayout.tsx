@@ -10,14 +10,14 @@ const GroupAdminLayout = ({children}:Props) => {
  
     return ( 
         <div className="main">
-        <div className="mainViewContent d-flex ">
-        <div className="mainViewContent__left  d-flex justify-content-end p-5">
+        <div className="  justify-content-between d-flex ">
+        <div className="  d-flex justify-content-end p-5">
             <GroupAdminLeft/>
         </div>
-        <div className="mainViewContent__middle d-flex justify-content-center">
+        <div className=" d-flex justify-content-center">
         {children}
         </div>
-        <div className="mainViewContent__right d-flex justify-content-start p-5">
+        <div className="   d-flex justify-content-start p-5">
             <GroupAdminRight/>
         </div>
         </div>

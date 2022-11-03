@@ -5,7 +5,7 @@ const PostCardOption = () => {
     return ( 
         <PostCardLayout>
             <div className="p-3 poll">
-                <div className="ms-5">
+                <div className="ms-2">
             <p className="pollQuery">Poll Question</p>
             <Form
       name="normal_login"
@@ -19,7 +19,7 @@ const PostCardOption = () => {
       >
         
         <Input 
-        style={{width:"460px", height:"56px"}}
+        style={{ height:"56px"}}
         type='text'
         placeholder="option 1.." 
          className=""
@@ -32,7 +32,7 @@ const PostCardOption = () => {
       >
         
         <Input 
-        style={{width:"460px", height:"56px"}}
+        style={{ height:"56px"}}
         type='text'
         placeholder="option 1.." 
          className=""

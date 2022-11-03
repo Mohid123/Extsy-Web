@@ -1,5 +1,5 @@
 .event-card {
-    width: 17.75rem;
+    // width: 17.75rem;
     // height: 16.688rem;
     // max-height: 17rem;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
@@ -23,7 +23,7 @@
 }
 
 .circular-img-upcoming {
-    width: 3.75rem;
+    max-width: 3.75rem;
     height: 3.75rem;
     border-radius: 100%;
     object-fit: cover;

@@ -11,7 +11,7 @@ const BuyerUSDT = () => {
       };
       const navigate = useNavigate()
     return (
-      <div className="BoxShadow mt-5 buyerUSDT mx-auto">
+      <div className="BoxShadow mt-5 buyerUSDT mx-auto bg-white">
         <div className="d-flex">
           <img src={buyUsdtImg} />
           <div className="ms-5">

@@ -32,24 +32,32 @@ const Ad = () => {
         </div>
         <br/>
         {/* <br/> */}
-        <div className="nftAd">
+        <div className="nftAd bg-white">
         <Carousel autoplay>
     <div>
-      <h3 style={contentStyle}><img src={img1}  style={{width:'21.125rem'}}/></h3>
+      <h3 style={contentStyle}><img src={img1}  
+      style={{width:'100%',maxWidth:"23.125rem"}}
+      /></h3>
     
     </div>
     <div>
-      <h3 ><img src={img1} style={{width:'21.125rem'}}/></h3>
+      <h3 ><img src={img1} 
+   style={{width:'100%',maxWidth:"23.125rem"}}
+      /></h3>
     </div>
     <div>
-      <h3 ><img src={img1}  style={{width:'21.125rem'}}/></h3>
+      <h3 ><img src={img1} 
+    style={{width:'100%',maxWidth:"23.125rem"}}
+       /></h3>
     </div>
     <div>
-      <h3 ><img src={img1}  style={{width:'21.125rem'}}/></h3>
+      <h3 ><img src={img1}  
+      style={{width:'100%',maxWidth:"23.125rem"}}
+      /></h3>
     </div>
   </Carousel>
           </div>
-          <div className="nftAdText">
+          <div className="nftAdText bg-white">
            
             <p className=" p-0 m-0 p-2 image__textStyle1 pt-0">
             Discover the most usnique NFT Marketplace

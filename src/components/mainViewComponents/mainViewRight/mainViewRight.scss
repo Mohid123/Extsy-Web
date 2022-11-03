@@ -3,7 +3,8 @@
 // color: $white-color !important;
 //     }
 .nftAd{
-    width:21.125rem;
+    max-width:23.125rem;
+    width: 100%;
 border-left:1px solid rgba(102, 102, 102, 0.35);
 border-right:1px solid rgba(102, 102, 102, 0.35);
 overflow: hidden;
@@ -18,7 +19,7 @@ overflow: hidden;
     border-radius: 0 0 10px 10px;
 }
 .image{
-    width: 21.125rem;
+    // width: 21.125rem;
     height: 213px;
     background-image: url("../../../assets/img/image.png");
     /* Note: backdrop-filter has minimal browser support */
@@ -96,6 +97,6 @@ line-height: 16px;
     .frndSuggest{
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
         border-radius: 10px;
-        width:  21.125rem;
+        // width:  21.125rem;
         padding: 25px 25px;
     }

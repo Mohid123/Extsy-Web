@@ -14,7 +14,7 @@ const EventAdminOption = () => {
     const [deleteEvent, setDeleteEvent] = useState(false);
     return ( 
         <>
-        <div className="p-3">
+        <div className="p-3 cardShadow mt-3 bg-white">
           <p className="groupName">Manage Group</p>
         
        <NavigateOption url={createEvent} text='Create New Event' onClick={()=>setIsEventModalOpen(true)}/>

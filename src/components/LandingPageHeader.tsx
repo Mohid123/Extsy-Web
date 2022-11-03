@@ -36,8 +36,8 @@ const MainViewHeader = () => {
      const [marketPlace, setMarketPlace] = useState(false);
      const [p2p, setP2p] = useState(false);
     return (
-      <div className="mainViewHeader shadow ">
-        <div className="headerCentral d-flex py-3 px-0 justify-content-between align-items-center">
+      <div className="mainViewHeader shadow bg-white">
+        <div className="headerCentral d-flex py-3 px-0 align-items-center ">
           <div className="mainViewHeader__left    ">
             <img
               src={logo}
@@ -90,7 +90,7 @@ const MainViewHeader = () => {
               {/* <p className="m-0 p-0 headerIconText">P2P</p> */}
             </div>
           </div>
-          <div className="mainViewHeader__right d-flex align-items-center">
+          <div className="mainViewHeader__right d-flex align-items-center justify-content-center">
             {/* search */}
             <div className={`input-box ${ isActive ? "open" :""}`}>
   <input type="text" placeholder="Search..." />

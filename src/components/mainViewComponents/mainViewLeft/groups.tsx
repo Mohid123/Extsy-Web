@@ -28,7 +28,7 @@ const Groups = () => {
     return (  
         <>
        
-        <div  className="landingPageOption  ">
+        <div  className="landingPageOption  bg-white">
         <div className="  propertiesTextStyle__group">Groups</div>
         {groups.map((group: Event, index: number) => {
             return(
@@ -39,18 +39,9 @@ const Groups = () => {
 <span className="propertiesTextStyle">{group.groupName}</span> 
      
                   </span>}
-                  {index === 1  && <hr style={{color: 'black', width: '240px', opacity: 0.2}}/>}
+                  {index === 1  && <hr style={{color: 'black', opacity: 0.2}}/>}
                 {index === 1  && <span className='see-all'>See all</span>}
-                  {/* <span className="d-flex justify-content-start mt-2 align-items-center">
-                      
-                  <img alt='rounded-img' className='circular-img-frndSuggestion me-3' style={{width:'2.063rem',height:"33px"}} src={'https://www.lct.org/media/filer_public_thumbnails/filer_public/6e/a9/6ea9c4c6-8b21-478b-97e2-b7d0fd17787c/weaver_sigourney_headshot.jpg__270x310_q85_subsampling-2.jpg'}/> 
-                  <span className="propertiesTextStyle">Crypto p2p</span> 
-                      <Badge
-        className="ms-2"
-        count={show ? 109 : 0}
-        style={{ backgroundColor: '#EE1D52' }}
-      />
-                  </span> */}
+                
                   </>
                   )
                      })}
