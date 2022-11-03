@@ -85,6 +85,16 @@ letter-spacing: 0.01em;
 
 color: #7C7C7C;
 }
+.ant-tabs-card {
+    // border: none !important;
+    border: none !important;
+   }
+   .ant-tabs-nav{
+    border: none !important;
+   }
+   .ant-tabs-tab{
+    border: none !important;
+   }
 .groupTabs{
     font-family: 'Poppins';
 font-style: normal;
@@ -96,6 +106,10 @@ line-height: 24px;
 .tabMain{
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
         border-radius: 10px;
-        width:  40.375rem;
+        max-width:  40.375rem;
+        width: 100%;
         padding: 25px 25px;
+}
+.ant-tabs-tab-active{
+    border-bottom:3px solid #7C167D !important;
 }

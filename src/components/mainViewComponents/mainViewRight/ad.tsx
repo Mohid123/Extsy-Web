@@ -35,17 +35,25 @@ const Ad = () => {
         <div className="nftAd">
         <Carousel autoplay>
     <div>
-      <h3 style={contentStyle}><img src={img1}  style={{width:'21.125rem'}}/></h3>
+      <h3 style={contentStyle}><img src={img1}  
+      style={{width:'100%',maxWidth:"23.125rem"}}
+      /></h3>
     
     </div>
     <div>
-      <h3 ><img src={img1} style={{width:'21.125rem'}}/></h3>
+      <h3 ><img src={img1} 
+   style={{width:'100%',maxWidth:"23.125rem"}}
+      /></h3>
     </div>
     <div>
-      <h3 ><img src={img1}  style={{width:'21.125rem'}}/></h3>
+      <h3 ><img src={img1} 
+    style={{width:'100%',maxWidth:"23.125rem"}}
+       /></h3>
     </div>
     <div>
-      <h3 ><img src={img1}  style={{width:'21.125rem'}}/></h3>
+      <h3 ><img src={img1}  
+      style={{width:'100%',maxWidth:"23.125rem"}}
+      /></h3>
     </div>
   </Carousel>
           </div>

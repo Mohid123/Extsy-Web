@@ -4,7 +4,7 @@ import FriendSuggest from './friendSuggestion';
 
 const MainViewRight = () => {
     return ( 
-    <div className='mainViewRight'>
+    <div className='mainViewRight me-2'>
     <Ad/>
     <br/>
     <FriendSuggest/>

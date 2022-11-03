@@ -53,7 +53,7 @@ const UpcomingEvents = () => {
                         <span className='user_name'>{date} - {event.venue}</span>
                     </div>
                 </div>}
-                {index === 1  && <hr style={{color: 'black', width: '240px', opacity: 0.2}}/>}
+                {index === 1  && <hr style={{color: 'black', maxWidth: '240px', opacity: 0.2}}/>}
                 {index === 1  && <span className='see-all'>See all</span>}
             </div>
         )
