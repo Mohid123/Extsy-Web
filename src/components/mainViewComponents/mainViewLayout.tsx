@@ -9,16 +9,16 @@ const MainViewLayout = ({children}:Props) => {
     return ( 
         <div className="main">
          
-        <div className=" justify-content-between d-flex mt-5">
+        <div className="d-flex  justify-content-between align-items-start mt-5 position-fixed">
         
-        <div className="viewLeft  ">
+        <div className="viewLeft  custom-scrollbar-css">
             <MainViewLeftProfileInfo/>
         </div>
-        <div className="viewMiddle mx-2">
+        <div className="viewMiddle mx-2 custom-scrollbar-css">
             {children}
             
         </div>
-        <div className="viewRight ">
+        <div className="viewRight custom-scrollbar-css ">
             <MainViewRight/>
         </div>
         </div>

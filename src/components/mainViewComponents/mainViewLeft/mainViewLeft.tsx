@@ -7,7 +7,7 @@ import { useLocation } from "react-router-dom";
 const MainViewLeft = () => {
   const url = useLocation()
     return ( 
-        <div className="mainViewLeftProfileInfo ms-2">   
+        <div className="mainViewLeftProfileInfo mx-2">   
            <ProfileInfo/>
            <br/>
            <MainViewLeftOption/> 
@@ -15,6 +15,21 @@ const MainViewLeft = () => {
          {url.pathname === '/groups'? "" :<Groups />}
            <br/>
            <UpcomingEvents/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
         </div>
      );
 }

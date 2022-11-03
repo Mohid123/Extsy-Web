@@ -6,7 +6,7 @@ const MainLayout = ({children}:any) => {
     const url = useLocation();
     
     return ( 
-    <div style={{background:' #F5F5F5'}}>
+    <div >
         {url.pathname.includes("/p2pbuyer")? <BuyerSellerHeader/>:  <MainViewHeader/>}
         <div className="MainDivCentral">
             {children}
