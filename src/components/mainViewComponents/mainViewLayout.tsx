@@ -14,7 +14,7 @@ const MainViewLayout = ({children}:Props) => {
         <div className="viewLeft  ">
             <MainViewLeftProfileInfo/>
         </div>
-        <div className="viewMiddle ">
+        <div className="viewMiddle mx-2">
             {children}
             
         </div>

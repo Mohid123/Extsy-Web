@@ -7,7 +7,7 @@ import { useLocation } from "react-router-dom";
 const MainViewLeft = () => {
   const url = useLocation()
     return ( 
-        <div className="mainViewLeftProfileInfo ">   
+        <div className="mainViewLeftProfileInfo ms-2">   
            <ProfileInfo/>
            <br/>
            <MainViewLeftOption/> 

@@ -8,13 +8,15 @@ import EventAdminOption from './eventAdminOption';
 
 const EventAdmin = () => {
   return (
-    <div className='my-4 mainAlignment d-flex justify-content-between'>
-      <div>
+    <div className='my-4 mainAlignment d-flex justify-content-around main'>
+      <div className='viewLeft'>
         <ProfileInfo />
         <EventAdminOption/>
       </div>
+      <div className='viewMiddle'>
       <EventAdminCreateEvent/>
-      <div><Ad/></div>
+      </div>
+      <div className='viewRight'><Ad/></div>
       
     </div>
   )

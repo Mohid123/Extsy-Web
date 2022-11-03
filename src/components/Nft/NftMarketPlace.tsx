@@ -12,7 +12,7 @@ import "./index.scss"
 
 const NftMarketPlace = () => {
     return (
-        <div className="NftContainer">
+        <div className="NftContainer main mt-5">
             <div className="d-flex justify-content-between">
                 <h6 className="fs_24 fw_700">Collections</h6>
                 <Button type="primary" className='px-4 pb-1 '  >
