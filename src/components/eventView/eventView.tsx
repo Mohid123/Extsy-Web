@@ -8,7 +8,7 @@ import EventViewCard from './eventViewCard/eventViewCard';
 
 const EventView = () => {
   return (
-    <div className='my-4 mainAlignmentPosts d-flex justify-content-between'>
+    <div className='my-4 main d-flex justify-content-between'>
       <div>
         <ProfileInfo />
         <GroupAdminLeftOption/>
