@@ -8,7 +8,7 @@ import { debounceTime, switchMap, distinctUntilChanged, map, Subject, filter, co
 import { followUser } from './../../store/reducers/profileSlice';
 import { getGroups, searchGroup } from '../../store/reducers/groupsSlice';
 import { Groups } from './../../store/reducers/groupsSlice';
-import { EventRes, Events, getAllEvents, searchEvents } from '../../store/reducers/eventsSlice';
+import { EventRes, getAllEvents, searchEvents } from '../../store/reducers/eventsSlice';
 
 const Arr = Array;
 const num: number = 5;
@@ -52,7 +52,7 @@ const ExploreUser= () => {
           map((val: any) => val.trim()),
           filter(val => val.length > 0),
           distinctUntilChanged(),
-          debounceTime(300),
+          debounceTime(400),
           switchMap((val: string) => {
             return combineLatest(
               dispatch(searchUserByName({offset: 0, limit: 10, name: val})),

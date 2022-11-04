@@ -2,38 +2,40 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { ApiService } from '../../services/api.service';
 import { ApiResponse } from '../../models/response.model';
 import { params } from '../../models/params.model';
+import { User } from './profileSlice';
 
 const apiService = new ApiService();
 
 
 export interface Events {
-    id: string
-    eventName: string
-    startDate: number
-    startTime: string
-    endDate: number
-    endTime: string
-    startAllDayCheck: boolean
-    endAllDayCheck: boolean
-    location: string
-    captureImageURL: string
-    path: string
-    coHosts: [string]
-    detail: string
-    createdByUserID: string
-    interestedCount: number
-    goingCount: number
-    shareCount: number
-    ignoreCount: number
-    postedDate: string
-    deletedCheck: boolean
-    blurHash: string
-    ticketPrice: number
-    ticketCurrency: string
-    longitude: number
-    latitude:number
-    city: string
-    dynamicUrl: string
+    id?: string | any
+    eventName?: string | any
+    startDate?: number | any
+    startTime?: string | any
+    endDate?: number | any
+    endTime?: string | any
+    startAllDayCheck?: boolean | any
+    endAllDayCheck?: boolean | any
+    location?: string | any
+    captureImageURL?: string | any
+    path?: string | any
+    coHosts?: [string] | any
+    detail?: string | any
+    createdByUserID?: string | any
+    interestedCount?: number | any
+    goingCount?: number | any
+    shareCount?: number | any
+    ignoreCount?: number | any
+    postedDate?: string | any
+    deletedCheck?: boolean | any
+    blurHash?: string | any
+    ticketPrice?: number | any
+    ticketCurrency?: string | any
+    longitude?: number | any
+    latitude?: number | any
+    city?: string | any
+    dynamicUrl?: string | any
+    user?: User | any
 }
 
 export interface EventRes {

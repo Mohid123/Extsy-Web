@@ -107,7 +107,7 @@ export const unFollowUser = createAsyncThunk('profile/unfollowUser', async(optio
     })
 })
 
-const initialState = { profile: {} } as User | any
+const initialState = { profile: {}, status: 'idle' } as User | any
 
 const profileSlice = createSlice({
     name: 'Profile',
@@ -115,11 +115,16 @@ const profileSlice = createSlice({
     reducers: {
     },
     extraReducers(builder) {
+        builder.addCase(loginUser.pending, (state, action) => {
+            state.status = 'pending'
+        }) 
         builder.addCase(loginUser.fulfilled, (state, action) => {
             state.profile = action?.payload?.data?.user;
+            state.status = 'succeeded'
         })
         builder.addCase(loginUser.rejected, (state, action) => {
             // add toast here for error message
+            state.status = 'failed'
         })
 
         // getUserCount
