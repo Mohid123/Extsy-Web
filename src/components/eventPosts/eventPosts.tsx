@@ -5,12 +5,8 @@ import ProfileInfo from '../mainViewComponents/mainViewLeft/profileInfo';
 import './eventPosts.scss';
 import Posts from './posts/posts';
 import UpcomingEvents from './upcomingEvents/upcomingEvents';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { AuthCredentials, getUserPostCount, loginUser } from '../../store/reducers/profileSlice';
-import { addPostReaction, deletePost, getPostByUserIdWithAllData, getPosts, getVotersForChoice, PostReaction } from '../../store/reducers/postsSlice';
-import { getAllStoriesWithAllData, getStoriesByUserIDWithData } from '../../store/reducers/storiesSlice';
-import { followUser, getAllUsers, searchUserByName } from '../../store/reducers/usersSlice';
 
 
 export interface PostsArr {

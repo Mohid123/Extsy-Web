@@ -36,7 +36,12 @@ export interface Events {
     dynamicUrl: string
 }
 
-const initialState = { events: [], status: 'idle' } as Events | any;
+export interface EventRes {
+    event: Events,
+    myStatus: {}
+}
+
+const initialState = { events: [], status: 'idle' } as EventRes | any;
 
 export const getAllEvents = createAsyncThunk('events/getAllEvents', async(options: {offset: any, limit: any}) => {
     const params: params = {

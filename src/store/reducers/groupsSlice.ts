@@ -20,7 +20,7 @@ export interface Groups {
     blurHash: string
 }
 
-const initialState = { groups: [] } as Groups | any;
+const initialState = { groups: [], status: 'idle' } as Groups | any;
 
 export const getGroups = createAsyncThunk('groups/getAllGroups', async(options: {offset: any, limit: any}) => {
     const params: params = {
@@ -68,11 +68,16 @@ const groupSlice = createSlice({
     initialState,
     reducers: {},
     extraReducers(builder) {
+        builder.addCase(getGroups.pending, (state, action) => {
+            state.status = 'loading'
+        })
         builder.addCase(getGroups.fulfilled, (state, action) => {
-            state.groups = action?.payload?.data
+            state.groups = action?.payload?.data;
+            state.status = 'succeeded'
         })
         builder.addCase(getGroups.rejected, (state, action) => {
             // throw error
+            state.status = 'failed'
         })
 
         builder.addCase(searchGroup.fulfilled, (state, action) => {

@@ -4,7 +4,11 @@ import { RightOutlined, SearchOutlined } from '@ant-design/icons';
 import { User } from '../../store/reducers/profileSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllUsers, searchUserByName } from '../../store/reducers/usersSlice';
-import { debounceTime, switchMap, distinctUntilChanged, map, Subject, filter } from 'rxjs';
+import { debounceTime, switchMap, distinctUntilChanged, map, Subject, filter, combineLatest } from 'rxjs';
+import { followUser } from './../../store/reducers/profileSlice';
+import { getGroups, searchGroup } from '../../store/reducers/groupsSlice';
+import { Groups } from './../../store/reducers/groupsSlice';
+import { EventRes, Events, getAllEvents, searchEvents } from '../../store/reducers/eventsSlice';
 
 const Arr = Array;
 const num: number = 5;
@@ -17,8 +21,20 @@ const ExploreUser= () => {
       dispatch(getAllUsers({offset: 0, limit: 10}))
     };
 
-    const {users} = useSelector((state: any) => state?.users)
-    const status = useSelector((state: any) => state?.users?.status);
+    const loadGroupData = () => {
+      dispatch(getGroups({offset: 0, limit: 10}))
+    }
+
+    const loadEventData = () => {
+      dispatch(getAllEvents({offset: 0, limit: 10}))
+    }
+
+    const {users} = useSelector((state: any) => state?.users);
+    const {groups} = useSelector((state: any) => state?.groups);
+    const {events} = useSelector((state: any) => state?.events);
+    const userStatus = useSelector((state: any) => state?.users?.status);
+    const groupStatus = useSelector((state: any) => state?.groups?.status);
+    const eventStatus = useSelector((state: any) => state?.events?.status);
     const searchSubject = new Subject();
 
     const searchUser = (e: any) => {
@@ -34,14 +50,22 @@ const ExploreUser= () => {
 
         searchSubject.pipe(
           map((val: any) => val.trim()),
-          debounceTime(600),
-          distinctUntilChanged(),
           filter(val => val.length > 0),
-          switchMap((val: string) => dispatch(searchUserByName({offset: 0, limit: 10, name: val})))
+          distinctUntilChanged(),
+          debounceTime(300),
+          switchMap((val: string) => {
+            return combineLatest(
+              dispatch(searchUserByName({offset: 0, limit: 10, name: val})),
+              dispatch(searchGroup({offset: 0, limit: 10, name: val})),
+              dispatch(searchEvents({offset: 0, limit: 10, name: val}))
+            )
+          })
         ).subscribe();
       }
       else {
-        dispatch(getAllUsers({offset: 0, limit: 10}))
+        loadUserData()
+        loadGroupData()
+        loadEventData()
       }
       
     }
@@ -54,6 +78,8 @@ const ExploreUser= () => {
     
     useEffect(() => { 
       loadUserData();
+      loadGroupData();
+      loadEventData();
     }, []);
 
     return (
@@ -65,9 +91,12 @@ const ExploreUser= () => {
               >
                 <Col className="gutter-row " span={24}  >
                   <Input id='input-box' onChange={searchUser} value={searchInput} size="large" className='mt-5' placeholder="Search Users, Groups, Events"  prefix={<SearchOutlined />} />
+
+                  {/* Users*/}
+
                   <h4 className='mt-4'>Users</h4>
-                  {status === 'loading' && skeletonLoader}
-                  {status === 'succeeded' && <List
+                  {userStatus === 'loading' && skeletonLoader}
+                  {userStatus === 'succeeded' && <List
                     dataSource={users}
                     renderItem={(item: User) => (
                       <List.Item key={item.id}>
@@ -82,40 +111,48 @@ const ExploreUser= () => {
                       </List.Item>
                     )}
                   />}
-                {/* <h4 className='mt-4'>Groups</h4> */}
-                {/* <List
-                  dataSource={data}
-                  renderItem={item => (
-                    <List.Item key={item.email}>
+
+                {/* Groups */}
+
+                <h4 className='mt-4'>Groups</h4>
+                {groupStatus === 'loading' && skeletonLoader}
+                {groupStatus === 'succeeded' && 
+                  <List
+                  dataSource={groups}
+                  renderItem={(item: Groups) => (
+                    <List.Item key={item.id}>
                       <List.Item.Meta
-                        avatar={<Avatar src={item.picture.large} />}
-                        title={<a href="https://ant.design">{item.name.last}</a>}
-                        description={item.email}
+                        avatar={<Avatar src={item.captureImageURL} />}
+                        title={<span>{item.groupName}</span>}
+                        description={item.description}
                       />
                       <Button type="primary"  ghost style={{marginRight:'10px', borderRadius:'10px'}}>
-              Join Now
-            </Button>
-          
+                        Join Now
+                      </Button>
                     </List.Item>
                   )}
-                />
+                />}
+
+                {/* Events */}
+
                 <h4 className='mt-4'>Events</h4>
-                <List
-                  dataSource={data}
-                  renderItem={item => (
-                    <List.Item key={item.email}>
+                {eventStatus === 'loading' && skeletonLoader}
+                {eventStatus === 'succeeded' && 
+                  <List
+                  dataSource={events}
+                  renderItem={(item: EventRes) => (
+                    <List.Item key={item.event?.id}>
                       <List.Item.Meta
-                        avatar={<Avatar src={item.picture.large} />}
-                        title={<a href="https://ant.design">{item.name.last}</a>}
-                        description={item.email}
+                        avatar={<Avatar src={item.event?.captureImageURL} />}
+                        title={<span>{item.event?.eventName}</span>}
+                        description={item.event?.detail}
                       />
                       <Button type="primary"  ghost style={{marginRight:'10px', borderRadius:'10px'}}>
-              View
-            </Button>
-          
+                        View
+                      </Button>
                     </List.Item>
                   )}
-                /> */}
+                />}
                 </Col>
               </Row>
         </div>
