@@ -87,16 +87,26 @@ const groupSlice = createSlice({
             // throw error
         })
 
+        builder.addCase(joinGroup.pending, (state, action) => {
+            state.status = 'loading'
+        })
+
         builder.addCase(joinGroup.fulfilled, (state, action) => {
-            state.groups.map((group: Groups) => {
+            debugger
+            state?.groups?.map((group: Groups) => {
+                debugger
                 if(group.id === action?.payload?.options.groupId) {
+                    debugger
                     group.membersCount = group.membersCount + 1
                 }
+                debugger
                 return group
             })
+            state.status = 'succeeded'
         })
         builder.addCase(joinGroup.rejected, (state, action) => {
             // throw error
+            state.status = 'failed'
         })
     }
 })

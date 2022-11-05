@@ -1,7 +1,7 @@
-import buyUsdtImg from '../../../assets/img/P2p/buyUsdtPic.png'
-import exchange from '../../../assets/img/P2p/exchange.svg'
-import completionRate from '../../../assets/img/P2p/completion rate icon.svg'
-import check from '../../../assets/img/P2p/Check.svg'
+import buyUsdtImg from '../../../assets/img/p2p/buyUsdtPic.png';
+import exchange from '../../../assets/img/p2p/exchange.svg'
+import completionRate from '../../../assets/img/p2p/completion rate icon.svg'
+import check from '../../../assets/img/p2p/Check.svg'
 import './buyerUSDT.scss'
 import { Button, Checkbox, Input } from 'antd'
 import { useNavigate } from 'react-router-dom'

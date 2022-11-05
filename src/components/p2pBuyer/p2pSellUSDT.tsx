@@ -4,8 +4,8 @@ import {  Timeline, Button, Divider } from "antd";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Authentication from '../../assets/img/Authentication.svg'
-import AvatarImage from '../../assets/img/P2p/Ellipse 3.svg'
-import CloseICon from '../../assets/img/P2p/Close.svg'
+import AvatarImage from '../../assets/img/p2p/Ellipse 3.svg'
+import CloseICon from '../../assets/img/p2p/Close.svg'
 import { useNavigate } from 'react-router-dom'
 
 const SellUSDT = () => {

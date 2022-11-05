@@ -5,7 +5,6 @@ import { User } from '../../store/reducers/profileSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllUsers, searchUserByName } from '../../store/reducers/usersSlice';
 import { debounceTime, switchMap, distinctUntilChanged, map, Subject, filter, combineLatest } from 'rxjs';
-import { followUser } from './../../store/reducers/profileSlice';
 import { getGroups, searchGroup } from '../../store/reducers/groupsSlice';
 import { Groups } from './../../store/reducers/groupsSlice';
 import { EventRes, getAllEvents, searchEvents } from '../../store/reducers/eventsSlice';

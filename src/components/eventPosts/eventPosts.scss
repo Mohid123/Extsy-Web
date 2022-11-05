@@ -3,3 +3,66 @@
         margin-inline: 4rem;
     }
 }
+
+.main-post {
+    width: 40.375rem;
+    max-height: 40rem;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 18px;
+    padding: 1.375rem 3.125rem;
+    margin-bottom: 30px;
+}
+
+.rounded-img-skel {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+}
+
+.namePost {
+    width: 20rem;
+    height: 0.6rem;
+    margin: 6px 0;
+}
+
+.date-card-skel {
+    position: absolute;
+    width: 3.375rem;
+    height: 3.688rem;
+    box-shadow: 0px 38px 76px rgba(0, 0, 0, 0.08), 0px 6px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    left: 15px;
+    bottom: -25px;
+}
+
+.btn-skel {
+    border-radius: 6px;
+    padding-inline: 10px;
+    width: 8.125rem;
+    height: 1.2rem;
+}
+
+.share-skel {
+    border-radius: 6px;
+    padding-inline: 10px;
+    width: 3.125rem;
+    height: 1.2rem;
+}
+  
+.skeleton-loader-main {
+    animation: skeleton-loader-main 1s steps(1000) infinite;
+    background: linear-gradient(65deg, #eaeaea 0%, #eaeaea 40%, #ffffff 50%, #eaeaea 75%, #eaeaea 100%);
+    background-size: 500px 200px;
+    background-position: 0 0, 0 0, 0 0, 0 0;
+}
+
+@keyframes skeleton-loader-main {
+    0% {
+        background-position: 0 0, 0 0, 0 0, 0 0;
+    }
+    100% {
+        background-position: -500px 0, -500px -200px, 0 -200px, 500px 0;
+    }
+}
+  

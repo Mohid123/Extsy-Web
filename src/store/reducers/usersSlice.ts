@@ -37,6 +37,28 @@ export const searchUserByName = createAsyncThunk('profile/searchUserByName', asy
     })
 })
 
+export const followUser = createAsyncThunk('profile/followUser', async(options: {followerId: string, currentUserId: string}) => {
+    return await apiService.get(`/profile/getfollowUser/${options.currentUserId}/${options.followerId}`).then((response: ApiResponse<any>) => {
+        if(!response.hasErrors()) {
+            return {options, response}
+        }
+        else {
+            throw response.errors[0]
+        }
+    })
+})
+
+export const unFollowUser = createAsyncThunk('profile/unfollowUser', async(options: {unfollowerId: string, currentUserId: string}) => {
+    return await apiService.get(`/profile/unfollowUser/${options.currentUserId}/${options.unfollowerId}`).then((response: ApiResponse<any>) => {
+        if(!response.hasErrors()) {
+            return {options, response}
+        }
+        else {
+            throw response.errors[0]
+        }
+    })
+})
+
 
 
 const userSlice = createSlice({
@@ -46,7 +68,7 @@ const userSlice = createSlice({
     extraReducers(builder) {
         builder.addCase(getAllUsers.pending, (state, action) => {
             state.status = 'loading'
-          })
+        })
         builder.addCase(getAllUsers.fulfilled, (state, action) => {
             state.users = action?.payload?.data
             state.status = 'succeeded'
@@ -61,6 +83,28 @@ const userSlice = createSlice({
         })
         builder.addCase(searchUserByName.rejected, (state, action) => {
             // throw toast
+        })
+
+        builder.addCase(followUser.pending, (state, action) => {
+            state.status = 'loading'
+        })
+
+        builder.addCase(followUser.fulfilled, (state, action) => {
+            state.users.map((user: User) => {
+                debugger
+                if(user.id === action?.payload.options?.currentUserId) {
+                    debugger
+                    user.followingCount = user.followingCount + 1
+                    debugger
+                }
+                return user
+            })
+            state.status = 'succeeded'
+        })
+        
+        builder.addCase(followUser.rejected, (state, action) => {
+            // throw toast
+            state.status = 'failed'
         })
     }
 })

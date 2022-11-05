@@ -1,7 +1,8 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { BehaviorSubject } from 'rxjs';
 import { ApiResponse } from '../../models/response.model';
 import { ApiService } from '../../services/api.service';
-import { setItem, StorageItem } from '../../utils/local-storage.utils';
+import { getItem, setItem, StorageItem } from '../../utils/local-storage.utils';
 
 export interface AuthCredentials {
     email: string,
@@ -58,6 +59,8 @@ export interface User {
     id: string
 }
 
+export const currentUser: BehaviorSubject<User | any> = new BehaviorSubject('');
+currentUser.next(getItem(StorageItem.User))
 
 const apiService = new ApiService();
 
@@ -74,6 +77,18 @@ export const loginUser = createAsyncThunk('auth/login', async (authCredentials: 
     })
 })
 
+export const getLoggedInUser = createAsyncThunk('profile/getProfileById', async() => {
+
+    return await apiService.get(`/profile/getProfileById/${currentUser?.value?.id}`).then((response: ApiResponse<any>) => {
+        if(!response.hasErrors()) {
+            return response
+        }
+        else {
+            throw response.errors[0]
+        }
+    })
+})
+
 export const getUserPostCount = createAsyncThunk('post/getUserCount', async(userID: string) => {
     return await apiService.get(`/post/getUserPostCount/${userID}`).then((response: ApiResponse<any>) => {
         if(!response.hasErrors()) {
@@ -85,27 +100,7 @@ export const getUserPostCount = createAsyncThunk('post/getUserCount', async(user
     })
 })
 
-export const followUser = createAsyncThunk('profile/followUser', async(options: {followerId: string, currentUserId: string}) => {
-    return await apiService.get(`/profile/getfollowUser/${options.currentUserId}/${options.followerId}`).then((response: ApiResponse<any>) => {
-        if(!response.hasErrors()) {
-            return {options, response}
-        }
-        else {
-            throw response.errors[0]
-        }
-    })
-})
 
-export const unFollowUser = createAsyncThunk('profile/unfollowUser', async(options: {unfollowerId: string, currentUserId: string}) => {
-    return await apiService.get(`/profile/unfollowUser/${options.currentUserId}/${options.unfollowerId}`).then((response: ApiResponse<any>) => {
-        if(!response.hasErrors()) {
-            return {options, response}
-        }
-        else {
-            throw response.errors[0]
-        }
-    })
-})
 
 const initialState = { profile: {}, status: 'idle' } as User | any
 
@@ -127,27 +122,25 @@ const profileSlice = createSlice({
             state.status = 'failed'
         })
 
+        // get Logged In User
+        builder.addCase(getLoggedInUser.pending, (state, action) => {
+            state.status = 'pending'
+        }) 
+        builder.addCase(getLoggedInUser.fulfilled, (state, action) => {
+            state.profile = action?.payload?.data;
+            state.status = 'succeeded'
+        })
+        builder.addCase(getLoggedInUser.rejected, (state, action) => {
+            // add toast here for error message
+            state.status = 'failed'
+        })
+
         // getUserCount
         builder.addCase(getUserPostCount.fulfilled, (state, action) => {
             state.user.postCount = action?.payload?.data
         })
         builder.addCase(getUserPostCount.rejected, (state, action) => {
             // add toast here for error message
-        })
-
-        builder.addCase(followUser.fulfilled, (state, action) => {
-            state.users.map((user: User) => {
-                debugger
-                if(user.id === action?.payload.options?.currentUserId) {
-                    debugger
-                    user.followingCount = user.followingCount + 1
-                    debugger
-                }
-                return user
-            })
-        })
-        builder.addCase(followUser.rejected, (state, action) => {
-            // throw toast
         })
     }
 })
